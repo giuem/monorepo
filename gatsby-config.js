@@ -34,6 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
     },
+    `gatsby-plugin-postcss`,
   ],
   flags: {},
 };
