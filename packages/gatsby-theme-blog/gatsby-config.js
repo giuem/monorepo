@@ -18,14 +18,14 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: resolveFile("./src/pages/"),
-      },
-      __key: "pages",
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "pages",
+    //     path: resolveFile("./src/pages/"),
+    //   },
+    //   __key: "pages",
+    // },
     {
       resolve: `gatsby-plugin-typescript`,
     },
