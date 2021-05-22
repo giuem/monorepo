@@ -1,6 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: "giuem.com",
+    title: "BLOG @ GIUEM",
+    description: "描述",
+    canonicalUrl: "https://www.giuem.com",
+    image: "",
+    author: {
+      name: "giuem",
+    },
+    social: {
+      twitter: "@giuemcom",
+      github: "@giuem",
+    },
   },
   plugins: [
     "gatsby-plugin-image",
