@@ -7,6 +7,11 @@
   "keywords": [
     "gatsby"
   ],
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  },
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "prepare": "husky install",
@@ -17,36 +22,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.5",
     "gatsby": "^3.4.0",
-    "gatsby-plugin-image": "^1.4.0",
-    "gatsby-plugin-manifest": "^3.4.0",
-    "gatsby-plugin-mdx": "^2.4.0",
-    "gatsby-plugin-postcss": "^4.4.0",
-    "gatsby-plugin-react-helmet": "^4.4.0",
-    "gatsby-plugin-sharp": "^3.4.0",
-    "gatsby-plugin-sitemap": "^4.0.0",
-    "gatsby-plugin-typescript": "^3.4.0",
-    "gatsby-source-filesystem": "^3.4.0",
-    "gatsby-transformer-sharp": "^3.4.0",
-    "postcss": "^8.2.13",
+    "gatsby-theme-blog": "1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "react-schemaorg": "^1.3.1",
-    "schema-dts": "^0.8.2",
-    "tailwindcss": "^2.1.2",
     "typescript": "^4.2.4"
   },
   "devDependencies": {
-    "@types/node": "^15.0.1",
-    "@types/react": "^17.0.4",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-helmet": "^6.1.1",
-    "@types/tailwindcss": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "babel-eslint": "^10.0.0",
