@@ -1,9 +1,12 @@
-// markup
+import { Layout } from "../components/Layout";
+
 const IndexPage = () => {
   return (
-    <main className="p-16">
-      Hello Gatsby with <span className="font-bold">Tailwind</span>
-    </main>
+    <Layout>
+      <main className="p-4">
+        Hello Gatsby with <span className="font-bold">Tailwind</span>
+      </main>
+    </Layout>
   );
 };
 

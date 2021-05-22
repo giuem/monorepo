@@ -1,11 +1,41 @@
+// @ts-check
+
+/** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "PingFang SC",
+          "Hiragino Sans GB",
+          "Noto Sans CJK SC",
+          "Microsoft YaHei",
+          "Noto Sans",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+        ],
+      },
+      // colors: {
+
+      // }
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
