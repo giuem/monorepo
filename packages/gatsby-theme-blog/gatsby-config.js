@@ -15,17 +15,29 @@ module.exports = {
     //     icon: "src/images/icon.png",
     //   },
     // },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `./contents/posts`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: "./contents/posts",
+      },
+    },
+
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "pages",
-    //     path: resolveFile("./src/pages/"),
-    //   },
-    //   __key: "pages",
-    // },
     {
       resolve: `gatsby-plugin-typescript`,
     },
