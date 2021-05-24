@@ -22,12 +22,6 @@ module.exports = {
         path: `./contents/posts`,
       },
     },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: "./contents/posts",
-      },
-    },
 
     {
       resolve: "gatsby-plugin-mdx",

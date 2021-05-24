@@ -1961,6 +1961,13 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/mdx-js__react@^1.5.3":
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/@types/mdx-js__react/-/mdx-js__react-1.5.3.tgz#2f858ab0ee5fc60b642f3764ef9001fe0530fe43"
+  integrity sha512-flP0BpS5rXnEbkU5ih79ARaI/+rK10Iee+zxTaWYtoiyc2+f1EJ8EnYgMmXHdAuI7OX4J9/hdoXfrfrri0AT+Q==
+  dependencies:
+    "@types/react" "*"
+
 "@types/minimatch@*":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.4.tgz#f0ec25dbf2f0e4b18647313ac031134ca5b24b21"
@@ -6060,20 +6067,6 @@ gatsby-core-utils@^2.4.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.5.0.tgz#70b3aabf184a39c790e12af8001be4164fd8afa6"
-  integrity sha512-YbKv7FLpeTCts28bv0H2lSuHrKgUxnsC1ZG1PPydOheQgPW9G8pdNlYvwZzGJmmS7rBcC/w859ss90wlvF6GEw==
-  dependencies:
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    file-type "^16.2.0"
-    fs-extra "^8.1.0"
-    node-object-hash "^2.0.0"
-    proper-lockfile "^4.1.1"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-1.4.0.tgz#49b9b6d617dbba3a032bfbc8dfd315754d63cfe3"
@@ -6107,20 +6100,6 @@ gatsby-page-utils@^1.4.0:
     chokidar "^3.5.1"
     fs-exists-cached "^1.0.0"
     gatsby-core-utils "^2.4.0"
-    glob "^7.1.6"
-    lodash "^4.17.21"
-    micromatch "^4.0.2"
-
-gatsby-page-utils@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-1.5.0.tgz#af9af3d543bfdd7a59ec880f8fc938ea9e2a6641"
-  integrity sha512-hL6bY2sYuO7Nk6W6lQw9TBpunMPcZvp3LEZ9WS1YfHWfygVm6v8hKOn09Wsv0n+CSjBH/EJ3ocX5iDlSYkqbKg==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    bluebird "^3.7.2"
-    chokidar "^3.5.1"
-    fs-exists-cached "^1.0.0"
-    gatsby-core-utils "^2.5.0"
     glob "^7.1.6"
     lodash "^4.17.21"
     micromatch "^4.0.2"
@@ -6208,21 +6187,6 @@ gatsby-plugin-page-creator@^3.4.0:
     gatsby-core-utils "^2.4.0"
     gatsby-page-utils "^1.4.0"
     gatsby-telemetry "^2.4.0"
-    globby "^11.0.3"
-    lodash "^4.17.21"
-
-gatsby-plugin-page-creator@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-3.5.0.tgz#14c4150c0fc137ba2210eee8b37ab600199048ed"
-  integrity sha512-0rH+WWnp8sgNyyKmEtcQAt7EGcBHom6r8oZYqOaVXJsgwr+uzTjg4ncz+Qcz+rb6lMHFY6ajxStFvU/VzIMAxA==
-  dependencies:
-    "@babel/traverse" "^7.12.5"
-    "@sindresorhus/slugify" "^1.1.2"
-    chokidar "^3.5.1"
-    fs-exists-cached "^1.0.0"
-    gatsby-core-utils "^2.5.0"
-    gatsby-page-utils "^1.5.0"
-    gatsby-telemetry "^2.5.0"
     globby "^11.0.3"
     lodash "^4.17.21"
 
@@ -6401,26 +6365,6 @@ gatsby-telemetry@^2.4.0:
     configstore "^5.0.1"
     fs-extra "^8.1.0"
     gatsby-core-utils "^2.4.0"
-    git-up "^4.0.2"
-    is-docker "^2.1.1"
-    lodash "^4.17.21"
-    node-fetch "^2.6.1"
-    uuid "3.4.0"
-
-gatsby-telemetry@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-2.5.0.tgz#ea3519afd9e905d6a6b1d01209e8df048764be1e"
-  integrity sha512-PbyYw74t/RLVbEWicjAdrCMttV1GSbuHZit0PsVPqqwNlL1LalJa/V7lcVMqqGrEbkB+fUoKkk1u2o+TDgvIng==
-  dependencies:
-    "@babel/code-frame" "^7.10.4"
-    "@babel/runtime" "^7.12.5"
-    "@turist/fetch" "^7.1.7"
-    "@turist/time" "^0.0.1"
-    async-retry-ng "^2.0.1"
-    boxen "^4.2.0"
-    configstore "^5.0.1"
-    fs-extra "^8.1.0"
-    gatsby-core-utils "^2.5.0"
     git-up "^4.0.2"
     is-docker "^2.1.1"
     lodash "^4.17.21"
