@@ -1,0 +1,26 @@
+---
+title: 搭了一个签到站
+date: 2016-12-24 22:14:31
+# tags:
+#   - ssl
+---
+
+最近要期末了，感觉就很忙（这学期太浪了，天天打屁股。前段时间抢了一台腾讯学生机，闲着也是闲着，就搭了一个签到站，顺便学了下怎么配置 SSL。<!--more-->
+
+## 网站程序
+
+这个签到站使用了 [binux](https://github.com/binux) / [qiandao](https://github.com/binux/qiandao) ，闲着无聊没事干可以自己搭，不过我还是推荐自己使用作者本人的网站 [qiandao.today](https://qiandao.today/)
+
+## SSL
+
+8 月 4 日更新，目前已经转到 Caddy -> [Ref](/caddy-tutorial-for-debian/).
+
+网站地址 [https://qd.gops.win/](https://qd.gops.win/) ，在 [SSL LABS](https://www.ssllabs.com/ssltest/analyze.html?d=qd.gops.win) 得分 **A+**。
+
+要 A+ 其实很简单的，照着屈屈的[这篇文章](https://imququ.com/post/my-nginx-conf.html)配就行了。
+
+目前使用的是 le 的 ECC + RSA 双证书，安利 [acme.sh](https://github.com/Neilpang/acme.sh) 这个脚本，用了来签发证书挺方便的。
+
+（这个博客感觉要被我荒废了，哎，还是太懒了，不想更新
+
+另外，祝大家圣诞快乐，鸡年大吉吧。

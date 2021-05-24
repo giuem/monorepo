@@ -1,0 +1,225 @@
+---
+title: 获取Bing每日壁纸用作首屏大图
+date: 2015-02-24 20:46:27
+tags:
+  - php
+  - bing
+---
+
+Bing 搜索每天都会更换一张精美的图片作为壁纸，除了特殊时候不太好看外（比如春节那几天），没多大问题。移动端还有上每日故事，与图片现配。现在我的博客首屏图片就是 Bing 每日壁纸，有没有感觉 B 格满满^\_^。本文将介绍如何把 Bing 每日壁纸和故事扒到自己博客。<!--more-->
+
+## 获取 API 接口
+
+首先我们进入[Bing 首页](http://bing.com/)，会发现自动转到中国版。不过这没关系，中国版更符合国情，速度也比国际版快一些。
+
+通过抓包，可以发现`http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1`这里可以获取到无水印的图片。
+
+那每日故事呢？通过模拟 UA，访问移动版。同样发现了 API 接口`http://cn.bing.com/cnhp/coverstory/`。不过这里的图片是有水印的。
+
+接口已经得到了，接下来就是写代码了。因为我既想使用无水印的图片，也想获取每日故事，所以我把两个接口结合起来使用。
+
+## 代码
+
+```php
+<?php
+/**
+  * 获取Bing每日壁纸和故事
+  * @author giuem
+  */
+function bingImgFetch(){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36'
+    ));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $re = curl_exec($ch);
+    curl_close($ch);
+    $re = json_decode($re,1);//电脑版返回内容
+    $re2 = json_decode(file_get_contents('http://cn.bing.com/cnhp/coverstory/'),1);//移动版返回内容
+    return array(
+    	/* 更改图片尺寸，减小体积 */
+        'url' => str_replace('1920x1080','1366x768',$re['images'][0]['url']),
+        /* 结束日期 */
+        'date' => date('j',strtotime($re['images'][0]['enddate'])),
+        /* 故事标题 */
+        'title' => $re2['title'],
+        /* 内容 */
+        'd' => $re2['para1']
+    );
+}
+?>
+```
+
+### 使用示例
+
+如果是 wordpress，可以把上面的代码丢进`function.php`，然后该怎么用就怎么用。
+
+```php
+$bingimg= bingImgFetch();
+echo $bingimg['url'];//输出图片地址
+echo $bingimg['title'];
+echo $bingimg['d'];
+```
+
+## 我的使用方法
+
+因为我用的是静态博客，不能在后端完成这些操作，所以只能通过 js 获取。同时把代码放在国内访问较快的`SAE`中，使用`Memcache`缓存内容。而且我在获取后还把数据储存在`localStorage`中，这样可以减少请求次数。
+
+为什么要缓存？因为不缓存的话，别人每访问一次你都要获取一次，IP 可能会被被 Bing ban 了。
+
+当然，你也可以缓存到数据库中，这些你都可以结合实际情况修改代码。
+
+### PHP in SAE
+
+```php
+<?php
+header('Access-Control-Allow-Origin: *');
+$mmc=memcache_init();
+if($mmc==false){
+    /* 如果memcache启动失败，直接获取 */
+    $bingimg = json_encode(bingImgFetch());
+}else {
+    $bingimg = memcache_get($mmc,'bing_url');
+    $date = memcache_get($mmc,'bing_url_date');
+    /* 判断日期进行更新 */
+    if(date('j') != $date || !$bingimg || !$date){
+        $bingimg = json_encode(bingImgFetch());
+        /* 写入 */
+        memcache_set($mmc,"bing_url",$bingimg);
+        memcache_set($mmc,"bing_url_date",date('j'));
+    }
+}
+echo $bingimg;
+function bingImgFetch(){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        'User-Agent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36'
+    ));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $re = curl_exec($ch);
+    curl_close($ch);
+    $re = json_decode($re,1);
+    $re2 = json_decode(file_get_contents('http://cn.bing.com/cnhp/coverstory/'),1);
+    return array(
+        'url' => str_replace('1920x1080','1366x768',$re['images'][0]['url']),
+        'date' => date('j',strtotime($re['images'][0]['enddate'])),
+        'title' => $re2['title'],
+        'd' => $re2['para1']
+    );
+}
+```
+
+### HTML
+
+```html
+<section id="hero">
+  <div class="hero-warp">
+    <p id="hero-title"></p>
+    <p id="hero-d"></p>
+  </div>
+</section>
+```
+
+### CSS
+
+```css
+html,
+body {
+  height: 100%;
+}
+#hero {
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  display: table;
+}
+.hero-warp {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#hero-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+#hero-d {
+  width: 80%;
+  margin: 0 auto;
+}
+```
+
+### JS
+
+如果你使用`jQuery`，可以把这里的 ajax 换成$.ajax()实现。
+
+```javascript
+(function () {
+  //bing pic load
+  var $data = {
+    title: localStorage.getItem("bing_title")
+      ? localStorage.getItem("bing_title")
+      : "",
+    d: localStorage.getItem("bing_d") ? localStorage.getItem("bing_d") : "",
+    url: localStorage.getItem("bing_url")
+      ? localStorage.getItem("bing_url")
+      : "",
+    date: localStorage.getItem("bing_date")
+      ? localStorage.getItem("bing_date")
+      : "",
+  };
+  if (
+    new Date().getDate() != $data.date ||
+    $data.title == "" ||
+    $data.d == "" ||
+    $data.url == ""
+  ) {
+    ajax("GET", "//giuem.sinaapp.com/bing/", function ($data) {
+      localStorage.setItem("bing_title", $data.title);
+      localStorage.setItem("bing_d", $data.d);
+      localStorage.setItem("bing_url", $data.url);
+      localStorage.setItem("bing_date", new Date().getDate());
+      setHero($data);
+    });
+  } else {
+    setHero($data);
+  }
+})();
+function setHero($data) {
+  var $hero = document.getElementById("hero");
+  if (!$hero) {
+    return;
+  }
+  if ($data) {
+    $hero.style.cssText += "background-image:url(" + $data.url + ")";
+    document.getElementById("hero-title").innerHTML = $data.title;
+    document.getElementById("hero-d").innerHTML = $data.d;
+  }
+}
+function ajax(type, url, opts, callback) {
+  var xhr = new XMLHttpRequest();
+  if (typeof opts === "function") {
+    callback = opts;
+    opts = null;
+  }
+  xhr.open(type, url);
+  var fd = new FormData();
+  if (type === "POST" && opts) {
+    for (var key in opts) {
+      fd.append(key, JSON.stringify(opts[key]));
+    }
+  }
+  xhr.onload = function () {
+    callback(JSON.parse(xhr.response));
+  };
+  xhr.send(opts ? fd : null);
+}
+```

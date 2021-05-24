@@ -1,0 +1,89 @@
+---
+title: 自定义百度网盘分享密码 (Javascript)
+date: 2016-03-05 20:46:37
+# tags:
+#   - 百度网盘
+#   - javascript
+---
+
+最近看到几个小伙伴的博客都在说这个自定义密码的，作为高三狗的我忍不住也要插上一脚了。。<!--more-->
+
+首先看下效果吧。（一不小心就开车了）
+
+- 地址：[http://pan.baidu.com/s/1o7bIomm](http://pan.baidu.com/share/init?shareid=2869703761&uk=1261063795)
+- 密码：`帅B`
+
+## 原理
+
+分析代码发现，百度网盘的自定义密码是在本地生成的
+
+![makePrivatePassword函数](https://img.giuem-lb.washingpatrick.cn/make-private-password-function.png)
+
+![makePrivatePassword函数的使用](https://img.giuem-lb.washingpatrick.cn/usage-of-make-private-password.png)
+
+这也就给了我们玩耍的机会。
+
+## 实现方法
+
+[不二](http://www.82cat.com/2016/02/17/275/) 和 [LiesAuer](http://blog.liesauer.net/?post=35) 他们都是采用构造请求的方法，我觉得不够 hacker，而且不太方便。
+
+所以我决定采用 JS 的方式修改密码。
+
+方法很简单：修改 `makePrivatePassword` 这一函数即可。
+
+## 具体代码
+
+说明：代码可以转载，但请不要说是你原创之类的话！！！
+
+### 压缩版
+
+```javascript
+javascript: require([
+  "function-widget-1:share/util/service/createLinkShare.js",
+]).prototype.makePrivatePassword = function () {
+  return prompt("请输入自定义的密码", "1234");
+};
+```
+
+### 原版
+
+```javascript
+require([
+  "function-widget-1:share/util/service/createLinkShare.js",
+]).prototype.makePrivatePassword = () => {
+  return prompt("请输入自定义的密码", "1234");
+};
+```
+
+## 使用方法
+
+别急，你可别复制走代码就用了，一不小心就会出现这样的错误：
+
+```
+Uncaught Error: Cannot find module `function-widget-1:share/util/service/createLinkShare.js`(…)
+```
+
+首先，选择要分享的文件，点击分享按钮。
+
+这时候，按 `F12` 打开控制台，切换至 `Console` ，输入代码按回车即可。当然，你也可以存为书签，点一下书签。
+
+然后点击创建私密链接，会弹出输入框，输入密码即可！
+
+注意使用代码前要先点一下 `分享` 按钮，相关模块才会载入，这时候用代码才有效果。
+
+![demo](https://img.giuem-lb.washingpatrick.cn/bdpanpawdemo.gif)
+
+## 密码类型
+
+必须是 4 个字符。
+如：
+
+- abcd
+- 1234
+- ab12
+- 啊 a （中文加一个数字或字母）
+
+其他类型请各位自己探索，可在下方给我留言。
+好像如果密码有中文，第一次访问时会提示错误，刷新一下才正常。
+
+** PS：这可能是高考前最后一次更新了，各位可别想我啊 **

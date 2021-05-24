@@ -1,0 +1,111 @@
+---
+title: 网页字体优化之字体异步加载
+date: 2016-09-24 22:01:14
+# tags:
+#   - javascript
+#   - webfontloader
+---
+
+网页字体一直以来都是一个令人头疼的问题，一方面想要页面更美观引入字体，另一方面又想要加快页面加载速度。而今天我要介绍的这款 JS 库，很好的解决了这个问题，它能将你的字体文件异步加载，不影响页面渲染。<!--more-->
+
+## 引子
+
+说起网页字体的优化，我很容易就想到了下面几种方法：
+
+1. 使用 CDN 分发你的字体文件，对于 Google Fonts 可以更换为国内反代的 CDN（虽然目前 Google Fonts 的服务器已近指向国内，但是速度、稳定性不是很理想）。
+
+2. 内联字，以 Base64 的方式将字体文件嵌入 CSS 文件中。https://amio.github.io/embedded-google-fonts/ 是 V2EX 上一个人写的小程序，可以将 Google Fonts 转化为 Base64 内联到 CSS 中。用这种方法再结合 CDN，效果还不错。
+
+3. 使用字蛛精简字体文件。本方法尽针对中文字体，具体实现方式移步：[字蛛](http://font-spider.org/) （好吧，我承认第三点是我拿来凑数的- -）
+
+而我今天要介绍的，是一个能将字体异步加载的 JS 库，它的地址是：[typekit/webfontloader](https://github.com/typekit/webfontloader) 。好了，本文到此结束。
+
+哈，开个玩笑。虽然说原文档讲得很详细了，但我觉得我还是要简单说明一下。
+
+## 使用方法
+
+这里我只是讲解一下异步加载 Google Fonts 的方法，以及这里面藏着的一个小坑。
+
+### 引入 JS
+
+首先，当然是要先引入 JS。演示代码使用的是七牛（staticfile）提供的 CDN。
+
+```html
+<script src="//staticfile.qnssl.com/webfont/1.6.16/webfontloader.js"></script>
+```
+
+我博客目前的方案是我之前介绍过的 [basket.js
+](/use-basketjs/)，感兴趣的话可以 `Ctrl + U` 看一下具体实现方式。
+
+### 运行 webfontloader
+
+官方给出的例子非常简单
+
+```javascript
+WebFont.load({
+  google: {
+    families: ["Droid Sans", "Droid Serif"],
+  },
+});
+```
+
+但是这样子只能使用原生的 Google Fonts，不能使用反代的 CDN，怎么办呢？这里就是我上面讲的那个小坑，官方文档并没有说明。
+
+刚开始发现这个问题的时候，我就去翻看源代码，想把原地址替换成国内反代的 CDN，然而我不小心发现了一个参数，可以指定 API。
+
+于是代码变成下面这样：（其中 `https://cdn.moefont.com/fonts/css` 是自定义的 API 地址，你可以换成其他的）
+
+```javascript
+WebFont.load({
+  google: {
+    families: ["Droid Sans", "Droid Serif"],
+    api: "https://cdn.moefont.com/fonts/css",
+  },
+});
+```
+
+好了，添加完 JS，让我们来看一下效果如何吧。咦，页面的加载怎么还是老样子？？好吧，其实还要最后一步：[修改 CSS](#修改-CSS)
+
+### 修改 CSS
+
+第二布，我们需要对原有的 CSS 进行修改。
+
+这里我举个简单例子：
+
+我们原来的 CSS 是这个样子的：
+
+```css
+body {
+  font-family: "Open Sans", "Microsoft YaHei";
+}
+```
+
+Open Sans 是 Google Fonts，也是造成页面字体空白的元凶。现在我们要把它揪出来，代码变成这样：
+
+```css
+body {
+  font-family: "Microsoft YaHei";
+}
+```
+
+然后再加上一行但字体文件载入时的 `font-family`
+
+```css
+.wf-active body {
+  font-family: "Open Sans", "Microsoft YaHei";
+}
+```
+
+这样再浏览页面，可以发现 webfontloader 生效了。
+
+我这里只是讲一下简单的用法，其他比如加载 iconfont 等本地字体还有一些高级用法请看官方文档。
+
+## 效果演示
+
+为了说明 webfontloader 给用户体验带来的提升，我做了一个对比。为了模拟极端环境，我利用 Chrome DevTools 把网络模拟为 GPRS。上面为普通加载方式，下面使用 webfontloader 加载。
+
+![webfontloader-test](https://img.giuem-lb.washingpatrick.cn/webfontloader-test.gif)
+
+## 一些题外话
+
+高考完的这几个月疯狂划水，玩了一暑假屁股，无暇更新博客。。现在上大学了，生活也稍微规律点，接下来会逐步发表一些文章。嗯，我要扯的就这些。

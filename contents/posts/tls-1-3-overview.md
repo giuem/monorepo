@@ -1,0 +1,135 @@
+---
+title: 大话 TLS 1.3
+date: 2018-09-19 10:30:45
+tags:
+---
+
+2018 年 8 月，在 TLS 1.2 发布 10 年之际，TLS 1.3（RFC 8446）正式定稿。一看到这个消息，我就想给我的 Nginx 服务器添加 TLS 1.3 的支持，但是这时的 OpenSSL 1.1.1 仍处于 pre 版本，虽然已经支持 TLS 1.3 final，但是线上服务器一般来说还是得用正式版。终于，在一个月后，OpenSSL 1.1.1 发布，作为新的长期支持（LTS）版本代替了 1.0.2。
+
+现在，是时候更新 Nginx 了。<!--more-->
+
+## 从 TLS 1.2 说起
+
+在 TLS 1.3 之前，TLS 1.2 的握手方式饱受诟病。TLS 1.2 的握手流程如下所示：
+
+```
+      Client                                               Server
+
+      ClientHello                  -------->
+                                                      ServerHello
+                                                     Certificate*
+                                               ServerKeyExchange*
+                                              CertificateRequest*
+                                   <--------      ServerHelloDone
+      Certificate*
+      ClientKeyExchange
+      CertificateVerify*
+      [ChangeCipherSpec]
+      Finished                     -------->
+                                               [ChangeCipherSpec]
+                                   <--------             Finished
+      Application Data             <------->     Application Data
+```
+
+1. 客户端发送一个 `ClientHello` 的信息到服务端，这个包含信息主要包含了客户端所支持的**加密套件**（`cipher_suites`）、支持的**TLS 版本**（`client_version`）、会话 ID（`session_id`）等数据。
+
+2. 服务器在收到这个 `ClientHello` 后，会选则一个合适的加密套件，然后返回一个 `ServerHello` 的信息，这当中包括了选中的**加密套件**。初此以外，还会**发送证书**以及**密钥交换**（`ServerKeyExchange`）。密钥交换的数据由选中的加密套件决定，比如使用 ECDHE 时，发送数据有椭圆曲线域参数、公钥的值（详情见 [RFC 4492 section 5.4](https://tools.ietf.org/html/rfc4492#section-5.4)）。
+3. 客户端收到 `ServerHello` 后，会对收到的证书进行验证。如果验证通过，则继续进行密钥交换流程：将客户端生成的公钥和服务端的结合，计算出本次会话的**密钥**，然后把公钥发送给服务端，最后再发送一个 `Finished` 信息。
+4. 服务器收到客户端公钥信息，也会计算得出密钥，然后发送 `Finished` 信息。
+5. 至此，握手阶段结束，加密连接开始。
+
+从中可以看出，整个握手流程需要 **2-RTT**，这在网络延迟较高的情况下是非常糟糕的，可能导致握手延迟增加几百毫秒。更糟糕的是，握手阶段的数据（如 `ServerHello` 阶段的信息），并不是加密的，中间人稍加利用，从中选择比较弱的加密算法，就可以带来降级攻击（Downgrade Attack）。
+
+![possible downgrade attack in tls 1.2](https://img.giuem-lb.washingpatrick.cn/possible-downgrade-attack-in-tls-1-2.png)
+
+## TLS 1.3 的改进
+
+TLS 1.2 的握手方式，是基于之前的版本 TLS 1.1 改进而来。可以说从 TLS 1.0 开始的握手方式基本没有太多的改变：2-RTT、未加密的 `ServerHello` 等等… 所以，在我看来 TLS 1.3 最大的改进，就在于握手方式改变。
+
+TLS 1.3 的握手流程如下所示：
+
+```
+       Client                                           Server
+
+Key  ^ ClientHello
+Exch | + key_share*
+     | + signature_algorithms*
+     | + psk_key_exchange_modes*
+     v + pre_shared_key*       -------->
+                                                  ServerHello  ^ Key
+                                                 + key_share*  | Exch
+                                            + pre_shared_key*  v
+                                        {EncryptedExtensions}  ^  Server
+                                        {CertificateRequest*}  v  Params
+                                               {Certificate*}  ^
+                                         {CertificateVerify*}  | Auth
+                                                   {Finished}  v
+                               <--------  [Application Data*]
+     ^ {Certificate*}
+Auth | {CertificateVerify*}
+     v {Finished}              -------->
+       [Application Data]      <------->  [Application Data]
+```
+
+1. 现在客户端在发送 `ClientHello` 信息时，不仅包含支持的加密套件等数据，还会**猜测**服务器可能会选择的加密算法，并以此计算并发送**共享密钥**（`pre_shared_key`）。
+2. 服务器收到 `ClientHello` 后，选择合适的加密套件，然后发送`ServerHello`，包含共享密钥、证书等数据。而这些数据，这时候已经是**加密**的了！
+3. 客户端收到服务端的共享密钥后，计算出密钥，加密连接开始。
+
+可以看到，整个握手流程变成了 **1-RTT**，握手时间明显减少，而且 `ServerHello` 之后的数据都是**加密**的，安全性大大提高。
+
+同时，在客户端在之前有过 TLS 连接的情况下，TLS 1.2 也可以做到 1-RTT。那么 TLS 1.3 呢？**0-RTT！**对于最近访问过的站点，可以直接在 `ClientHello` 阶段发送加密的数据（如 HTTP GET）。但是，值得注意的是，这种方式不具备前向安全性，可能会有重放攻击，使用该功能需谨慎。
+
+除此之外，TLS 1.3 相比 TLS 1.2，还做了一些安全性上的改进：
+
+- 废除不安全的加密算法
+- 新的加密套件
+- 禁用 TLS 压缩
+- ……
+
+> 详尽的更新信息见文末的[参考资料](#参考资料)
+
+## TLS 1.3 in Nginx
+
+目前，Chrome 和 Firefox 的最新版本已经支持 TLS 1.3 draft 28，[Can I Use](https://caniuse.com/#search=tls%201.3) 的统计数据显示：TLS 1.3 的全球覆盖率为 65%。无论如何，为了更快、更安全的 TLS 连接，提前给 Nginx 服务器加上 TLS 1.3 的支持是很有必要的。
+
+在 Nginx 上开启 TLS 1.3 是非常简单的。
+
+首先，需要下载 Nginx 1.15.4 和 OpenSSL 1.1.1。这里为 OpenSSL 打一个 patch，主要作用是同时开启 TLS 1.3 draft 23 + 26 + 28 + final 的支持，同时可以自定义加密套件。
+
+```bash
+wget -c https://www.openssl.org/source/openssl-1.1.1.tar.gz -O openssl-1.1.1.tar.gz && tar zxf openssl-1.1.1.tar.gz && rm openssl-1.1.1.tar.gz
+cd openssl-1.1.1 && curl https://raw.githubusercontent.com/hakasenyang/openssl-patch/master/openssl-equal-1.1.1_ciphers.patch | patch -p1 && cd ../
+wget -c https://nginx.org/download/nginx-1.15.4.tar.gz -O nginx-1.15.4.tar.gz && tar zxf nginx-1.15.4.tar.gz
+```
+
+然后编译 Nginx，
+
+```bash
+cd nginx-1.15.4
+./configure --with-openssl=../openssl-1.1.1
+make && make install
+```
+
+TLS 1.3 的相关配置推荐：
+
+```nginx
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+ssl_ciphers [TLS13+AESGCM+AES128|TLS13+AESGCM+AES256|TLS13+CHACHA20]:[EECDH+ECDSA+AESGCM+AES128|EECDH+ECDSA+CHACHA20]:EECDH+ECDSA+AESGCM+AES256:EECDH+ECDSA+AES128+SHA:EECDH+ECDSA+AES256+SHA:[EECDH+aRSA+AESGCM+AES128|EECDH+aRSA+CHACHA20]:EECDH+aRSA+AESGCM+AES256:EECDH+aRSA+AES128+SHA:EECDH+aRSA+AES256+SHA:RSA+AES128+SHA:RSA+AES256+SHA:RSA+3DES;
+ssl_ecdh_curve X25519:P-256:P-384:P-224:P-521;
+ssl_prefer_server_ciphers on;
+
+# 0-RTT（谨慎使用）
+ssl_early_data on;
+```
+
+这里只做了一个最简单的演示，不包含具体的编译参数等信息。
+
+我在 GitHub 上开源了我服务器上 Nginx 的编译脚本和一些配置文件，可供参考使用。
+
+https://github.com/giuem/nginx-giuem
+
+## 参考资料
+
+- [A Detailed Look at RFC 8446 (a.k.a. TLS 1.3)](https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/)
+- [RFC 8446 (TLS 1.3)](https://tools.ietf.org/html/rfc8446)
+- [RFC 5246 (TLS 1.2)](https://tools.ietf.org/html/rfc5246)

@@ -1,0 +1,144 @@
+---
+title: 开始使用 Caddy
+date: 2017-08-04 16:14:16
+# tags:
+#   - caddy
+---
+
+一直以来，我都是使用 Nginx 作为 Web 服务器，但是配置可以说是非常麻烦了。每次我要新开一个域名，都要先使用 [acme.sh](https://github.com/Neilpang/acme.sh) 签发 SSL 证书，然后再写配置，大概要花上 5 分钟的时间。曾经想过写个脚本自动完成这些工作，但是苦于对 Linux 的了解不多，也就作罢了。<!--more-->
+
+最近看到了 Caddy，一个用 Go 写的 Web 服务器，它的配置简洁，同时能自动开启 HTTPS、支持 HTTP/2 && **QUIC**，完全符合我的需求啊，研究一番，就在我的服务器部署了，本文作一个简单记录。
+
+我的操作系统是 `Debian Jessie` ，理论上只要是带有 `Systemd` 的系统都适用本文。
+
+## 下载安装
+
+首先去 [Download Caddy](https://caddyserver.com/download)，选择你系统平台、插件、是否开启监控（TELEMETRY）、许可证；例如我选的是
+
+- Platform: Linux 64
+- Plugins: http.cache, http.cors, http.expires, http.filter, http.git, tls.dns.cloudflare
+- TELEMETRY: ON
+- License: Personal
+
+然后复制下方的 `One-step installer script (bash)`，在命令行运行就可以了。
+
+```shell
+CADDY_TELEMETRY=on curl https://getcaddy.com | bash -s personal http.cache,http.cors,http.expires,http.filter,http.git,tls.dns.cloudflare
+```
+
+安装完后输入 `which caddy`，不出意外的话会输出 `/usr/local/bin/caddy`
+
+至此，安装完毕，但是目前它不会开机自启，只是简单地把二进制文件下载下来，所以下一步要注册服务。
+
+## 注册服务
+
+这里我使用的是官方提供的脚本 [caddy.service](https://github.com/mholt/caddy/blob/master/dist/init/linux-systemd/caddy.service)，其他系统也可以在[这里](https://github.com/mholt/caddy/tree/master/dist/init)找到相应的脚本。
+
+把这个文件下载到 `/etc/systemd/system/` 。
+
+```shell
+sudo curl -s https://raw.githubusercontent.com/mholt/caddy/master/dist/init/linux-systemd/caddy.service -o /etc/systemd/system/caddy.service
+```
+
+创建所需目录，我图方便没有修改脚本直接使用默认值了，如果有特殊需求，可以自己更改目录。
+
+```shell
+sudo mkdir /etc/caddy
+sudo chown -R root:www-data /etc/caddy
+sudo touch /etc/caddy/Caddyfile
+
+sudo mkdir /etc/ssl/caddy
+sudo chown -R www-data:root /etc/ssl/caddy
+sudo chmod 0770 /etc/ssl/caddy
+
+sudo mkdir /var/www
+sudo chown www-data:www-data /var/www
+```
+
+上面创建了三个目录，`/etc/caddy` 用了存放 Caddy 的配置文件，`/etc/ssl/caddy` 存放证书，`/var/www` 是默认的网站目录。
+
+接着，重新加载 `systemd daemon`，让配置生效。
+
+```shell
+sudo systemctl daemon-reload
+```
+
+让 Caddy 开机自启。
+
+```shell
+sudo systemctl enable caddy.service
+```
+
+至此，Caddy 已经成功注册服务，并能够开机自启了。
+
+## 配置
+
+这部分的内容我不打算详细记录，主要是[官方文档](https://caddyserver.com/docs)已经写的很详细了。
+
+下面是我的配置，
+
+```
+example.com {
+  proxy / 127.0.0.1:9001 {
+    header_upstream Host {host}
+    header_upstream X-Real-IP {remote}
+    header_upstream X-Forwarded-For {remote}
+    header_upstream X-Forwarded-Proto {scheme}
+  }
+  gzip
+  header / -Server
+  header / Strict-Transport-Security "max-age=31536000;"
+  tls user@example.com {
+    protocols tls1.0 tls1.2
+    dns cloudflare
+  }
+}
+```
+
+如果要使用 DNS 的方式认证域名的话，需要设置环境变量，修改 `/etc/systemd/system/caddy.service` ，加入环境变量，我使用的是 CloudFlare 的 DNS，所以我需要添加 `CLOUDFLARE_EMAIL` 和 `CLOUDFLARE_API_KEY` ，其他 DNS 看[这里](https://caddyserver.com/docs/automatic-https#enabling-the-dns-challenge) 。
+
+```diff
+[Service]
+...
+...
+
+Environment=CADDYPATH=/etc/ssl/caddy
++ Environment=CLOUDFLARE_EMAIL=xxx
++ Environment=CLOUDFLARE_API_KEY=xxx
+
+...
+...
+```
+
+写完配置后输入 `sudo systemctl start caddy.service` 启动 Caddy。
+
+输入 `journalctl --boot -u caddy.service` 可以查看日志。
+
+## 启用 QUIC
+
+关于 QUIC 的介绍，可以看一下[这篇文章](https://ma.ttias.be/googles-quic-protocol-moving-web-tcp-udp/)，一句话概况呢就是减少 TLS 握手次数，加快网站速度。
+
+修改 `/etc/systemd/system/caddy.service` ，在 `ExecStart=/usr/local/bin/caddy -log stdout -agree=true -conf=/etc/caddy/Caddyfile -root=/var/tmp` 后面加上 `-quic` ，即
+
+```shell
+ExecStart=/usr/local/bin/caddy -log stdout -agree=true -conf=/etc/caddy/Caddyfile -root=/var/tmp -quic
+```
+
+然后重新加载 Systemd，并重启 Caddy
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl restart caddy.service
+```
+
+同时，别忘了给主机开放 443 (UDP) 端口。
+
+~~目前 QUIC 只有 Chrome 支持，并且需要手动开启（默认只有白名单域名启用）。访问 `chrome://flags/#enable-quic`，切换为 Enabled 即可。~~
+
+目前 Chrome 已对所有域名开放 QUIC，同时 [HTTP/3 将使用 QUIC](https://tools.ietf.org/html/draft-ietf-quic-http-17)。开启后，重启 Chrome，访问网站，通过 Chrome DevTools - Security 可以看到协议已经是 QUIC 了。
+
+![quic-view](https://img.giuem-lb.washingpatrick.cn/snipaste_20170805_214617.png)
+
+## 关于性能
+
+Caddy 是 Go 写的，性能方面是稍落后于 Nginx 的，但其实对于小站来说，这一点性能差距是可以忽略的，毕竟 [You Are Not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb) 。

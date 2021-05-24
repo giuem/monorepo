@@ -1,0 +1,71 @@
+---
+title: 浅谈 Wormhole 及相关测试
+date: 2015-11-07 20:33:33
+# tags:
+#   - wormhole
+#   - android
+---
+
+葫芦娃葫芦娃，一根藤上七朵花，风吹雨打都不怕，啦啦啦啦，叮当咚咚当当，葫芦娃。看到这个 `Wormhole` 漏洞，脑海里不知不觉就浮现出这一小段歌词。<!--more-->
+
+那么，这个漏洞到底是什么呢？
+切确的说，这是一个有“漏洞”的后门。百度开放这个后门，主要是为了方便 XX。它通过监听本地 `40310/6259` 端口，从而使网页端（百度搜索，百度统计等）和 APP 进行“通信”。
+
+## 漏洞伊始
+
+这个后门是通过判断 `remote-addr` 请求头来确定是否为本机访问，但不幸的是，这个字段是可以伪造的，导致任意联网上的设备都可以通过这个后门来获取、修改你手机上的敏感信息！
+
+## 功\(wei\)能\(hai\)
+
+![图1.危害](https://img.giuem-lb.washingpatrick.cn/wormhole-1.png)
+
+从图中可以看到，这个后门有如下功能：
+
+> **geolocation 获取用户手机的 GPS 地理位置（城市，经度，纬度）**
+> getsearchboxinfo 获取手机百度的版本信息
+> getapn 获取当前的网络状况（WIFI/3G/4G 运营商）
+> getserviceinfo 获取提供 nano http 的应用信息
+> getpackageinfo 获取手机应用的版本信息
+> **sendintent 发送任意 intent 可以用来打开网页或者与其他 app 交互**
+> **getcuid 获取 imei**
+> getlocstring 获取本地字符串信息
+> **scandownloadfile 扫描下载文件(UCDownloads/QQDownloads/360Download...)**
+> **addcontactinfo 给手机增加联系人**
+> **getapplist 获取全部安装 app 信息**
+> **downloadfile 下载任意文件到指定路径如果文件是 apk 则进行安装**
+> **uploadfile 上传任意文件到指定路径 如果文件是 apk 则进行安装**
+
+## 最新消息
+
+以百度的尿性看，这个后门也许不会被关闭。在最近的修复中，百度只是修改了几个函数，**后门并没有关闭**。
+
+详细信息请移步： [【11.5 更新最新版本已修复】百度真的修复了所有的 WormHole 漏洞么?](http://www.freebuf.com/vuls/84017.html)
+
+## 利用
+
+既然漏洞并没有被修复，那么我们就可以对其就行利\(wan\)用\(shua\)。前面已经说到，由于对请求来源的判断可以伪造，所以只要你的手机暴露与公网之上，那么就有被入侵的危险。
+
+由于这个漏洞有较大危害，所以我这里就不放出代码了。
+
+### 获取手机安装的 APP 信息
+
+![图1.获取手机安装的APP](https://img.giuem-lb.washingpatrick.cn/wormhole-2.png)
+
+### 获取 GPS 地理位置
+
+![图3.获取 GPS 地理位置](https://img.giuem-lb.washingpatrick.cn/wormhole-3.png)
+
+### 其他
+
+我还尝试打开任意网页和添加联系人的功能，但由于对 java 的理解有限，不能很好解读代码，其他的功能就不演示了。
+
+## 可能的利用方法
+
+- 扫描 IP
+
+- 在网站中插入恶意的 JS ，调用 Wormhole
+
+## 扩展阅读
+
+1. [比葫芦娃还可怕的百度全系 APP SDK 漏洞 - WormHole 虫洞漏洞分析报告](http://drops.wooyun.org/papers/10061)
+2. [如何评价百度在 SDK 中嵌入后门](http://www.zhihu.com/question/37124478)

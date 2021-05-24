@@ -1,0 +1,55 @@
+---
+title: 使用 basket.js 缓存页面静态文件
+date: 2015-12-20 14:55:50
+# tags:
+#   - javascript
+#   - basket.js
+---
+
+最近对博客进行了一次很大的修改，比如使用 jQuery 和 Pjax。当然，还有本文要介绍的 basket.js。<!--more-->
+
+## basket.js 是什么
+
+basket.js 是一个 javascript 类库（废话），它可以将页面中的 css、js 文件缓存到 `localStorage` 中，下次访问时直接读取 `localStorage` 的内容，大大减少了加载时间。而且 basket.js 本身非常小，gzip 压缩后只有 5 kb 左右。
+
+## 使用
+
+首先引入 javascript 代码，推荐使用下面 cdn （支持 SSL）。
+
+```
+//dn-staticfile.qbox.me/basket.js/0.5.2/basket.full.min.js
+//cdn.css.net/libs/basket.js/0.5.2/basket.full.min.js
+//cdn.bootcss.com/basket.js/0.5.2/basket.full.min.js
+```
+
+使用也很简单，看一段我博客的代码就知道了。
+
+```javascript
+basket
+  .require(
+    // 引入 jQuery
+    { url: "//dn-staticfile.qbox.me/jquery/2.1.4/jquery.min.js" }
+  )
+  .then(function () {
+    // 按顺序引入，避免 jQuery Plugin 先于 jQuery 引入
+    basket.require({ url: "/js/main.js", unique: "1" });
+  });
+```
+
+具体使用方法看[官方文档](http://addyosmani.com/basket.js/)（其实是我翻译不下去了，哈哈）
+
+## 效果
+
+### 首次访问
+
+![首次访问](https://img.giuem-lb.washingpatrick.cn/20151220153403.png)
+
+### 二次访问不缓存
+
+![二次访问不缓存](https://img.giuem-lb.washingpatrick.cn/20151220153515.png)
+
+### 二次访问缓存
+
+![二次访问缓存](https://img.giuem-lb.washingpatrick.cn/20151220153602.png)
+
+可以看到，效果还是不错的，如果页面不引入字体的话，还可以更快。
