@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Nav } from "./Nav";
-import { Title } from "./Title";
+import { SiteHeaderNav } from "./SiteHeaderNav";
+import { SiteHeaderTitle } from "./SiteHeaderTitle";
 
-export const Header: React.FC = () => {
+export const SiteHeader: React.FC = () => {
   const {
     site: {
       siteMetadata: { title, nav: navItems },
@@ -25,8 +25,8 @@ export const Header: React.FC = () => {
 
   return (
     <header>
-      <Title title={title} />
-      <Nav items={navItems} />
+      <SiteHeaderTitle title={title} />
+      <SiteHeaderNav items={navItems} />
     </header>
   );
 };

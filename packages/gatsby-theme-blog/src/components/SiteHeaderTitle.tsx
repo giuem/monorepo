@@ -1,8 +1,8 @@
-export type TitleProps = {
+export type SiteHeaderTitleProps = {
   title: string;
 };
 
-export const Title: React.FC<TitleProps> = ({ title }) => {
+export const SiteHeaderTitle: React.FC<SiteHeaderTitleProps> = ({ title }) => {
   return (
     <h1 className="font-semibold text-3xl my-6 sm:text-5xl sm:my-11 ">
       {title}

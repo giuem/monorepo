@@ -1,6 +1,6 @@
 import { graphql, Link, PageProps } from "gatsby";
-import { Header } from "../components/Header/Header";
-import { Layout } from "../components/Layout";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteLayout } from "../components/SiteLayout";
 import { Post } from "../types/post";
 
 type IndexQueryProps = {
@@ -26,9 +26,9 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = ({ data }) => {
   const posts = data.allMdx.nodes;
 
   return (
-    <Layout>
+    <SiteLayout>
       <main>
-        <Header />
+        <SiteHeader />
         {/* <section>
           {posts.map((post, index) => (
             <div key={index}>
@@ -37,7 +37,7 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = ({ data }) => {
           ))}
         </section> */}
       </main>
-    </Layout>
+    </SiteLayout>
   );
 };
 

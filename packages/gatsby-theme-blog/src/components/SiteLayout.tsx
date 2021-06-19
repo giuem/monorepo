@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { SEO } from "./SEO";
 
-export const Layout: React.FC = ({ children }) => {
+export const SiteLayout: React.FC = ({ children }) => {
   return (
     <div className="container mx-auto px-4">
       <SEO />

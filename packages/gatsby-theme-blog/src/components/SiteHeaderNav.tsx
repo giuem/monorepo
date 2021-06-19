@@ -1,10 +1,10 @@
-import { Link } from "../Link";
+import { Link } from "./Link";
 
-type NavProps = {
+type SiteHeaderNavProps = {
   items: NavItem[];
 };
 
-export const Nav: React.FC<NavProps> = ({ items }) => {
+export const SiteHeaderNav: React.FC<SiteHeaderNavProps> = ({ items }) => {
   return (
     <nav>
       <ul className="flex gap-4 text-xl text-indigo-700">
