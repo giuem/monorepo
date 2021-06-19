@@ -2,6 +2,8 @@ import { Link as GatsbyLink } from "gatsby";
 
 type LinkProps = {
   href: string;
+  // @TODO: Fix types
+  [key: string]: unknown;
 };
 
 export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {

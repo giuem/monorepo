@@ -1,7 +1,8 @@
-import { graphql, Link, PageProps } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteLayout } from "../components/SiteLayout";
 import { Post } from "../types/post";
+import { FeaturedPosts } from "../components/FeaturedPost";
 
 type IndexQueryProps = {
   allMdx: {
@@ -11,7 +12,7 @@ type IndexQueryProps = {
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 8) {
       nodes {
         frontmatter {
           title
@@ -29,13 +30,7 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = ({ data }) => {
     <SiteLayout>
       <main>
         <SiteHeader />
-        {/* <section>
-          {posts.map((post, index) => (
-            <div key={index}>
-              <Link to={`/${post.slug}`}>{post.frontmatter.title}</Link>
-            </div>
-          ))}
-        </section> */}
+        <FeaturedPosts posts={posts} />
       </main>
     </SiteLayout>
   );
