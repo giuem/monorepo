@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "BLOG @ GIUEM",
+    title: "Soul Evolution",
+    titleTemplate: "%s | Blog @ GIUEM",
     description: "描述",
     canonicalUrl: "https://www.giuem.com",
     image: "",
