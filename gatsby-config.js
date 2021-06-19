@@ -28,5 +28,7 @@ module.exports = {
     ],
   },
   plugins: ["gatsby-theme-blog"],
-  flags: {},
+  flags: {
+    FAST_DEV: true,
+  },
 };
