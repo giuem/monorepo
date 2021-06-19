@@ -1,4 +1,5 @@
 import { graphql, Link, PageProps } from "gatsby";
+import { Header } from "../components/Header/Header";
 import { Layout } from "../components/Layout";
 import { Post } from "../types/post";
 
@@ -10,7 +11,7 @@ type IndexQueryProps = {
 
 export const pageQuery = graphql`
   query {
-    allMdx {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         frontmatter {
           title
@@ -26,17 +27,15 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = ({ data }) => {
 
   return (
     <Layout>
-      <main className="p-4">
-        <h1 className="text-xl">
-          Hello Gatsby with <span className="font-bold">Tailwind</span>
-        </h1>
-        <section>
+      <main>
+        <Header />
+        {/* <section>
           {posts.map((post, index) => (
             <div key={index}>
               <Link to={`/${post.slug}`}>{post.frontmatter.title}</Link>
             </div>
           ))}
-        </section>
+        </section> */}
       </main>
     </Layout>
   );

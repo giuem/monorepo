@@ -12,6 +12,20 @@ module.exports = {
       twitter: "@giuemcom",
       github: "@giuem",
     },
+    nav: [
+      {
+        title: "Home",
+        href: "/",
+      },
+      {
+        title: "Links",
+        href: "/links",
+      },
+      {
+        title: "About",
+        href: "/about",
+      },
+    ],
   },
   plugins: ["gatsby-theme-blog"],
   flags: {},
