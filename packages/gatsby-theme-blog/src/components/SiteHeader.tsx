@@ -2,7 +2,11 @@ import { graphql, useStaticQuery } from "gatsby";
 import { SiteHeaderNav } from "./SiteHeaderNav";
 import { SiteHeaderTitle } from "./SiteHeaderTitle";
 
-export const SiteHeader: React.FC = () => {
+type SiteHeaderProps = {
+  withoutTitle?: boolean;
+};
+
+export const SiteHeader: React.FC<SiteHeaderProps> = ({ withoutTitle }) => {
   const {
     site: {
       siteMetadata: { title, nav: navItems },
@@ -24,8 +28,8 @@ export const SiteHeader: React.FC = () => {
   `);
 
   return (
-    <header>
-      <SiteHeaderTitle title={title} />
+    <header className="my-6">
+      {withoutTitle ? null : <SiteHeaderTitle title={title} />}
       <SiteHeaderNav items={navItems} />
     </header>
   );

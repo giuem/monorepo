@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { Post } from "../types/post";
 import { mdxComponents } from "../components/mdxComponents";
 import { SiteLayout } from "../components/SiteLayout";
+import { SiteHeader } from "../components/SiteHeader";
 
 type PostTemplateQueryProps = {
   post: Post;
@@ -28,6 +29,7 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
   const { post } = data;
   return (
     <SiteLayout>
+      <SiteHeader withoutTitle />
       <article>
         <header className="mb-8">
           <h1 className="text-3xl font-bold">{post.frontmatter.title}</h1>
