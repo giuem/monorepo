@@ -3,7 +3,7 @@ import { SEO } from "./SEO";
 
 export const SiteLayout: React.FC = ({ children }) => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto px-4">
       <SEO />
       <Helmet>
         <body className="bg-white text-gray-900" />

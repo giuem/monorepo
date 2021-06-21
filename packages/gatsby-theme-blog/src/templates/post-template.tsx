@@ -32,7 +32,9 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
       <SiteHeader withoutTitle />
       <article>
         <header className="mb-8">
-          <h1 className="text-3xl font-bold">{post.frontmatter.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold">
+            {post.frontmatter.title}
+          </h1>
         </header>
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{post.body}</MDXRenderer>
