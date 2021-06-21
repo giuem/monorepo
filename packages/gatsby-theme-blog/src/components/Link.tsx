@@ -1,4 +1,5 @@
 import { Link as GatsbyLink } from "gatsby";
+import { ExternalLink } from "../icons/ExternalLink";
 
 type LinkProps = {
   href: string;
@@ -8,6 +9,7 @@ type LinkProps = {
 
 export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
   const isInternalLink = /^\/(?!\/)/.test(href);
+  const isHash = /^#/.test(href);
 
   if (isInternalLink) {
     return (
@@ -17,9 +19,17 @@ export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
     );
   }
 
+  if (isHash) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <a href={href} {...props}>
-      {children}
+    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+      {children} <ExternalLink />
     </a>
   );
 };

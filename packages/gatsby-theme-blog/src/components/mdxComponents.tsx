@@ -1,4 +1,5 @@
 import { MDXProviderComponents } from "@mdx-js/react";
+import { Link } from "./Link";
 
 export const mdxComponents: MDXProviderComponents = {
   wrapper: (props) => (
@@ -7,4 +8,5 @@ export const mdxComponents: MDXProviderComponents = {
       {...props}
     />
   ),
+  a: (props) => <Link className="hover:bg-indigo-100" {...props} />,
 };
