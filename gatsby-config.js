@@ -18,6 +18,10 @@ module.exports = {
         href: "/",
       },
       {
+        title: "Archives",
+        href: "/archives",
+      },
+      {
         title: "Links",
         href: "/links",
       },
