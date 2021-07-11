@@ -31,7 +31,7 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
     <SiteLayout>
       <SiteHeader isPostPage />
       <article>
-        <header className="mb-8">
+        <header className="mb-8 md:mb-12">
           <h1 className="text-3xl md:text-5xl font-bold">
             {post.frontmatter.title}
           </h1>
