@@ -12,12 +12,13 @@ type IndexQueryProps = {
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 8) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 6) {
       nodes {
         frontmatter {
           title
         }
         slug
+        excerpt
       }
     }
   }
