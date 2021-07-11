@@ -6,6 +6,7 @@ import { Post } from "../types/post";
 import { mdxComponents } from "../components/mdxComponents";
 import { SiteLayout } from "../components/SiteLayout";
 import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
 
 type PostTemplateQueryProps = {
   post: Post;
@@ -40,6 +41,7 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
           <MDXRenderer>{post.body}</MDXRenderer>
         </MDXProvider>
       </article>
+      <SiteFooter />
     </SiteLayout>
   );
 };

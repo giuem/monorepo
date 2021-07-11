@@ -3,6 +3,7 @@ import { SiteHeader } from "../components/SiteHeader";
 import { SiteLayout } from "../components/SiteLayout";
 import { Post } from "../types/post";
 import { FeaturedPosts } from "../components/FeaturedPost";
+import { SiteFooter } from "../components/SiteFooter";
 
 type IndexQueryProps = {
   allMdx: {
@@ -32,6 +33,7 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = ({ data }) => {
       <main>
         <SiteHeader />
         <FeaturedPosts posts={posts} />
+        <SiteFooter />
       </main>
     </SiteLayout>
   );

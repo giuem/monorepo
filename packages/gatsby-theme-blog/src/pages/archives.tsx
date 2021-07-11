@@ -3,6 +3,7 @@ import { SiteLayout } from "../components/SiteLayout";
 import { SiteHeader } from "../components/SiteHeader";
 import { Post } from "../types/post";
 import { Link } from "../components/Link";
+import { SiteFooter } from "../components/SiteFooter";
 
 type ArchivesQueryProps = {
   allMdx: {
@@ -40,6 +41,7 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({ data }) => {
           </h2>
         ))}
       </section>
+      <SiteFooter />
     </SiteLayout>
   );
 };
