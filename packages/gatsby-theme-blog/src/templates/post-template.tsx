@@ -29,7 +29,7 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
   const { post } = data;
   return (
     <SiteLayout>
-      <SiteHeader withoutTitle />
+      <SiteHeader isPostPage />
       <article>
         <header className="mb-8">
           <h1 className="text-3xl md:text-5xl font-bold">

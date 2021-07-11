@@ -3,10 +3,12 @@ import { SiteHeaderNav } from "./SiteHeaderNav";
 import { SiteHeaderTitle } from "./SiteHeaderTitle";
 
 type SiteHeaderProps = {
-  withoutTitle?: boolean;
+  isPostPage?: boolean;
 };
 
-export const SiteHeader: React.FC<SiteHeaderProps> = ({ withoutTitle }) => {
+export const SiteHeader: React.FC<SiteHeaderProps> = ({
+  isPostPage = false,
+}) => {
   const {
     site: {
       siteMetadata: { title, nav: navItems },
@@ -28,8 +30,8 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({ withoutTitle }) => {
   `);
 
   return (
-    <header className="my-6">
-      {withoutTitle ? null : <SiteHeaderTitle title={title} />}
+    <header className="flex items-center flex-wrap justify-between mt-10 mb-24 h-12">
+      <SiteHeaderTitle title={title} isPostPage={isPostPage} />
       <SiteHeaderNav items={navItems} />
     </header>
   );
