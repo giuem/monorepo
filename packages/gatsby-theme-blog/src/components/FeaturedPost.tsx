@@ -14,7 +14,7 @@ export const FeaturedPosts: React.FC<{ posts: Post[] }> = ({ posts }) => {
       </section>
       <footer className="my-12">
         <Link
-          className="px-5 py-3 rounded-md bg-indigo-50 hover:bg-indigo-100 md:text-lg"
+          className="px-5 py-3 rounded-md bg-indigo-50 hover:bg-indigo-100 text-indigo-800 md:text-lg"
           href="/archives"
         >
           View all
