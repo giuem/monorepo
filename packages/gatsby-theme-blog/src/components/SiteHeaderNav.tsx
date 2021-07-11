@@ -7,7 +7,7 @@ type SiteHeaderNavProps = {
 export const SiteHeaderNav: React.FC<SiteHeaderNavProps> = ({ items }) => {
   return (
     <nav>
-      <ul className="flex space-x-4 text-xl text-indigo-700">
+      <ul className="flex items-center h-12 space-x-4 text-xl text-indigo-700">
         {items.map(({ title, href }) => (
           <li key={href}>
             <Link
