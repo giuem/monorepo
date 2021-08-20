@@ -71,7 +71,8 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-pnpm'
+    'gatsby-plugin-pnpm',
+    '@giuem/gatsby-plugin-webpack-bundle-analyzer'
   ],
   flags: {
     FAST_DEV: true,
