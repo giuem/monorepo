@@ -13,7 +13,7 @@ type PostTemplateQueryProps = {
 };
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     post: mdx(id: { eq: $id }) {
       id
       frontmatter {

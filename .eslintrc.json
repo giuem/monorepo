@@ -2,7 +2,17 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["tsconfig.json", "./blog/*/tsconfig.json"]
+    "project": ["tsconfig.json", "./blog/*/tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "17.0.0"
+    }
   },
   "env": {
     "es6": true,
@@ -13,9 +23,14 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/strict"
+    "plugin:jsx-a11y/strict",
+
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "react/jsx-uses-react": "off",
@@ -23,13 +38,19 @@
     "react/prop-types": "off",
     "react/display-name": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "error"
   },
   "overrides": [
     {
       "files": ["*.js"],
       "rules": {
         "@typescript-eslint/no-var-requires": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
       }
     }
   ]
