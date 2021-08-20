@@ -1,10 +1,38 @@
 const path = require("path");
 
-function resolveFile(file) {
-  return path.join(__dirname, file);
-}
-
 module.exports = {
+  siteMetadata: {
+    title: "Soul Evolution",
+    titleTemplate: "%s | Blog @ GIUEM",
+    description: "描述",
+    canonicalUrl: "https://www.giuem.com",
+    image: "",
+    author: {
+      name: "giuem",
+    },
+    social: {
+      twitter: "@giuemcom",
+      github: "@giuem",
+    },
+    nav: [
+      {
+        title: "Home",
+        href: "/",
+      },
+      {
+        title: "Archives",
+        href: "/archives",
+      },
+      {
+        title: "Links",
+        href: "/links",
+      },
+      {
+        title: "About",
+        href: "/about",
+      },
+    ],
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
@@ -39,9 +67,14 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: {
-          tailwindcss: { config: resolveFile("./tailwind.config.js") },
+          tailwindcss: {},
         },
       },
     },
+    'gatsby-plugin-pnpm'
   ],
+  flags: {
+    FAST_DEV: true,
+    DEV_SSR: false,
+  },
 };

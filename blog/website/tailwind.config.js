@@ -3,7 +3,7 @@
 /** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   mode: "jit",
-  purge: ["./packages/**/*.{ts,tsx}"],
+  purge: ["./src/**/*.{ts,tsx}"],
   darkMode: "media",
   theme: {
     extend: {
