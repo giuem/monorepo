@@ -2,6 +2,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { graphql, PageProps } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
+import { Disqus } from "../components/disqus";
 import { SiteFooter } from "../components/layout/site-footer";
 import { SiteHeader } from "../components/layout/site-header";
 import { SiteLayout } from "../components/layout/site-layout";
@@ -40,6 +41,9 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{post.body}</MDXRenderer>
         </MDXProvider>
+        <footer>
+          <Disqus />
+        </footer>
       </article>
       <SiteFooter />
     </SiteLayout>
