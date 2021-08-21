@@ -64,6 +64,7 @@ importers:
       gatsby-source-filesystem: ^3.4.0
       gatsby-transformer-sharp: ^3.4.0
       postcss: ^8.2.13
+      prism-react-renderer: ^1.2.1
       react: ^17.0.1
       react-dom: ^17.0.1
       react-helmet: ^6.1.0
@@ -90,6 +91,7 @@ importers:
       gatsby-source-filesystem: 3.12.0_gatsby@3.12.0
       gatsby-transformer-sharp: 3.12.0_aa932f39d4b134108725fd7a9e580c3d
       postcss: 8.3.6
+      prism-react-renderer: 1.2.1_react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-helmet: 6.1.0_react@17.0.2
@@ -11229,6 +11231,14 @@ packages:
   /pretty-hrtime/1.0.3:
     resolution: {integrity: sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /prism-react-renderer/1.2.1_react@17.0.2:
+    resolution: {integrity: sha512-w23ch4f75V1Tnz8DajsYKvY5lF7H1+WvzvLUcF0paFxkTHSp42RS0H5CttdN2Q8RR3DRGZ9v5xD/h3n8C8kGmg==}
+    peerDependencies:
+      react: '>=0.14.9'
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /probe-image-size/6.0.0:

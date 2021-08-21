@@ -1,5 +1,3 @@
 {
-  "eslint.packageManager": "pnpm",
-  "eslint.format.enable": true,
   "npm.validate.enable": false
 }
