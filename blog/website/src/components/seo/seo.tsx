@@ -1,15 +1,16 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { helmetJsonLdProp } from 'react-schemaorg';
-import { BlogPosting, WebSite } from 'schema-dts';
+// import { helmetJsonLdProp } from 'react-schemaorg';
+// import { BlogPosting, WebSite } from 'schema-dts';
 
 export type SEOProps = {
   title?: string;
   description?: string;
   image?: string;
-  pathname?: string;
 
-  isArticle?: boolean;
+  pathname: string;
+
+  // isArticle?: boolean;
 };
 
 type SEOQueryType = {
@@ -50,11 +51,11 @@ const query = graphql`
   }
 `;
 
-type SchemaOrgProps = {
-  url: string;
-  title: string;
-  isArticle: boolean;
-};
+// type SchemaOrgProps = {
+//   url: string;
+//   title: string;
+//   isArticle: boolean;
+// };
 
 // const SchemaOrg: React.FC<SchemaOrgProps> = ({ url, title, isArticle }) => {
 //   const jsonLdScripts = [
@@ -82,33 +83,36 @@ export const SEO: React.FC<SEOProps> = (props) => {
     site: { siteMetadata: seo },
   } = useStaticQuery<SEOQueryType>(query);
 
-  const { image, isArticle = false, pathname = '/' } = props;
+  const { image, pathname } = props;
   const hasImage = Boolean(image);
-  const url = `${seo.siteUrl}${pathname}`;
-  const title = props.title ? props.title : seo.title;
-  const description = props.description ? props.description : seo.description;
+  // pathname already contains `/`
+  // remove last two slash
+  const url = `${seo.siteUrl}${pathname}/`.replace(/\/\/$/, '/');
+  const title = props.title || seo.title;
+  const description = props.description || seo.description;
 
   return (
     <>
       <Helmet titleTemplate={seo.titleTemplate}>
-        <meta charSet="utf-8" />
         <title>{title}</title>
         <meta name="description" content={description} />
         {hasImage && <meta name="image" content={image} />}
 
-        {isArticle ? <meta property="og:type" content="article" /> : null}
+        {/* {isArticle ? <meta property="og:type" content="article" /> : null} */}
         <meta property="og:url" content={url} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {hasImage && <meta property="og:image" content={image} />}
 
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         {seo?.social?.twitter && (
           <meta name="twitter:creator" content={seo.social.twitter} />
         )}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {hasImage && <meta name="twitter:image" content={image} />}
+
+        <link rel="canonical" href={url} />
       </Helmet>
 
       {/* <SchemaOrg url={url} title={title} isArticle={isArticle} /> */}

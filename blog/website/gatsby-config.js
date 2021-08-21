@@ -5,7 +5,7 @@ module.exports = {
     title: BLOG_NAME,
     titleTemplate: '%s | Blog @ GIUEM',
     description: '描述',
-    siteUrl: 'https://www.giuem.com/',
+    siteUrl: 'https://www.giuem.com',
     image: '',
     author: {
       name: 'giuem',
@@ -87,7 +87,7 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
-                const url = `${site.siteMetadata.siteUrl}${edge.node.fields.slug}/`;
+                const url = `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}/`;
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,

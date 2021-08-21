@@ -10,7 +10,7 @@ export type FeaturedPostItemProps = {
 
 export const FeaturedPostItem: React.FC<FeaturedPostItemProps> = ({ post }) => {
   return (
-    <article className="mt-16 mb-12">
+    <article className="mt-16 mb-12 first:mt-0">
       <h2 className="md:text-2xl text-xl font-semibold">
         <Link
           className="md:border-b-2 md:hover:border-indigo-400 hover:bg-indigo-50"

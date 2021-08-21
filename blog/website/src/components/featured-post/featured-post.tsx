@@ -5,7 +5,7 @@ import { FeaturedPostItem } from './featured-post-item';
 
 export const FeaturedPosts: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (
-    <div className="my-12">
+    <div>
       {/* <FeaturedPostHeader /> */}
       <section>
         {posts.map((post, index) => (

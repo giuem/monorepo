@@ -4,6 +4,7 @@ import { SiteFooter } from '../components/layout/site-footer';
 import { SiteHeader } from '../components/layout/site-header';
 import { SiteLayout } from '../components/layout/site-layout';
 import { Link } from '../components/link';
+import { SEO } from '../components/seo/seo';
 import { Post } from '../types/post';
 import { getPostUrl } from '../utils/get-post-url';
 
@@ -31,12 +32,17 @@ export const pageQuery = graphql`
   }
 `;
 
-const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({ data }) => {
+const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({
+  data,
+  path,
+}) => {
   const posts = data.allMdx.nodes;
   return (
     <SiteLayout>
-      <SiteHeader></SiteHeader>
-      <section className="flex flex-col space-y-5">
+      <SEO title="所有文章" pathname={path} />
+      <SiteHeader isPostPage></SiteHeader>
+      <main className="flex-1 flex flex-col space-y-5">
+        <h1 className="text-2xl font-semibold mb-4">所有文章</h1>
         {posts.map((post) => (
           <h2 className="text-xl" key={post.fields.slug}>
             <Link
@@ -47,7 +53,7 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({ data }) => {
             </Link>
           </h2>
         ))}
-      </section>
+      </main>
       <SiteFooter />
     </SiteLayout>
   );
