@@ -26,6 +26,7 @@
     "gatsby-plugin-sharp": "^3.4.0",
     "gatsby-plugin-sitemap": "^4.8.0",
     "gatsby-plugin-typescript": "^3.4.0",
+    "gatsby-remark-autolink-headers": "^4.9.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "lodash-es": "^4.17.21",

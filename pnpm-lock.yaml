@@ -64,6 +64,7 @@ importers:
       gatsby-plugin-sharp: ^3.4.0
       gatsby-plugin-sitemap: ^4.8.0
       gatsby-plugin-typescript: ^3.4.0
+      gatsby-remark-autolink-headers: ^4.9.0
       gatsby-source-filesystem: ^3.4.0
       gatsby-transformer-sharp: ^3.4.0
       lodash-es: ^4.17.21
@@ -95,6 +96,7 @@ importers:
       gatsby-plugin-sharp: 3.12.0_gatsby@3.12.0
       gatsby-plugin-sitemap: 4.8.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d
       gatsby-plugin-typescript: 3.12.0_gatsby@3.12.0
+      gatsby-remark-autolink-headers: 4.9.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d
       gatsby-source-filesystem: 3.12.0_gatsby@3.12.0
       gatsby-transformer-sharp: 3.12.0_aa932f39d4b134108725fd7a9e580c3d
       lodash-es: 4.17.21
@@ -6967,6 +6969,24 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
+    dev: false
+
+  /gatsby-remark-autolink-headers/4.9.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d:
+    resolution: {integrity: sha512-/JY/0bTBWZy8Gk0/5pyaB+6TJ2VnoxANFCnyA2F2QJahae0IGCoTstFx+1uCwF9QbDkoTNOndghuSYYMoUYrmw==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      gatsby: ^3.0.0-next.0
+      react: ^16.9.0 || ^17.0.0
+      react-dom: ^16.9.0 || ^17.0.0
+    dependencies:
+      '@babel/runtime': 7.15.3
+      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      github-slugger: 1.3.0
+      lodash: 4.17.21
+      mdast-util-to-string: 2.0.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      unist-util-visit: 2.0.3
     dev: false
 
   /gatsby-source-filesystem/3.12.0_gatsby@3.12.0:
