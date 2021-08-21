@@ -5,6 +5,7 @@ import { SiteHeader } from "../components/layout/site-header";
 import { SiteLayout } from "../components/layout/site-layout";
 import { Link } from "../components/link";
 import { Post } from "../types/post";
+import { getPostUrl } from "../utils/get-post-url";
 
 type ArchivesQueryProps = {
   allMdx: {
@@ -37,7 +38,7 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({ data }) => {
           <h2 className="text-xl" key={post.fields.slug}>
             <Link
               className="hover:bg-indigo-50 border-b-2 hover:border-indigo-400"
-              href={`/${post.fields.slug}/`}
+              href={getPostUrl(post.fields.slug)}
             >
               {post.frontmatter.title}
             </Link>
