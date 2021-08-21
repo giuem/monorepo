@@ -1,10 +1,11 @@
-const BLOG_NAME = 'Soul Evolution';
+const BLOG_NAME = 'x Homology';
 
 module.exports = {
   siteMetadata: {
     title: BLOG_NAME,
     titleTemplate: '%s | Blog @ GIUEM',
-    description: '描述',
+    description:
+      'GIUEM(@giuemcom) 的博客，平常会简单开箱测评买到的科技数码产品，也会记录分享日常的折腾奇奇怪怪的东西，技术向的文章会偏前端、信息安全',
     siteUrl: 'https://www.giuem.com',
     image: '',
     author: {
@@ -16,19 +17,19 @@ module.exports = {
     },
     nav: [
       {
-        title: 'Home',
+        title: '主页',
         href: '/',
       },
       {
-        title: 'Archives',
+        title: '文章',
         href: '/archives/',
       },
       {
-        title: 'Links',
+        title: '链接',
         href: '/links/',
       },
       {
-        title: 'About',
+        title: '关于',
         href: '/about/',
       },
     ],
