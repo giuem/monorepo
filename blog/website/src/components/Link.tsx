@@ -1,4 +1,5 @@
 import { Link as GatsbyLink } from "gatsby";
+
 import { ExternalLink } from "../icons/external-link";
 
 type LinkProps = {

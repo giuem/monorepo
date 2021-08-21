@@ -38,7 +38,17 @@
     "react/prop-types": "off",
     "react/display-name": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "react-hooks/exhaustive-deps": "error",
+
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "newlines-between": "always"
+      }
+    ],
+    "import/newline-after-import": "error",
+    "import/no-extraneous-dependencies": "error"
   },
   "overrides": [
     {
@@ -50,6 +60,7 @@
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
+        "no-dupe-class-members": "off",
         "no-undef": "off"
       }
     }

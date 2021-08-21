@@ -1,12 +1,12 @@
-type SiteMetadata = {
-  title: string;
-  titleTemplate: string;
-  description: string;
+// type SiteMetadata = {
+//   title: string;
+//   titleTemplate: string;
+//   description: string;
 
-  nav: NavItem[];
-};
+//   nav: NavItem[];
+// };
 
-type NavItem = {
-  title: string;
-  href: string;
-};
+// type NavItem = {
+//   title: string;
+//   href: string;
+// };

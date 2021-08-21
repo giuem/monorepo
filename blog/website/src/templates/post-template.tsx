@@ -1,12 +1,12 @@
-import { graphql, PageProps } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
+import { graphql, PageProps } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Post } from "../types/post";
-import { mdxComponents } from "../components/typography/mdx-components";
-import { SiteLayout } from "../components/layout/site-layout";
-import { SiteHeader } from "../components/layout/site-header";
 import { SiteFooter } from "../components/layout/site-footer";
+import { SiteHeader } from "../components/layout/site-header";
+import { SiteLayout } from "../components/layout/site-layout";
+import { mdxComponents } from "../components/typography/mdx-components";
+import { Post } from "../types/post";
 
 type PostTemplateQueryProps = {
   post: Post;

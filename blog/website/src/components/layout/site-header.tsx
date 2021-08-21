@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
+
 import { SiteHeaderNav } from "./site-header-nav";
 import { SiteHeaderTitle } from "./site-header-title";
 

@@ -56,26 +56,26 @@ type SchemaOrgProps = {
   isArticle: boolean;
 };
 
-const SchemaOrg: React.FC<SchemaOrgProps> = ({ url, title, isArticle }) => {
-  const jsonLdScripts = [
-    helmetJsonLdProp<WebSite>({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      url: url,
-      name: title,
-    }),
-    // @todo: need more fields
-    isArticle &&
-      helmetJsonLdProp<BlogPosting>({
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        url,
-        name: title,
-      }),
-  ].filter(Boolean);
+// const SchemaOrg: React.FC<SchemaOrgProps> = ({ url, title, isArticle }) => {
+//   const jsonLdScripts = [
+//     helmetJsonLdProp<WebSite>({
+//       "@context": "https://schema.org",
+//       "@type": "WebSite",
+//       url: url,
+//       name: title,
+//     }),
+//     // @todo: need more fields
+//     isArticle &&
+//       helmetJsonLdProp<BlogPosting>({
+//         "@context": "https://schema.org",
+//         "@type": "BlogPosting",
+//         url,
+//         name: title,
+//       }),
+//   ].filter(Boolean);
 
-  return <Helmet script={jsonLdScripts} />;
-};
+//   return <Helmet script={jsonLdScripts} />;
+// };
 
 export const SEO: React.FC<SEOProps> = (props) => {
   const {

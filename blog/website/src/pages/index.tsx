@@ -1,9 +1,10 @@
 import { graphql, PageProps } from "gatsby";
+
+import { FeaturedPosts } from "../components/featured-post/featured-post";
+import { SiteFooter } from "../components/layout/site-footer";
 import { SiteHeader } from "../components/layout/site-header";
 import { SiteLayout } from "../components/layout/site-layout";
 import { Post } from "../types/post";
-import { FeaturedPosts } from "../components/featured-post/featured-post";
-import { SiteFooter } from "../components/layout/site-footer";
 
 type IndexQueryProps = {
   allMdx: {
