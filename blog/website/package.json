@@ -31,6 +31,7 @@
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "lodash-es": "^4.17.21",
+    "nightwind": "^1.1.12",
     "postcss": "^8.2.13",
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",

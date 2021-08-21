@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
+import { DarkModeToggleButton } from './dark-mode-toggle';
 import { SiteHeaderNav } from './site-header-nav';
 import { SiteHeaderTitle } from './site-header-title';
 
@@ -32,7 +33,10 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
 
   return (
     <header className="flex flex-col mt-10 mb-20">
-      <SiteHeaderTitle title={title} isPostPage={isPostPage} />
+      <div className="flex items-center justify-between">
+        <SiteHeaderTitle title={title} isPostPage={isPostPage} />
+        <DarkModeToggleButton />
+      </div>
       <SiteHeaderNav items={navItems} />
     </header>
   );
