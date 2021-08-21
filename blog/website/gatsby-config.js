@@ -1,6 +1,8 @@
+const BLOG_NAME = 'Soul Evolution';
+
 module.exports = {
   siteMetadata: {
-    title: 'Soul Evolution',
+    title: BLOG_NAME,
     titleTemplate: '%s | Blog @ GIUEM',
     description: '描述',
     siteUrl: 'https://www.giuem.com/',
@@ -122,6 +124,27 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/icons*'],
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: BLOG_NAME,
+        short_name: BLOG_NAME,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#4F46E5`,
+        icon: 'static/logo.svg',
+        cache_busting_mode: 'none',
+        theme_color_in_head: false,
+      },
     },
   ],
   flags: {
