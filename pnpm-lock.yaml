@@ -6,17 +6,17 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': 4.29.2
       '@typescript-eslint/parser': 4.29.2
-      eslint: ^7.32.0
-      eslint-config-prettier: ^8.3.0
-      eslint-plugin-import: ^2.24.1
-      eslint-plugin-jsx-a11y: ^6.4.1
-      eslint-plugin-prettier: ^3.4.0
-      eslint-plugin-react: ^7.24.0
+      eslint: 7.32.0
+      eslint-config-prettier: 8.3.0
+      eslint-plugin-import: 2.24.1
+      eslint-plugin-jsx-a11y: 6.4.1
+      eslint-plugin-prettier: 3.4.1
+      eslint-plugin-react: 7.24.0
       eslint-plugin-react-hooks: 4.2.0
-      husky: ^7.0.1
-      lint-staged: ^11.1.2
-      prettier: ^2.3.2
-      typescript: ^4.2.4
+      husky: 7.0.1
+      lint-staged: 11.1.2
+      prettier: 2.3.2
+      typescript: 4.3.5
     devDependencies:
       '@typescript-eslint/eslint-plugin': 4.29.2_b01b7137116ac50f0745961d9cf72d34
       '@typescript-eslint/parser': 4.29.2_eslint@7.32.0+typescript@4.3.5
@@ -24,7 +24,7 @@ importers:
       eslint-config-prettier: 8.3.0_eslint@7.32.0
       eslint-plugin-import: 2.24.1_eslint@7.32.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
-      eslint-plugin-prettier: 3.4.0_5a48a349ffec60f5257b5f148f5199c3
+      eslint-plugin-prettier: 3.4.1_5a48a349ffec60f5257b5f148f5199c3
       eslint-plugin-react: 7.24.0_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
       husky: 7.0.1
@@ -34,7 +34,7 @@ importers:
 
   blog/gatsby-plugin-webpack-bundle-analyzer:
     specifiers:
-      webpack-bundle-analyzer: ^4.4.2
+      webpack-bundle-analyzer: 4.4.2
     dependencies:
       webpack-bundle-analyzer: 4.4.2
 
@@ -43,15 +43,15 @@ importers:
       '@giuem/gatsby-plugin-webpack-bundle-analyzer': workspace:^1.0.0
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
-      '@tailwindcss/typography': ^0.4.0
-      '@types/lodash-es': ^4.17.4
-      '@types/mdx-js__react': ^1.5.3
-      '@types/node': ^15.0.1
-      '@types/react': ^17.0.4
-      '@types/react-dom': ^17.0.3
-      '@types/react-helmet': ^6.1.1
-      '@types/tailwindcss': ^2.0.3
-      autoprefixer: ^10.2.5
+      '@tailwindcss/typography': 0.4.1
+      '@types/lodash-es': 4.17.4
+      '@types/mdx-js__react': 1.5.4
+      '@types/node': 15.14.9
+      '@types/react': 17.0.19
+      '@types/react-dom': 17.0.9
+      '@types/react-helmet': 6.1.2
+      '@types/tailwindcss': 2.2.1
+      autoprefixer: 10.3.2
       gatsby: ^3.4.0
       gatsby-plugin-feed: ^3.12.0
       gatsby-plugin-google-analytics: ^3.12.0
@@ -59,7 +59,7 @@ importers:
       gatsby-plugin-manifest: ^3.12.0
       gatsby-plugin-mdx: ^2.4.0
       gatsby-plugin-offline: ^4.12.0
-      gatsby-plugin-pnpm: ^1.2.8
+      gatsby-plugin-pnpm: 1.2.8
       gatsby-plugin-postcss: ^4.4.0
       gatsby-plugin-react-helmet: ^4.4.0
       gatsby-plugin-sharp: ^3.4.0
@@ -69,24 +69,24 @@ importers:
       gatsby-source-filesystem: ^3.4.0
       gatsby-transformer-sharp: ^3.4.0
       lodash-es: ^4.17.21
-      nightwind: ^1.1.12
-      postcss: ^8.2.13
-      prism-react-renderer: ^1.2.1
+      nightwind: 1.1.12
+      postcss: 8.3.6
+      prism-react-renderer: 1.2.1
       react: 17.0.2
       react-dom: 17.0.2
-      react-helmet: ^6.1.0
-      react-icons: ^4.2.0
-      react-schemaorg: ^1.3.1
-      schema-dts: ^0.8.2
-      tailwindcss: ^2.1.2
-      typescript: ^4.2.4
+      react-helmet: 6.1.0
+      react-icons: 4.2.0
+      react-schemaorg: 1.3.3
+      schema-dts: 0.8.3
+      tailwindcss: 2.2.7
+      typescript: 4.3.5
     dependencies:
       '@giuem/gatsby-plugin-webpack-bundle-analyzer': link:../gatsby-plugin-webpack-bundle-analyzer
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.7
-      autoprefixer: 10.3.1_postcss@8.3.6
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      autoprefixer: 10.3.2_postcss@8.3.6
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-plugin-feed: 3.12.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d
       gatsby-plugin-google-analytics: 3.12.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d
       gatsby-plugin-image: 1.12.0_11e6dae7882bc004ece0c58a5481aae7
@@ -112,12 +112,12 @@ importers:
       react-icons: 4.2.0_react@17.0.2
       react-schemaorg: 1.3.3_f373b1d9897f671159d4e057f3111b37
       schema-dts: 0.8.3_typescript@4.3.5
-      tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
+      tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
       typescript: 4.3.5
     devDependencies:
       '@types/lodash-es': 4.17.4
       '@types/mdx-js__react': 1.5.4
-      '@types/node': 15.14.8
+      '@types/node': 15.14.9
       '@types/react': 17.0.19
       '@types/react-dom': 17.0.9
       '@types/react-helmet': 6.1.2
@@ -1672,7 +1672,7 @@ packages:
       value-or-promise: 1.0.6
     dev: false
 
-  /@graphql-tools/url-loader/6.10.1_9dc8333b4655794b068aad6b2141e4cf:
+  /@graphql-tools/url-loader/6.10.1_d05a74304ceaaf19936b64e8b9023e60:
     resolution: {integrity: sha512-DSDrbhQIv7fheQ60pfDpGD256ixUQIR6Hhf9Z5bRjVkXOCvO5XrkwoWLiU7iHL81GB1r0Ba31bf+sl+D4nyyfw==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0
@@ -1691,7 +1691,7 @@ packages:
       is-promise: 4.0.0
       isomorphic-ws: 4.0.1_ws@7.4.5
       lodash: 4.17.21
-      meros: 1.1.4_@types+node@15.14.8
+      meros: 1.1.4_@types+node@15.14.9
       subscriptions-transport-ws: 0.9.19_graphql@15.5.1
       sync-fetch: 0.3.0
       tslib: 2.2.0
@@ -2344,7 +2344,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
+      tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
     dev: false
 
   /@tokenizer/token/0.3.0:
@@ -2528,6 +2528,11 @@ packages:
 
   /@types/node/15.14.8:
     resolution: {integrity: sha512-+ZjmmoGV7WBwhzNh/GkwehB7uyXn9HFwzQUfj9pbyR8eFAq20Qguoh93sPbWzzhsbhTme6YE92/iJ54Z0WRH7A==}
+    dev: false
+
+  /@types/node/15.14.9:
+    resolution: {integrity: sha512-qjd88DrCxupx/kJD5yQgZdcYKZKSIGBVDIBE1/LTGcNm3d2Np/jxojkdePDdfnBHJc5W7vSMpbJ1aB7p/Py69A==}
+    dev: true
 
   /@types/node/16.6.2:
     resolution: {integrity: sha512-LSw8TZt12ZudbpHc6EkIyDM3nHVWKYrAvGy6EAJfNfjusbwnThqjqxUKKRwuV3iWYeW/LYMzNgaq3MaLffQ2xA==}
@@ -3268,6 +3273,22 @@ packages:
       postcss-value-parser: 4.1.0
     dev: false
 
+  /autoprefixer/10.3.2_postcss@8.3.6:
+    resolution: {integrity: sha512-RHKq0YCvhxAn9987n0Gl6lkzLd39UKwCkUPMFE0cHhxU0SvcTjBxWG/CtkZ4/HvbqK9U5V8j03nAcGBlX3er/Q==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.16.8
+      caniuse-lite: 1.0.30001251
+      colorette: 1.3.0
+      fraction.js: 4.1.1
+      normalize-range: 0.1.2
+      postcss: 8.3.6
+      postcss-value-parser: 4.1.0
+    dev: false
+
   /axe-core/4.3.2:
     resolution: {integrity: sha512-5LMaDRWm8ZFPAEdzTYmgjjEdj1YnQcpfrVajO/sn/LhbpGp0Y0H64c2hLZI1gRMxfA+w1S71Uc/nHaOXgcCvGg==}
     engines: {node: '>=4'}
@@ -3405,7 +3426,7 @@ packages:
       gatsby: ^3.0.0-next.0
     dependencies:
       '@babel/core': 7.15.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
     dev: false
 
   /babel-plugin-remove-graphql-queries/3.12.0_gatsby@3.12.0:
@@ -3415,7 +3436,7 @@ packages:
       '@babel/core': ^7.0.0
       gatsby: ^3.0.0-next.0
     dependencies:
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
     dev: false
 
   /babel-plugin-syntax-object-rest-spread/6.13.0:
@@ -5607,7 +5628,7 @@ packages:
       string-natural-compare: 3.0.1
     dev: false
 
-  /eslint-plugin-graphql/4.0.0_c7a616cf8bff5b78fd150f8e503636e3:
+  /eslint-plugin-graphql/4.0.0_6ba7bed09b096bea747e3808f2a48e1c:
     resolution: {integrity: sha512-d5tQm24YkVvCEk29ZR5ScsgXqAGCjKlMS8lx3mS7FS/EKsWbkvXQImpvic03EpMIvNTBW5e+2xnHzXB/VHNZJw==}
     engines: {node: '>=10.0'}
     peerDependencies:
@@ -5615,7 +5636,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.15.3
       graphql: 15.5.1
-      graphql-config: 3.4.1_c7a616cf8bff5b78fd150f8e503636e3
+      graphql-config: 3.4.1_6ba7bed09b096bea747e3808f2a48e1c
       lodash.flatten: 4.4.0
       lodash.without: 4.4.0
     transitivePeerDependencies:
@@ -5667,8 +5688,8 @@ packages:
       jsx-ast-utils: 3.2.0
       language-tags: 1.0.5
 
-  /eslint-plugin-prettier/3.4.0_5a48a349ffec60f5257b5f148f5199c3:
-    resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
+  /eslint-plugin-prettier/3.4.1_5a48a349ffec60f5257b5f148f5199c3:
+    resolution: {integrity: sha512-htg25EUYUeIhKHXjOinK4BgCcDwtLHjqaxCDsMy5nbnUMkKFvIhMVCp+5GFUXQ4Nr8lBsPqtGAqBenbpFqAA2g==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
       eslint: '>=5.0.0'
@@ -6637,7 +6658,7 @@ packages:
       '@hapi/joi': 15.1.1
       common-tags: 1.8.0
       fs-extra: 9.1.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-plugin-utils: 1.12.0_gatsby@3.12.0
       lodash.merge: 4.6.2
       react: 17.0.2
@@ -6654,7 +6675,7 @@ packages:
       react-dom: ^16.9.0 || ^17.0.0
     dependencies:
       '@babel/runtime': 7.15.3
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       minimatch: 3.0.4
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -6680,7 +6701,7 @@ packages:
       chokidar: 3.5.2
       common-tags: 1.8.0
       fs-extra: 8.1.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-core-utils: 2.12.0
       gatsby-plugin-sharp: 3.12.0_gatsby@3.12.0
       gatsby-source-filesystem: 3.12.0_gatsby@3.12.0
@@ -6699,7 +6720,7 @@ packages:
       gatsby: ^3.0.0-next.0
     dependencies:
       '@babel/runtime': 7.15.3
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-core-utils: 2.12.0
       gatsby-plugin-utils: 1.12.0_gatsby@3.12.0
       semver: 7.3.5
@@ -6768,7 +6789,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.15.3
       cheerio: 1.0.0-rc.10
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-core-utils: 2.12.0
       glob: 7.1.7
       idb-keyval: 3.2.0
@@ -6788,7 +6809,7 @@ packages:
       '@sindresorhus/slugify': 1.1.2
       chokidar: 3.5.2
       fs-exists-cached: 1.0.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-core-utils: 2.12.0
       gatsby-page-utils: 1.12.0
       gatsby-telemetry: 2.12.0
@@ -6803,7 +6824,7 @@ packages:
     peerDependencies:
       gatsby: ~2.x.x || ~3.x.x
     dependencies:
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       lodash.get: 4.4.2
       lodash.uniq: 4.5.0
     dev: false
@@ -6816,7 +6837,7 @@ packages:
       postcss: ^8.0.5
     dependencies:
       '@babel/runtime': 7.15.3
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       postcss: 8.3.6
       postcss-loader: 4.3.0_postcss@8.3.6
     transitivePeerDependencies:
@@ -6831,7 +6852,7 @@ packages:
       react-helmet: ^5.1.3 || ^6.0.0
     dependencies:
       '@babel/runtime': 7.15.3
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       react-helmet: 6.1.0_react@17.0.2
     dev: false
 
@@ -6846,7 +6867,7 @@ packages:
       bluebird: 3.7.2
       filenamify: 4.3.0
       fs-extra: 9.1.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-core-utils: 2.12.0
       gatsby-plugin-utils: 1.12.0_gatsby@3.12.0
       gatsby-telemetry: 2.12.0
@@ -6875,7 +6896,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.15.3
       common-tags: 1.8.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       minimatch: 3.0.4
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -6895,7 +6916,7 @@ packages:
       '@babel/preset-typescript': 7.15.0_@babel+core@7.15.0
       '@babel/runtime': 7.15.3
       babel-plugin-remove-graphql-queries: 3.12.0_@babel+core@7.15.0+gatsby@3.12.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6906,7 +6927,7 @@ packages:
     peerDependencies:
       gatsby: ^3.0.0-next.0
     dependencies:
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       joi: 17.4.2
     dev: false
 
@@ -7000,7 +7021,7 @@ packages:
       react-dom: ^16.9.0 || ^17.0.0
     dependencies:
       '@babel/runtime': 7.15.3
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       github-slugger: 1.3.0
       lodash: 4.17.21
       mdast-util-to-string: 2.0.0
@@ -7020,7 +7041,7 @@ packages:
       chokidar: 3.5.2
       file-type: 16.5.3
       fs-extra: 8.1.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-core-utils: 2.12.0
       got: 9.6.0
       md5-file: 5.0.0
@@ -7063,7 +7084,7 @@ packages:
       bluebird: 3.7.2
       common-tags: 1.8.0
       fs-extra: 9.1.0
-      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      gatsby: 3.12.0_6b8590d523be1d8aada440b9163a3cc7
       gatsby-plugin-sharp: 3.12.0_gatsby@3.12.0
       potrace: 2.1.8
       probe-image-size: 6.0.0
@@ -7080,7 +7101,7 @@ packages:
       - supports-color
     dev: false
 
-  /gatsby/3.12.0_dd0860c13e2f461903128a0feebae158:
+  /gatsby/3.12.0_6b8590d523be1d8aada440b9163a3cc7:
     resolution: {integrity: sha512-H0F2ZNLuYZAg2TyHSjvsKlYfLo9bNUoMha3W4csLeAsI8okP3HV9m0J8FXVMrK4CdGc1RXqQzNu+2HdUpdMZZQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -7138,7 +7159,7 @@ packages:
       eslint: 7.32.0
       eslint-config-react-app: 6.0.0_e2dade3e7740324626cafe66216e675e
       eslint-plugin-flowtype: 5.9.0_eslint@7.32.0
-      eslint-plugin-graphql: 4.0.0_c7a616cf8bff5b78fd150f8e503636e3
+      eslint-plugin-graphql: 4.0.0_6ba7bed09b096bea747e3808f2a48e1c
       eslint-plugin-import: 2.24.1_eslint@7.32.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
       eslint-plugin-react: 7.24.0_eslint@7.32.0
@@ -7601,7 +7622,7 @@ packages:
       object-path: 0.11.5
     dev: false
 
-  /graphql-config/3.4.1_c7a616cf8bff5b78fd150f8e503636e3:
+  /graphql-config/3.4.1_6ba7bed09b096bea747e3808f2a48e1c:
     resolution: {integrity: sha512-g9WyK4JZl1Ko++FSyE5Ir2g66njfxGzrDDhBOwnkoWf/t3TnnZG6BBkWP+pkqVJ5pqMJGPKHNrbew8jRxStjhw==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -7612,7 +7633,7 @@ packages:
       '@graphql-tools/json-file-loader': 6.2.6_graphql@15.5.1
       '@graphql-tools/load': 6.2.8_graphql@15.5.1
       '@graphql-tools/merge': 6.2.14_graphql@15.5.1
-      '@graphql-tools/url-loader': 6.10.1_9dc8333b4655794b068aad6b2141e4cf
+      '@graphql-tools/url-loader': 6.10.1_d05a74304ceaaf19936b64e8b9023e60
       '@graphql-tools/utils': 7.10.0_graphql@15.5.1
       cosmiconfig: 7.0.0
       cosmiconfig-toml-loader: 1.0.0
@@ -9633,7 +9654,7 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /meros/1.1.4_@types+node@15.14.8:
+  /meros/1.1.4_@types+node@15.14.9:
     resolution: {integrity: sha512-E9ZXfK9iQfG9s73ars9qvvvbSIkJZF5yOo9j4tcwM5tN8mUKfj/EKN5PzOr3ZH0y5wL7dLAHw3RVEfpQV9Q7VQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -9642,7 +9663,7 @@ packages:
       '@types/node':
         optional: true
     dependencies:
-      '@types/node': 15.14.8
+      '@types/node': 15.14.9
     dev: false
 
   /methods/1.1.2:
@@ -10016,7 +10037,7 @@ packages:
     peerDependencies:
       tailwindcss: ^2.0.0
     dependencies:
-      tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
+      tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
     dev: false
 
   /nlcst-to-string/2.0.4:
@@ -13361,7 +13382,7 @@ packages:
       string-width: 4.2.2
       strip-ansi: 6.0.0
 
-  /tailwindcss/2.2.7_7b69a43ec4689fa7484dee35f79a7806:
+  /tailwindcss/2.2.7_8b238584a104f535cc123d61e89214a6:
     resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -13370,7 +13391,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.1
-      autoprefixer: 10.3.1_postcss@8.3.6
+      autoprefixer: 10.3.2_postcss@8.3.6
       bytes: 3.1.0
       chalk: 4.1.2
       chokidar: 3.5.2
