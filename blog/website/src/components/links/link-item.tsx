@@ -34,6 +34,8 @@ export const LinkItem: React.FC<LinkProps> = ({
             }}
             src={avatar}
             alt={`avatar ${title}`}
+            decoding="async"
+            loading="lazy"
           />
         </div>
         <p className="font-semibold text-lg mt-2">{title}</p>
