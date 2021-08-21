@@ -58,11 +58,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode });
+    const parent = getNode(node.parent);
+
     createNodeField({
       name: `slug`,
       node,
       // remove year
-      value: value.replace(/^\/\d+\//, "").replace(/\/$/, ""),
+      value: value.replace(/^\/\d+\//, "").replace(/\//g, ""),
+    });
+    console.log(parent.sourceInstanceName);
+    createNodeField({
+      name: "type",
+      node,
+      value: parent.sourceInstanceName,
     });
   }
 };

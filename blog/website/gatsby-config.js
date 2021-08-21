@@ -49,7 +49,13 @@ module.exports = {
         path: `./contents/posts`,
       },
     },
-
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `./contents/pages`,
+      },
+    },
     {
       resolve: "gatsby-plugin-mdx",
       options: {

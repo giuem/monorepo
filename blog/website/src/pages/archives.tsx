@@ -15,7 +15,10 @@ type ArchivesQueryProps = {
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fields: { type: { eq: "posts" } } }
+    ) {
       nodes {
         frontmatter {
           title
