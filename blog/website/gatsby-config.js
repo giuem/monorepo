@@ -30,6 +30,7 @@ module.exports = {
         href: "/about",
       },
     ],
+    links: require("./data/links.json"),
   },
   plugins: [
     "gatsby-plugin-image",

@@ -44,6 +44,7 @@ importers:
       '@mdx-js/mdx': ^1.6.22
       '@mdx-js/react': ^1.6.22
       '@tailwindcss/typography': ^0.4.0
+      '@types/lodash-es': ^4.17.4
       '@types/mdx-js__react': ^1.5.3
       '@types/node': ^15.0.1
       '@types/react': ^17.0.4
@@ -63,6 +64,7 @@ importers:
       gatsby-plugin-typescript: ^3.4.0
       gatsby-source-filesystem: ^3.4.0
       gatsby-transformer-sharp: ^3.4.0
+      lodash-es: ^4.17.21
       postcss: ^8.2.13
       prism-react-renderer: ^1.2.1
       react: ^17.0.1
@@ -90,6 +92,7 @@ importers:
       gatsby-plugin-typescript: 3.12.0_gatsby@3.12.0
       gatsby-source-filesystem: 3.12.0_gatsby@3.12.0
       gatsby-transformer-sharp: 3.12.0_aa932f39d4b134108725fd7a9e580c3d
+      lodash-es: 4.17.21
       postcss: 8.3.6
       prism-react-renderer: 1.2.1_react@17.0.2
       react: 17.0.2
@@ -100,6 +103,7 @@ importers:
       tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
       typescript: 4.3.5
     devDependencies:
+      '@types/lodash-es': 4.17.4
       '@types/mdx-js__react': 1.5.4
       '@types/node': 15.14.8
       '@types/react': 17.0.19
@@ -2468,9 +2472,14 @@ packages:
       '@types/node': 16.6.2
     dev: false
 
+  /@types/lodash-es/4.17.4:
+    resolution: {integrity: sha512-BBz79DCJbD2CVYZH67MBeHZRX++HF+5p8Mo5MzjZi64Wac39S3diedJYHZtScbRVf4DjZyN6LzA0SB0zy+HSSQ==}
+    dependencies:
+      '@types/lodash': 4.14.172
+    dev: true
+
   /@types/lodash/4.14.172:
     resolution: {integrity: sha512-/BHF5HAx3em7/KkzVKm3LrsD6HZAXuXO1AJZQ3cRRBZj4oHZDviWPYu0aEplAqDFNHZPW6d3G7KN+ONcCCC7pw==}
-    dev: false
 
   /@types/mdast/3.0.8:
     resolution: {integrity: sha512-HdUXWDNtDenuVJFrV2xBCLEMiw1Vn7FMuJxqJC5oBvC2adA3pgtp6CPCIMQdz3pmWxGuJjT+hOp6FnOXy6dXoQ==}
@@ -8971,6 +8980,10 @@ packages:
 
   /lock/1.1.0:
     resolution: {integrity: sha1-UxV0mdFlOxNspmRRBx/KYVcD+lU=}
+    dev: false
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: false
 
   /lodash.assignin/4.2.0:

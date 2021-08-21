@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Diygod",
+    "href": "https://diygod.me/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/DIYgod.jpg",
+    "slogan": "写代码是热爱，写到世界充满爱！"
+  },
+  {
+    "title": "飞",
+    "href": "http://flylai.com/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/flylai.jpeg",
+    "slogan": "As you wish."
+  },
+  {
+    "title": "超能小紫",
+    "href": "https://www.mokeyjay.com/",
+    "avatar": "https://www.mokeyjay.com/headimg.png",
+    "slogan": "某PHP菜鸟的技术博客与ACG日常"
+  },
+  {
+    "title": "龙哥盟",
+    "href": "http://flygon.net/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/flygon.png",
+    "slogan": null
+  },
+  {
+    "title": "LiesAuer's Blog",
+    "href": "http://www.liesauer.net/blog/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/liesauer.jpeg",
+    "slogan": null
+  },
+  {
+    "title": "LWL的自由天空",
+    "href": "https://blog.lwl12.com/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/lwl12.png",
+    "slogan": "一起去啊，更远的地方！"
+  },
+  {
+    "title": "Wincer's Blog",
+    "href": "https://blog.itswincer.com/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/itswincer.png",
+    "slogan": "Wincer 的个人博客"
+  },
+  {
+    "title": "w候人兮猗",
+    "href": "https://www.ahwgs.cn",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/ahwgs.jpg",
+    "slogan": "世俗却正义"
+  },
+  {
+    "title": "FH云彩博客",
+    "href": "https://yuncaioo.com",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190502/avatar/yuncaioo.png",
+    "slogan": "我也不知道该介绍什么啊.jpg"
+  },
+  {
+    "title": "某初雪的无名Blog",
+    "href": "https://yuki.yuki233.com/",
+    "avatar": "https://cdn.jsdelivr.net/gh/giuem/assets@20190503/avatar/yuki233.png",
+    "slogan": "某初雪的日常咕咕Blog，随缘更新"
+  },
+  {
+    "title": "Sukka's Blog",
+    "href": "https://blog.skk.moe",
+    "avatar": "https://cdn.jsdelivr.net/npm/skx@0.2.3/avatar/192x192.png",
+    "slogan": "童话只美在真实却从不续写"
+  },
+  {
+    "title": "云游君的小站",
+    "href": "https://www.yunyoujun.cn",
+    "avatar": "https://cdn.jsdelivr.net/gh/YunYouJun/yunyoujun.github.io/images/avatar.jpg",
+    "slogan": "希望能成为一个有趣的人。"
+  },
+  {
+    "title": "觉论",
+    "href": "https://blog.ryouissei.com/",
+    "avatar": "https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/apple-touch-icon.png",
+    "slogan": "The Sense of Design & Life. | Issei's Blog"
+  },
+  {
+    "title": "TonyHe",
+    "href": "https://www.ouorz.com",
+    "avatar": "https://static.ouorz.com/t.jpg",
+    "slogan": "Just A Poor Lifesinger"
+  },
+  {
+    "title": "Lufs's Blog",
+    "href": "https://isteed.cc",
+    "avatar": "https://cdn.jsdelivr.net/gh/lufsx/res@0.1.1/avatar/avatar-128x128.png",
+    "slogan": "一个假的博客"
+  },
+  {
+    "title": "Pika's Blog",
+    "href": "https://blog.pika666.cn",
+    "avatar": "https://www.pika666.cn/assets/pic/head.jpg",
+    "slogan": "不务正业の医学生璐璐的随笔"
+  }
+]

@@ -1,0 +1,53 @@
+.zen {
+  --border-radius: 87% 91% 98% 100%;
+}
+
+.zen:hover {
+  --border-radius: 95% 70% 100% 80%;
+  --transform: rotate(2deg);
+}
+
+.zen:nth-child(2n + 1) {
+  --border-radius: 59% 52% 56% 59%;
+  --transform: rotate(-6deg);
+}
+.zen:nth-child(2n + 1):hover {
+  --border-radius: 51% 67% 56% 64%;
+  --transform: rotate(-4deg);
+}
+
+.zen:nth-child(3n + 2) {
+  --border-radius: 84% 94% 83% 72%;
+  --transform: rotate(5deg);
+}
+.zen:nth-child(3n + 2):hover {
+  --border-radius: 69% 64% 53% 70%;
+  --transform: rotate(0deg);
+}
+
+.zen:nth-child(5n + 3) {
+  --border-radius: 73% 100% 82% 100%;
+  --transform: rotate(7deg);
+}
+.zen:nth-child(5n + 3):hover {
+  --border-radius: 73% 70% 82% 80%;
+  --transform: rotate(7deg);
+}
+
+.zen:nth-child(7n + 5) {
+  --border-radius: 93% 90% 85% 78%;
+  --transform: rotate(-2deg);
+}
+.zen:nth-child(7n + 5):hover {
+  --border-radius: 53% 70% 85% 68%;
+  --transform: rotate(-2deg);
+}
+
+.zen:nth-child(7n + 5) {
+  --border-radius: 68% 68% 83% 53%;
+  --transform: rotate(-2deg);
+}
+.zen:nth-child(7n + 5):hover {
+  --border-radius: 58% 98% 78% 83%;
+  --transform: rotate(3deg);
+}
