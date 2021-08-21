@@ -1,7 +1,7 @@
-import { Post } from "../../types/post";
-import { Link } from "../link";
+import { Post } from '../../types/post';
+import { Link } from '../link';
 
-import { FeaturedPostItem } from "./featured-post-item";
+import { FeaturedPostItem } from './featured-post-item';
 
 export const FeaturedPosts: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (

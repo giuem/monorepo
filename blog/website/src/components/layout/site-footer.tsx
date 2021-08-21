@@ -1,4 +1,4 @@
-import { FaRss } from "react-icons/fa";
+import { FaRss } from 'react-icons/fa';
 
 export const SiteFooter: React.FC = () => {
   const year = new Date().getFullYear();

@@ -1,5 +1,5 @@
-import { Link as GatsbyLink } from "gatsby";
-import { BiLink } from "react-icons/bi";
+import { Link as GatsbyLink } from 'gatsby';
+import { BiLink } from 'react-icons/bi';
 
 type LinkProps = {
   href: string;

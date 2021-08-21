@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { SiteHeaderNav } from "./site-header-nav";
-import { SiteHeaderTitle } from "./site-header-title";
+import { SiteHeaderNav } from './site-header-nav';
+import { SiteHeaderTitle } from './site-header-title';
 
 type SiteHeaderProps = {
   isPostPage?: boolean;
@@ -15,7 +15,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
       siteMetadata: { title, nav: navItems },
     },
   } = useStaticQuery<{
-    site: { siteMetadata: Pick<SiteMetadata, "nav" | "title"> };
+    site: { siteMetadata: Pick<SiteMetadata, 'nav' | 'title'> };
   }>(graphql`
     query {
       site {

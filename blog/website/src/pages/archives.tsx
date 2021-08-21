@@ -1,11 +1,11 @@
-import { graphql, PageProps } from "gatsby";
+import { graphql, PageProps } from 'gatsby';
 
-import { SiteFooter } from "../components/layout/site-footer";
-import { SiteHeader } from "../components/layout/site-header";
-import { SiteLayout } from "../components/layout/site-layout";
-import { Link } from "../components/link";
-import { Post } from "../types/post";
-import { getPostUrl } from "../utils/get-post-url";
+import { SiteFooter } from '../components/layout/site-footer';
+import { SiteHeader } from '../components/layout/site-header';
+import { SiteLayout } from '../components/layout/site-layout';
+import { Link } from '../components/link';
+import { Post } from '../types/post';
+import { getPostUrl } from '../utils/get-post-url';
 
 type ArchivesQueryProps = {
   allMdx: {

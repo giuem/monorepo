@@ -48,7 +48,13 @@
       }
     ],
     "import/newline-after-import": "error",
-    "import/no-extraneous-dependencies": "error"
+    "import/no-extraneous-dependencies": "error",
+
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ]
   },
   "overrides": [
     {

@@ -1,4 +1,4 @@
-import "./zen.css";
+import './zen.css';
 
 type LinkProps = {
   title: string;
@@ -24,13 +24,13 @@ export const LinkItem: React.FC<LinkProps> = ({
       >
         <div
           className="relative mx-auto"
-          style={{ width: "90%", paddingBottom: "90%" }}
+          style={{ width: '90%', paddingBottom: '90%' }}
         >
           <img
             className="absolute inset-0 w-full h-full object-cover border-2 border-indigo-600 transition-all duration-700"
             style={{
-              borderRadius: "var(--border-radius)",
-              transform: "var(--transform)",
+              borderRadius: 'var(--border-radius)',
+              transform: 'var(--transform)',
             }}
             src={avatar}
             alt={`avatar ${title}`}

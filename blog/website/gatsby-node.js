@@ -64,11 +64,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       // remove year
-      value: value.replace(/^\/\d+\//, "").replace(/\//g, ""),
+      value: value.replace(/^\/\d+\//, '').replace(/\//g, ''),
     });
     console.log(parent.sourceInstanceName);
     createNodeField({
-      name: "type",
+      name: 'type',
       node,
       value: parent.sourceInstanceName,
     });

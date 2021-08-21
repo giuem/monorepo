@@ -1,4 +1,4 @@
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 exports.onCreateWebpackConfig = (
   { stage, actions },
@@ -6,12 +6,12 @@ exports.onCreateWebpackConfig = (
 ) => {
   if (disable) return;
 
-  if ((stage === "develop" && devMode) || stage === "build-javascript") {
+  if ((stage === 'develop' && devMode) || stage === 'build-javascript') {
     // Prevent server to keep runing in Gatsby Cloud
     const defaultOptions = process.env.GATSBY_CLOUD
-      ? { analyzerMode: "static" }
+      ? { analyzerMode: 'static' }
       : {
-          analyzerMode: "server",
+          analyzerMode: 'server',
           analyzerPort: 3001,
         };
 

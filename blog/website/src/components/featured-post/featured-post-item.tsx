@@ -1,6 +1,6 @@
-import { Post } from "../../types/post";
-import { getPostUrl } from "../../utils/get-post-url";
-import { Link } from "../link";
+import { Post } from '../../types/post';
+import { getPostUrl } from '../../utils/get-post-url';
+import { Link } from '../link';
 
 export type FeaturedPostItemProps = {
   post: Post;

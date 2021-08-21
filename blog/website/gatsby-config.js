@@ -1,40 +1,40 @@
 module.exports = {
   siteMetadata: {
-    title: "Soul Evolution",
-    titleTemplate: "%s | Blog @ GIUEM",
-    description: "描述",
-    siteUrl: "https://www.giuem.com/",
-    image: "",
+    title: 'Soul Evolution',
+    titleTemplate: '%s | Blog @ GIUEM',
+    description: '描述',
+    siteUrl: 'https://www.giuem.com/',
+    image: '',
     author: {
-      name: "giuem",
+      name: 'giuem',
     },
     social: {
-      twitter: "@giuemcom",
-      github: "@giuem",
+      twitter: '@giuemcom',
+      github: '@giuem',
     },
     nav: [
       {
-        title: "Home",
-        href: "/",
+        title: 'Home',
+        href: '/',
       },
       {
-        title: "Archives",
-        href: "/archives/",
+        title: 'Archives',
+        href: '/archives/',
       },
       {
-        title: "Links",
-        href: "/links/",
+        title: 'Links',
+        href: '/links/',
       },
       {
-        title: "About",
-        href: "/about/",
+        title: 'About',
+        href: '/about/',
       },
     ],
-    links: require("./contents/links.json"),
+    links: require('./contents/links.json'),
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
     // "gatsby-plugin-sitemap",
     // {
     //   resolve: "gatsby-plugin-manifest",
@@ -57,14 +57,14 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: [`.mdx`, `.md`],
       },
     },
 
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typescript`,
     },
@@ -76,7 +76,7 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-pnpm",
+    'gatsby-plugin-pnpm',
     // "@giuem/gatsby-plugin-webpack-bundle-analyzer",
     {
       resolve: `gatsby-plugin-feed`,
@@ -92,7 +92,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url,
                   guid: url,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
             },
@@ -115,7 +115,7 @@ module.exports = {
               }
             }
           `,
-            output: "/rss.xml",
+            output: '/rss.xml',
           },
         ],
       },

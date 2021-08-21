@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { Helmet } from "react-helmet";
-import { helmetJsonLdProp } from "react-schemaorg";
-import { BlogPosting, WebSite } from "schema-dts";
+import { graphql, useStaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { helmetJsonLdProp } from 'react-schemaorg';
+import { BlogPosting, WebSite } from 'schema-dts';
 
 export type SEOProps = {
   title?: string;
@@ -82,7 +82,7 @@ export const SEO: React.FC<SEOProps> = (props) => {
     site: { siteMetadata: seo },
   } = useStaticQuery<SEOQueryType>(query);
 
-  const { image, isArticle = false, pathname = "/" } = props;
+  const { image, isArticle = false, pathname = '/' } = props;
   const hasImage = Boolean(image);
   const url = `${seo.siteUrl}${pathname}`;
   const title = props.title ? props.title : seo.title;
