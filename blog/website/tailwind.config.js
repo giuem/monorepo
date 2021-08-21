@@ -57,6 +57,7 @@ module.exports = {
   },
   variants: {
     extend: {},
+    margin: ['responsive', 'first'],
   },
   plugins: [require('@tailwindcss/typography'), require('nightwind')],
 };
