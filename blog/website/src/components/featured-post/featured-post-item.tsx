@@ -20,7 +20,9 @@ export const FeaturedPostItem: React.FC<FeaturedPostItemProps> = ({ post }) => {
         </Link>
       </h2>
       {post.excerpt && (
-        <h3 className="md:text-lg md:mt-4 text-base mt-2">{post.excerpt}</h3>
+        <h3 className="md:text-lg md:mt-4 text-base mt-2 text-gray-600">
+          {post.excerpt}
+        </h3>
       )}
     </article>
   );

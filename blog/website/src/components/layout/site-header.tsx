@@ -31,7 +31,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
   `);
 
   return (
-    <header className="flex items-center flex-wrap justify-between mt-10 mb-20">
+    <header className="flex flex-col mt-10 mb-20">
       <SiteHeaderTitle title={title} isPostPage={isPostPage} />
       <SiteHeaderNav items={navItems} />
     </header>

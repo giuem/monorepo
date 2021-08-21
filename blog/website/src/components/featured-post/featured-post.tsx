@@ -17,7 +17,7 @@ export const FeaturedPosts: React.FC<{ posts: Post[] }> = ({ posts }) => {
           className="px-5 py-3 rounded-md bg-indigo-50 hover:bg-indigo-100 text-indigo-800 md:text-lg"
           href="/archives"
         >
-          View all
+          更多文章
         </Link>
       </footer>
     </div>

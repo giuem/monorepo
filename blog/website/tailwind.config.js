@@ -41,6 +41,15 @@ module.exports = {
           lg: '1024px',
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            blockquote: {
+              fontStyle: 'normal',
+            },
+          },
+        },
+      },
     },
   },
   variants: {

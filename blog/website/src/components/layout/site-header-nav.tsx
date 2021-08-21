@@ -6,13 +6,13 @@ type SiteHeaderNavProps = {
 
 export const SiteHeaderNav: React.FC<SiteHeaderNavProps> = ({ items }) => {
   return (
-    <nav>
-      <ul className="flex items-center h-12 space-x-4 text-xl text-indigo-700">
+    <nav className="mt-8 -ml-3">
+      <ul className="flex items-center space-x-2 text-xl text-indigo-700">
         {items.map(({ title, href }) => (
           <li key={href}>
             <Link
-              className="hover:underline"
-              activeClassName="underline"
+              className="rounded md:hover:bg-indigo-50 py-3 px-4 transition-all duration-100"
+              activeClassName="md:bg-indigo-50 underline md:no-underline"
               href={href}
             >
               {title}

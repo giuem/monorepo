@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 
-const FONT_LINK =
-  'https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap';
+// const FONT_LINK =
+//   'https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap';
 
 export const SiteLayout: React.FC = ({ children }) => {
   return (
