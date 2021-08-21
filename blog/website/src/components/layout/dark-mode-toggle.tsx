@@ -36,7 +36,7 @@ export const DarkModeToggleButton: React.FC = () => {
 
   return (
     <button
-      className="text-lg hover:bg-gray-100 bg-gray-50 p-2 rounded"
+      className="text-lg hover:bg-gray-100 active:bg-gray-100 focus:ring-2 bg-gray-50 p-2 rounded"
       onClick={toggle}
     >
       {theme === 'light' ? <FiSun /> : <FiMoon />}
