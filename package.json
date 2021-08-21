@@ -12,8 +12,7 @@
     "prepare": "husky install",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "bootstrap": "npm i -g pnpm@^6 && pnpm install",
-    "build:blog": "cd blog/website && gatsby build"
+    "bootstrap": "npm i -g pnpm@^6 && pnpm install"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.29.2",
