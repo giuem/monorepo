@@ -54,6 +54,7 @@ importers:
       autoprefixer: ^10.2.5
       gatsby: ^3.4.0
       gatsby-plugin-feed: ^3.12.0
+      gatsby-plugin-google-analytics: ^3.12.0
       gatsby-plugin-image: ^1.4.0
       gatsby-plugin-manifest: ^3.12.0
       gatsby-plugin-mdx: ^2.4.0
@@ -86,6 +87,7 @@ importers:
       autoprefixer: 10.3.1_postcss@8.3.6
       gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
       gatsby-plugin-feed: 3.12.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d
+      gatsby-plugin-google-analytics: 3.12.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d
       gatsby-plugin-image: 1.12.0_11e6dae7882bc004ece0c58a5481aae7
       gatsby-plugin-manifest: 3.12.0_gatsby@3.12.0
       gatsby-plugin-mdx: 2.12.0_73e8d0148a4c5c71ceb6a02bbce55c80
@@ -6639,6 +6641,22 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       rss: 1.2.2
+    dev: false
+
+  /gatsby-plugin-google-analytics/3.12.0_5326fc0eecd91cf6dfbc9fefd1d6cf0d:
+    resolution: {integrity: sha512-KthqhyFci/nGzzdrlGyZtZne+J79HTPZZ1Q+hVloMJJgIF8GzBHECApRqg/dNzz+MBnbEozww9iSFmvh4GzmJA==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      gatsby: ^3.0.0-next.0
+      react: ^16.9.0 || ^17.0.0
+      react-dom: ^16.9.0 || ^17.0.0
+    dependencies:
+      '@babel/runtime': 7.15.3
+      gatsby: 3.12.0_dd0860c13e2f461903128a0feebae158
+      minimatch: 3.0.4
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      web-vitals: 1.1.2
     dev: false
 
   /gatsby-plugin-image/1.12.0_11e6dae7882bc004ece0c58a5481aae7:
@@ -14252,6 +14270,10 @@ packages:
 
   /web-namespaces/1.1.4:
     resolution: {integrity: sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==}
+    dev: false
+
+  /web-vitals/1.1.2:
+    resolution: {integrity: sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==}
     dev: false
 
   /webpack-bundle-analyzer/4.4.2:

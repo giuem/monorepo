@@ -154,6 +154,13 @@ module.exports = {
         theme_color_in_head: false,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-102578664-1',
+        enableWebVitalsTracking: true,
+      },
+    },
   ],
   flags: {
     FAST_DEV: true,
