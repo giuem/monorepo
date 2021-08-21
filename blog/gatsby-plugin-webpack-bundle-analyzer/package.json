@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "webpack-bundle-analyzer": "^4.4.2"
+    "webpack-bundle-analyzer": "4.4.2"
   }
 }
