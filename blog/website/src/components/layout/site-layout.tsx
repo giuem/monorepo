@@ -7,8 +7,12 @@ export const SiteLayout: React.FC = ({ children }) => {
         <html lang="zh-CN" />
         <body className="bg-white text-gray-900" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=PT+Sans:wght@400;700&display=swap"
+          rel="stylesheet"
+        /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Helmet>
