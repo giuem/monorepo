@@ -12,7 +12,7 @@ export const SiteHeaderTitle: React.FC<SiteHeaderTitleProps> = ({
   return (
     <Link className="h-12 flex items-center mr-4" href="/">
       {isPostPage ? (
-        <h3 className="font-bold text-3xl">{title}</h3>
+        <h3 className="font-semibold text-4xl">{title}</h3>
       ) : (
         <h1 className="font-semibold text-4xl">{title}</h1>
       )}
