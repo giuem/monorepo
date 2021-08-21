@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { SiteHeaderNav } from "./SiteHeaderNav";
-import { SiteHeaderTitle } from "./SiteHeaderTitle";
+import { SiteHeaderNav } from "./site-header-nav";
+import { SiteHeaderTitle } from "./site-header-title";
 
 type SiteHeaderProps = {
   isPostPage?: boolean;

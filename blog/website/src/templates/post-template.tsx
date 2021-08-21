@@ -3,10 +3,10 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { Post } from "../types/post";
-import { mdxComponents } from "../components/mdxComponents";
-import { SiteLayout } from "../components/SiteLayout";
-import { SiteHeader } from "../components/SiteHeader";
-import { SiteFooter } from "../components/SiteFooter";
+import { mdxComponents } from "../components/typography/mdx-components";
+import { SiteLayout } from "../components/layout/site-layout";
+import { SiteHeader } from "../components/layout/site-header";
+import { SiteFooter } from "../components/layout/site-footer";
 
 type PostTemplateQueryProps = {
   post: Post;

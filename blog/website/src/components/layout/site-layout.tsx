@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { SEO } from "./SEO";
+import { SEO } from "../seo/seo";
 
 export const SiteLayout: React.FC = ({ children }) => {
   return (

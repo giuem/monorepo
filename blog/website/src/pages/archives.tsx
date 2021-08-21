@@ -1,9 +1,9 @@
 import { graphql, PageProps } from "gatsby";
-import { SiteLayout } from "../components/SiteLayout";
-import { SiteHeader } from "../components/SiteHeader";
+import { SiteLayout } from "../components/layout/site-layout";
+import { SiteHeader } from "../components/layout/site-header";
 import { Post } from "../types/post";
-import { Link } from "../components/Link";
-import { SiteFooter } from "../components/SiteFooter";
+import { Link } from "../components/link";
+import { SiteFooter } from "../components/layout/site-footer";
 
 type ArchivesQueryProps = {
   allMdx: {

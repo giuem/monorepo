@@ -1,5 +1,5 @@
 import { MDXProviderComponents } from "@mdx-js/react";
-import { Link } from "./Link";
+import { Link } from "../link";
 
 export const mdxComponents: MDXProviderComponents = {
   wrapper: (props) => (

@@ -1,5 +1,5 @@
-import { Post } from "../types/post";
-import { Link } from "./Link";
+import { Post } from "../../types/post";
+import { Link } from "../link";
 
 export type FeaturedPostItemProps = {
   post: Post;
