@@ -1,0 +1,163 @@
+---
+title: 小米 AX 9000 简单开箱测试
+date: 2021-04-04 20:01:14
+---
+
+先介绍下我目前住的地方的网络环境吧：1000M的电信光纤入户，主路由是自己组的 OpenWRT 软路由用于拨号上网，下面挂了一台网件 R6300V2 和一台斐讯 K3 作为 AP。路由器放在客厅和我的卧室隔了一道承重墙，这导致我的卧室 5G 信号不是很好，躺在床上看手机经常一个翻身连接速率就会骤降甚至断网。正巧前不久小米发布新旗舰路由器 AX9000，而且听说小米 Wi-Fi 6 系列的路由器口碑不错，就买了一台试试水。<!--more-->
+
+<small>BTW, 这篇文章的成文日期是清明节，不过当你们看到时应该已经6月初了，中间的这段时间可能被谁吃掉了（</small>
+
+<style>
+{`.mobile-screenshot {
+  max-width: 300px;
+  margin: 0 auto;
+}`}
+</style>
+
+## 参数简介
+
+参数部分就不过多介绍了，具体可以看[小米官网](https://www.mi.com/mirouter/ax9000)。这里列几个比较关键的参数：
+
+* 搭载了高通IPQ8072 处理器，4 核 14nm A53 架构和一个双核的NPU，搭载 1G 内存和 256M ROM，官方宣称可以同时支持 1000 台设备连接。
+* 提供一个 2.5G 的网口和4个千兆网口，其中 2.5G 网口可以在WAN和LAN间切换。比较可惜不是全 2.5 G口不能战未来。
+* 无线同时支持 2.4G/5.2G/5.8G 三个频段
+  * 2.4G 规格为 4x4 MIMO 1148Mbps
+  * 5.2G 规格为 4×4 MIMO 4804Mbps
+  * 5.8G 规格为 4×4 MIMO 2402Mbps，支持 2x2 4K QAM
+* 主动式散热，增加稳定性但是积灰属性++
+* 支持 USB3.0，这个说实话用不上而且3.0还会影响到 2.4G Wi-Fi
+
+
+
+## 开箱
+
+我是首发当天在狗东上买的，当时还显示采购中，没想到当天夜里就有货了，第二天下午就送到了。刚拿到手上发现这包装是真的大，比我的台式机机箱还大，不知道的还以为我买了台电脑呢。
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-box.jpg)
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-vs-nr200.jpg)
+
+背面介绍了一堆路由器的参数和特性。
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-box-back.jpg)
+
+打开包装后是一个巨大的海绵箱子。
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-protect-box.jpg)
+
+打开保护盒后就可以看到路由器本体和配件盒。
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-opened-box.jpg)
+
+AX9000 本体
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-front.jpg)
+
+天线展开角度可以接近 180 度，正面有四条 RGB 灯带，可以在软件中设置颜色和光效。
+
+![](https://img.giuem-lb.washingpatrick.cn/AX9000-2.jpg)
+
+AX9000 的四面都有接口，正面是电源和网络指示灯
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-led.jpg)
+
+背面是四个 LAN 口和一个 WAN 口，右侧的 LAN 口和 WAN 口可以切换 2.5G
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-interface.jpg)
+
+AX9000 比较有槽点的设计是网口和电源线接口不是在同一侧，电源线开机键和 RESET 键放到另一侧，导致接线时有两侧需要连线
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-switch.jpg)
+
+另一侧是 USB3.0 接口和一个 Mesh 一键组网按键
+
+![](https://img.giuem-lb.washingpatrick.cn/AX9000-usb3-mesh.jpg)
+
+再来看看配件盒，配件盒内的东西不多，就一个电源适配器、一条网线和一张说明书
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-extra.jpg)
+
+电源适配器的尺寸不算小，输出是 12V 4A
+
+![](https://img.giuem-lb.washingpatrick.cn/ax9000-adapter.jpg)
+
+开箱完毕，接下来开始配置路由器。
+
+## 路由器设置
+
+现在这些互联网公司出品的路由器设置起来都非常傻瓜化了，简单几步就能上网。接上电源线和网线后开机，打开 Wi-Fi 会看到一个没有密码的无线网络，我这里是 xiaomi-router-ra70_xxx，具体的 Wi-Fi 名可以在底部的铭牌中查到。
+
+<div class="mobile-screenshot">
+
+![](https://img.giuem-lb.washingpatrick.cn/IMG_3793.PNG)
+
+</div>
+
+连接后会弹出一个 portal 认证网页，根据步骤设置完就能上网了。
+
+<div style="display: flex; align-items: flex-end; gap:8px;">
+
+![IMG_3794](https://img.giuem-lb.washingpatrick.cn/IMG_3794.PNG)
+
+![IMG_3795](https://img.giuem-lb.washingpatrick.cn/IMG_3795.PNG)
+
+![IMG_3796](https://img.giuem-lb.washingpatrick.cn/IMG_3796.PNG)
+
+</div>
+
+之后你还可以把路由器添加到米家APP中，注意这里可能需要更新到最新版本的米家APP，打开米家会自动发现路由器并提示你添加。
+
+<div class="mobile-screenshot">
+
+![IMG_3797](https://img.giuem-lb.washingpatrick.cn/IMG_3797.PNG)
+
+</div>
+
+加入米家后，就可以远程设置路由器了
+
+<div class="mobile-screenshot">
+
+![IMG_3801](https://img.giuem-lb.washingpatrick.cn/IMG_3801.PNG)
+
+</div>
+
+米家APP中的设置很全面，已经可以代替网页管理后台了
+
+<div class="mobile-screenshot">
+
+![IMG_3800](https://img.giuem-lb.washingpatrick.cn/IMG_3800.PNG)
+
+</div>
+
+打开 RGB 灯效设置页，可以设置呼吸灯、彩虹灯等各种灯效。但这对于我来说是一个毫无软用的功能，我选择关闭所有的灯光。对于我来说，一台路由器只要静静地躺在角落里稳定的运行就足够了。
+
+<div class="mobile-screenshot">
+
+![IMG_3807](https://img.giuem-lb.washingpatrick.cn/IMG_3807.PNG)
+
+</div>
+
+另外还有需要注意的是，USB3.0 默认也是打开的需要关闭，否则会影响到 2.4G 的 Wi-Fi。
+
+## 无线测试
+
+配置完成后，和之前的K3路由器做一个简单的对比测试。测试不保证严谨，仅供参考。因为路由器只作为无线 AP 使用，所以只对无线传输速度进行测试，目前我手上没有万兆网络设备只能测千兆下的速度表现。我们使用 [LibreSpeed](https://github.com/librespeed/speedtest) 进行测试，测试节点在内网的一台服务器上。测试设备为 iPhone 11 Pro，最大 PHY 数据速率为 1200 Mbps。
+
+第一组测试：将测试设备贴到路由器旁，可以看到 AX9000 可以的下行速率可以跑到 875Mbps，而 K3 的速率只有 661Mbps。
+
+| AX9000 | K3 |
+| :---: | :---: |
+| ![](https://img.giuem-lb.washingpatrick.cn/IMG_3802.PNG) | ![](https://img.giuem-lb.washingpatrick.cn/IMG_3803.PNG) |
+
+
+第二组测试：将测试设备放到卧室最角落，隔了一堵承重墙。可以看到隔了一堵墙后，两款路由器的传输速率能有很大幅度的下降，但是 AX9000 还是能达到接近百兆的传输速率，是 K3 的两倍多。
+
+| AX9000 | K3 |
+| :---: | :---: |
+| ![](https://img.giuem-lb.washingpatrick.cn/IMG_3805.PNG) | ![](https://img.giuem-lb.washingpatrick.cn/IMG_3804.PNG) |
+
+
+## 总结
+
+从测试结果来看，AX9000 的无线性能已经大幅度超过了原来的 K3 路由器，算是比较令我满意的一次设备升级。但是穿墙能力只能算是差强人意，好在小米AX系列路由器现在已经支持 AP Mesh 组网，未来的某一天如果现在的无线信号不能满足我的需求，可以再买一台 AX 系列路由器组 Mesh 网络，增强无线信号的强度。
+
