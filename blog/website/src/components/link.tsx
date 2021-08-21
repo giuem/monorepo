@@ -1,6 +1,5 @@
 import { Link as GatsbyLink } from "gatsby";
-
-import { ExternalLink } from "../icons/external-link";
+import { BiLink } from "react-icons/bi";
 
 type LinkProps = {
   href: string;
@@ -30,7 +29,8 @@ export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
 
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
-      {children} <ExternalLink />
+      <BiLink className="inline" />
+      {children}
     </a>
   );
 };
