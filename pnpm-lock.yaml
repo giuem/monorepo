@@ -41,8 +41,8 @@ importers:
   blog/website:
     specifiers:
       '@giuem/gatsby-plugin-webpack-bundle-analyzer': workspace:^1.0.0
-      '@mdx-js/mdx': ^1.6.22
-      '@mdx-js/react': ^1.6.22
+      '@mdx-js/mdx': 1.6.22
+      '@mdx-js/react': 1.6.22
       '@tailwindcss/typography': ^0.4.0
       '@types/lodash-es': ^4.17.4
       '@types/mdx-js__react': ^1.5.3
