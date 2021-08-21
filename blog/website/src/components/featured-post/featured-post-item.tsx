@@ -13,7 +13,7 @@ export const FeaturedPostItem: React.FC<FeaturedPostItemProps> = ({ post }) => {
       <h2 className="md:text-2xl text-xl font-semibold">
         <Link
           className="md:border-b-2 md:hover:border-indigo-400 hover:bg-indigo-50"
-          href={`/${post.slug}`}
+          href={`/${post.fields.slug}/`}
         >
           {post.frontmatter.title}
         </Link>

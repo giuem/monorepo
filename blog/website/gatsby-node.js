@@ -61,7 +61,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      // remove year
+      value: value.replace(/^\/\d+\//, "").replace(/\/$/, ""),
     });
   }
 };

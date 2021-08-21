@@ -3,7 +3,7 @@ module.exports = {
     title: "Soul Evolution",
     titleTemplate: "%s | Blog @ GIUEM",
     description: "描述",
-    canonicalUrl: "https://www.giuem.com",
+    canonicalUrl: "https://www.giuem.com/",
     image: "",
     author: {
       name: "giuem",
@@ -90,11 +90,13 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
+                const url = `${site.siteMetadata.canonicalUrl}${edge.node.fields.slug}/`;
+
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.canonicalUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.canonicalUrl + edge.node.fields.slug,
+                  url,
+                  guid: url,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 });
               });

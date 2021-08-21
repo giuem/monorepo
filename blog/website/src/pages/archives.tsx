@@ -19,7 +19,9 @@ export const pageQuery = graphql`
         frontmatter {
           title
         }
-        slug
+        fields {
+          slug
+        }
       }
     }
   }
@@ -32,10 +34,10 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({ data }) => {
       <SiteHeader></SiteHeader>
       <section className="flex flex-col space-y-5">
         {posts.map((post) => (
-          <h2 className="text-xl" key={post.slug}>
+          <h2 className="text-xl" key={post.fields.slug}>
             <Link
               className="hover:bg-indigo-50 border-b-2 hover:border-indigo-400"
-              href={`/${post.slug}`}
+              href={`/${post.fields.slug}/`}
             >
               {post.frontmatter.title}
             </Link>

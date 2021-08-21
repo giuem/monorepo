@@ -4,7 +4,7 @@ export type PostFrontmatter = {
 
 export type Post = {
   frontmatter: PostFrontmatter;
-  slug: string;
+  fields: { slug: string };
   body: string;
   excerpt?: string;
 };
