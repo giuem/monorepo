@@ -13,6 +13,12 @@ export const SiteLayout: React.FC = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=PT+Sans:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS Feed for GIUEM"
+          href="/rss.xml"
+        />
       </Helmet>
       {children}
     </div>
