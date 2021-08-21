@@ -23,7 +23,7 @@
     "gatsby-plugin-postcss": "^4.4.0",
     "gatsby-plugin-react-helmet": "^4.4.0",
     "gatsby-plugin-sharp": "^3.4.0",
-    "gatsby-plugin-sitemap": "^4.0.0",
+    "gatsby-plugin-sitemap": "^4.8.0",
     "gatsby-plugin-typescript": "^3.4.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-sharp": "^3.4.0",

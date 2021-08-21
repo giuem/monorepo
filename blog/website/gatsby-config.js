@@ -3,7 +3,7 @@ module.exports = {
     title: "Soul Evolution",
     titleTemplate: "%s | Blog @ GIUEM",
     description: "描述",
-    canonicalUrl: "https://www.giuem.com/",
+    siteUrl: "https://www.giuem.com/",
     image: "",
     author: {
       name: "giuem",
@@ -19,15 +19,15 @@ module.exports = {
       },
       {
         title: "Archives",
-        href: "/archives",
+        href: "/archives/",
       },
       {
         title: "Links",
-        href: "/links",
+        href: "/links/",
       },
       {
         title: "About",
-        href: "/about",
+        href: "/about/",
       },
     ],
     links: require("./contents/links.json"),
@@ -71,26 +71,15 @@ module.exports = {
       },
     },
     "gatsby-plugin-pnpm",
-    "@giuem/gatsby-plugin-webpack-bundle-analyzer",
+    // "@giuem/gatsby-plugin-webpack-bundle-analyzer",
     {
       resolve: `gatsby-plugin-feed`,
       options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              canonicalUrl
-              site_url: canonicalUrl
-            }
-          }
-        }`,
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
-                const url = `${site.siteMetadata.canonicalUrl}${edge.node.fields.slug}/`;
+                const url = `${site.siteMetadata.siteUrl}${edge.node.fields.slug}/`;
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
@@ -121,10 +110,12 @@ module.exports = {
             }
           `,
             output: "/rss.xml",
-            title: "RSS Feed for GIUEM",
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
     },
   ],
   flags: {

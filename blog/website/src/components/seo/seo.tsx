@@ -18,7 +18,7 @@ type SEOQueryType = {
       title: string;
       titleTemplate?: string;
       description: string;
-      canonicalUrl: string;
+      siteUrl: string;
       image: string;
       author: {
         name: string;
@@ -37,7 +37,7 @@ const query = graphql`
         title
         titleTemplate
         description
-        canonicalUrl
+        siteUrl
         image
         author {
           name
@@ -84,7 +84,7 @@ export const SEO: React.FC<SEOProps> = (props) => {
 
   const { image, isArticle = false, pathname = "/" } = props;
   const hasImage = Boolean(image);
-  const url = `${seo.canonicalUrl}${pathname}`;
+  const url = `${seo.siteUrl}${pathname}`;
   const title = props.title ? props.title : seo.title;
   const description = props.description ? props.description : seo.description;
 
