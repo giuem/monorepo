@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 export const SiteLayout: React.FC = ({ children }) => {
   return (
-    <div className="max-w-3xl mx-auto px-4 flex flex-col min-h-screen">
+    <div className="max-w-3xl mx-auto px-4 lg:px-0 flex flex-col min-h-screen">
       <Helmet>
         <html lang="zh-CN" />
         <script>{nightwind.init()}</script>

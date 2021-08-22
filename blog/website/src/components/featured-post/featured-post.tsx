@@ -12,9 +12,9 @@ export const FeaturedPosts: React.FC<{ posts: Post[] }> = ({ posts }) => {
           <FeaturedPostItem key={index} post={post} />
         ))}
       </section>
-      <footer className="my-12">
+      <footer className="my-16">
         <Link
-          className="px-5 py-3 rounded-md bg-indigo-50 hover:bg-indigo-100 text-indigo-800 md:text-lg"
+          className="px-5 py-3 rounded-md bg-indigo-50 hover:bg-indigo-100 text-indigo-800 sm:text-lg"
           href="/archives"
         >
           更多文章
