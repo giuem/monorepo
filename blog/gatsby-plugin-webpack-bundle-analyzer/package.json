@@ -1,8 +1,0 @@
-{
-  "name": "@giuem/gatsby-plugin-webpack-bundle-analyzer",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "webpack-bundle-analyzer": "4.4.2"
-  }
-}
