@@ -27,21 +27,24 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
     }
   `);
 
-  console.log(css);
-
   useEffect(() => {
-    const dsqjs = new DisqusJS({
-      shortname: 'giuem',
-      siteName: siteTitle,
-      identifier: slug,
-      url: `${siteUrl}/${url}/`.replace(/\/\//g, '/'),
-      title: title,
-      api: 'https://disqus.giuem.com/',
-      apikey:
-        'aQpOK5Wj0ZjWy8bAPxcC5se1OhNhuVjmSDp0h50D2JmtcPoSaBCLXTeasNZYUuxU',
-      admin: 'giuem',
-      adminLabel: 'Mod',
-    });
+    if (typeof window === 'undefined') {
+      return;
+    }
+    setTimeout(() => {
+      new DisqusJS({
+        shortname: 'giuem',
+        siteName: siteTitle,
+        identifier: slug,
+        url: `${siteUrl}/${url}/`.replace(/\/\//g, '/'),
+        title: title,
+        api: 'https://disqus.giuem.com/',
+        apikey:
+          'aQpOK5Wj0ZjWy8bAPxcC5se1OhNhuVjmSDp0h50D2JmtcPoSaBCLXTeasNZYUuxU',
+        admin: 'giuem',
+        adminLabel: 'Mod',
+      });
+    }, 1000);
   }, [siteTitle, siteUrl, slug, title, url]);
 
   return (
