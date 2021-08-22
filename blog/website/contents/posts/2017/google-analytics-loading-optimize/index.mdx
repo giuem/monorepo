@@ -30,20 +30,20 @@ date: 2017-07-17 18:54:48
   var f = c.screen,
     g = encodeURIComponent,
     h = [
-      "ga=" + a,
-      "dt=" + g(d.title),
-      "dr=" + g(d.referrer),
-      "ul=" + (e.language || e.browserLanguage || e.userLanguage),
-      "sd=" + f.colorDepth + "-bit",
-      "sr=" + f.width + "x" + f.height,
-      "vp=" +
+      'ga=' + a,
+      'dt=' + g(d.title),
+      'dr=' + g(d.referrer),
+      'ul=' + (e.language || e.browserLanguage || e.userLanguage),
+      'sd=' + f.colorDepth + '-bit',
+      'sr=' + f.width + 'x' + f.height,
+      'vp=' +
         Math.max(d.documentElement.clientWidth, c.innerWidth || 0) +
-        "x" +
+        'x' +
         Math.max(d.documentElement.clientHeight, c.innerHeight || 0),
-      "z=" + +new Date(),
+      'z=' + +new Date(),
     ];
-  (c.__ga_img = new Image()), (c.__ga_img.src = b + "?" + h.join("&"));
-})("UA-xxxx-x", "https://ga.giuem.com", window, document, navigator, location);
+  (c.__ga_img = new Image()), (c.__ga_img.src = b + '?' + h.join('&'));
+})('UA-xxxx-x', 'https://ga.giuem.com', window, document, navigator, location);
 ```
 
 **目前已经部署海外线路（由 CloudFlare 提供），国内为腾讯云上海机房**
@@ -76,9 +76,9 @@ date: 2017-07-17 18:54:48
 
 ## 使用效果
 
-![ga-proxy](https://img.giuem-lb.washingpatrick.cn/20170721141531.png)
+![ga-proxy](./images/20170721141531.png)
 
-![raw ga](https://img.giuem-lb.washingpatrick.cn/20170721142234.png)
+![raw ga](./images/20170721142234.png)
 
 整个请求花费 33 ms, 156 B 流量可以说是非常快了。服务器的 Ping 值在 29 ms 左右，中间 4 ms 的损失主要花在 SSL 上了，速度还是挺不错的。
 

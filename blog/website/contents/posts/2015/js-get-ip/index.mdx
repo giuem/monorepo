@@ -12,7 +12,7 @@ tags:
 
 Demo：[https://diafygi.github.io/webrtc-ips/](https://diafygi.github.io/webrtc-ips/)
 
-![demo](https://img.giuem-lb.washingpatrick.cn/20150213214159.png)
+![demo](./images/20150213214159.png)
 
 ## 代码
 
@@ -29,10 +29,10 @@ function getIPs(callback) {
 
   //bypass naive webrtc blocking
   if (!RTCPeerConnection) {
-    var iframe = document.createElement("iframe");
+    var iframe = document.createElement('iframe');
     //invalidate content script
-    iframe.sandbox = "allow-same-origin";
-    iframe.style.display = "none";
+    iframe.sandbox = 'allow-same-origin';
+    iframe.style.display = 'none';
     document.body.appendChild(iframe);
     var win = iframe.contentWindow;
     window.RTCPeerConnection = win.RTCPeerConnection;
@@ -56,7 +56,7 @@ function getIPs(callback) {
 
   //add same stun server for chrome
   if (window.webkitRTCPeerConnection)
-    servers = { iceServers: [{ urls: "stun:stun.services.mozilla.com" }] };
+    servers = { iceServers: [{ urls: 'stun:stun.services.mozilla.com' }] };
 
   //construct a new RTCPeerConnection
   var pc = new RTCPeerConnection(servers, mediaConstraints);
@@ -77,7 +77,7 @@ function getIPs(callback) {
   };
 
   //create a bogus data channel
-  pc.createDataChannel("");
+  pc.createDataChannel('');
 
   //create an offer sdp
   pc.createOffer(

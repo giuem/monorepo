@@ -28,11 +28,11 @@ basket.js 是一个 javascript 类库（废话），它可以将页面中的 css
 basket
   .require(
     // 引入 jQuery
-    { url: "//dn-staticfile.qbox.me/jquery/2.1.4/jquery.min.js" }
+    { url: '//dn-staticfile.qbox.me/jquery/2.1.4/jquery.min.js' }
   )
   .then(function () {
     // 按顺序引入，避免 jQuery Plugin 先于 jQuery 引入
-    basket.require({ url: "/js/main.js", unique: "1" });
+    basket.require({ url: '/js/main.js', unique: '1' });
   });
 ```
 
@@ -42,14 +42,14 @@ basket
 
 ### 首次访问
 
-![首次访问](https://img.giuem-lb.washingpatrick.cn/20151220153403.png)
+![首次访问](./images/20151220153403.png)
 
 ### 二次访问不缓存
 
-![二次访问不缓存](https://img.giuem-lb.washingpatrick.cn/20151220153515.png)
+![二次访问不缓存](./images/20151220153515.png)
 
 ### 二次访问缓存
 
-![二次访问缓存](https://img.giuem-lb.washingpatrick.cn/20151220153602.png)
+![二次访问缓存](./images/20151220153602.png)
 
 可以看到，效果还是不错的，如果页面不引入字体的话，还可以更快。

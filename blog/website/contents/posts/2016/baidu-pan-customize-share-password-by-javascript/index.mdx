@@ -17,9 +17,9 @@ date: 2016-03-05 20:46:37
 
 分析代码发现，百度网盘的自定义密码是在本地生成的
 
-![makePrivatePassword函数](https://img.giuem-lb.washingpatrick.cn/make-private-password-function.png)
+![makePrivatePassword函数](./images/make-private-password-function.png)
 
-![makePrivatePassword函数的使用](https://img.giuem-lb.washingpatrick.cn/usage-of-make-private-password.png)
+![makePrivatePassword函数的使用](./images/usage-of-make-private-password.png)
 
 这也就给了我们玩耍的机会。
 
@@ -39,9 +39,9 @@ date: 2016-03-05 20:46:37
 
 ```javascript
 javascript: require([
-  "function-widget-1:share/util/service/createLinkShare.js",
+  'function-widget-1:share/util/service/createLinkShare.js',
 ]).prototype.makePrivatePassword = function () {
-  return prompt("请输入自定义的密码", "1234");
+  return prompt('请输入自定义的密码', '1234');
 };
 ```
 
@@ -49,9 +49,9 @@ javascript: require([
 
 ```javascript
 require([
-  "function-widget-1:share/util/service/createLinkShare.js",
+  'function-widget-1:share/util/service/createLinkShare.js',
 ]).prototype.makePrivatePassword = () => {
-  return prompt("请输入自定义的密码", "1234");
+  return prompt('请输入自定义的密码', '1234');
 };
 ```
 
@@ -71,7 +71,7 @@ Uncaught Error: Cannot find module `function-widget-1:share/util/service/createL
 
 注意使用代码前要先点一下 `分享` 按钮，相关模块才会载入，这时候用代码才有效果。
 
-![demo](https://img.giuem-lb.washingpatrick.cn/bdpanpawdemo.gif)
+![demo](./images/bdpanpawdemo.gif)
 
 ## 密码类型
 

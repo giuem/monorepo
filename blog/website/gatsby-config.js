@@ -38,13 +38,10 @@ module.exports = {
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    // "gatsby-plugin-sitemap",
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     icon: "src/images/icon.png",
-    //   },
-    // },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-remark-images',
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -70,12 +67,22 @@ module.exports = {
               icon: false,
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+              linkImagesToOriginal: false,
+              showCaptions: false,
+              backgroundColor: 'none',
+              quality: 50,
+              withWebp: { quality: 80 },
+              withAvif: { quality: 80 },
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
         ],
       },
     },
-
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typescript`,
     },

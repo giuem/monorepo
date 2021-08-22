@@ -44,7 +44,7 @@ date: 2016-09-24 22:01:14
 ```javascript
 WebFont.load({
   google: {
-    families: ["Droid Sans", "Droid Serif"],
+    families: ['Droid Sans', 'Droid Serif'],
   },
 });
 ```
@@ -58,8 +58,8 @@ WebFont.load({
 ```javascript
 WebFont.load({
   google: {
-    families: ["Droid Sans", "Droid Serif"],
-    api: "https://cdn.moefont.com/fonts/css",
+    families: ['Droid Sans', 'Droid Serif'],
+    api: 'https://cdn.moefont.com/fonts/css',
   },
 });
 ```
@@ -76,7 +76,7 @@ WebFont.load({
 
 ```css
 body {
-  font-family: "Open Sans", "Microsoft YaHei";
+  font-family: 'Open Sans', 'Microsoft YaHei';
 }
 ```
 
@@ -84,7 +84,7 @@ Open Sans 是 Google Fonts，也是造成页面字体空白的元凶。现在我
 
 ```css
 body {
-  font-family: "Microsoft YaHei";
+  font-family: 'Microsoft YaHei';
 }
 ```
 
@@ -92,7 +92,7 @@ body {
 
 ```css
 .wf-active body {
-  font-family: "Open Sans", "Microsoft YaHei";
+  font-family: 'Open Sans', 'Microsoft YaHei';
 }
 ```
 
@@ -104,7 +104,7 @@ body {
 
 为了说明 webfontloader 给用户体验带来的提升，我做了一个对比。为了模拟极端环境，我利用 Chrome DevTools 把网络模拟为 GPRS。上面为普通加载方式，下面使用 webfontloader 加载。
 
-![webfontloader-test](https://img.giuem-lb.washingpatrick.cn/webfontloader-test.gif)
+![webfontloader-test](./images/webfontloader-test.gif)
 
 ## 一些题外话
 
