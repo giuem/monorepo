@@ -13,7 +13,7 @@ export const FeaturedPostItem: React.FC<FeaturedPostItemProps> = ({ post }) => {
     <article className="mt-16 mb-12 first:mt-0">
       <h2 className="sm:text-2xl text-2xl font-semibold">
         <Link
-          className="sm:border-b-2 sm:hover:border-indigo-400 hover:bg-indigo-50"
+          className="sm:border-b-2 sm:border-gray-200 sm:hover:border-indigo-400 hover:bg-indigo-50"
           href={getPostUrl(post.fields.slug)}
         >
           {post.frontmatter.title}
