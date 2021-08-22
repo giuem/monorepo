@@ -28,6 +28,7 @@
     "gatsby-plugin-react-helmet": "4.12.0",
     "gatsby-plugin-sharp": "3.12.0",
     "gatsby-plugin-sitemap": "4.8.0",
+    "gatsby-plugin-typed-css-module": "workspace:*",
     "gatsby-plugin-typescript": "3.12.0",
     "gatsby-remark-autolink-headers": "4.9.0",
     "gatsby-source-filesystem": "3.12.0",

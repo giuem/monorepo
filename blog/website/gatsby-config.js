@@ -162,6 +162,7 @@ module.exports = {
         enableWebVitalsTracking: true,
       },
     },
+    'gatsby-plugin-typed-css-module',
   ],
   flags: {
     FAST_DEV: true,

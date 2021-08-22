@@ -1,0 +1,11 @@
+{
+  "name": "gatsby-plugin-typed-css-module",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@teamsupercell/typings-for-css-modules-loader": "^2.5.1"
+  },
+  "devDependencies": {
+    "gatsby": "3.12.0"
+  }
+}
