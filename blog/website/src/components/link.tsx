@@ -8,7 +8,7 @@ type LinkProps = {
 };
 
 export const Link: React.FC<LinkProps> = ({ href, children, ...props }) => {
-  const isInternalLink = /^\/(?!\/)/.test(href);
+  const isInternalLink = /^\/(?!\/)/.test(href) && props.target !== '_blank';
   const isHash = /^#/.test(href);
 
   if (isInternalLink) {
