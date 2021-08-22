@@ -79,14 +79,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: {
-          tailwindcss: {},
-        },
-      },
-    },
+    `gatsby-plugin-postcss`,
     'gatsby-plugin-pnpm',
     // "@giuem/gatsby-plugin-webpack-bundle-analyzer",
     {
