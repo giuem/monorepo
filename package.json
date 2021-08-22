@@ -15,15 +15,8 @@
     "bootstrap": "npm i -g pnpm@^6 && pnpm install"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.29.2",
-    "@typescript-eslint/parser": "4.29.2",
+    "@giuem/eslint-config": "workspace:*",
     "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.24.1",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.4.1",
-    "eslint-plugin-react": "7.24.0",
-    "eslint-plugin-react-hooks": "4.2.0",
     "husky": "7.0.1",
     "lint-staged": "11.1.2",
     "prettier": "2.3.2",
@@ -33,8 +26,8 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ],
-    "*.{md,json}": [
-      "prettier --write"
+    "*": [
+      "prettier --ignore-unknown --write"
     ]
   }
 }
