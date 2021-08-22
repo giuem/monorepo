@@ -11,7 +11,7 @@ export type FeaturedPostItemProps = {
 export const FeaturedPostItem: React.FC<FeaturedPostItemProps> = ({ post }) => {
   return (
     <article className="mt-16 mb-12 first:mt-0">
-      <h2 className="md:text-2xl text-xl font-semibold">
+      <h2 className="md:text-2xl text-2xl font-semibold">
         <Link
           className="md:border-b-2 md:hover:border-indigo-400 hover:bg-indigo-50"
           href={getPostUrl(post.fields.slug)}
@@ -20,7 +20,7 @@ export const FeaturedPostItem: React.FC<FeaturedPostItemProps> = ({ post }) => {
         </Link>
       </h2>
       {post.excerpt && (
-        <h3 className="md:text-lg md:mt-4 text-base mt-2 text-gray-600">
+        <h3 className="md:text-lg md:mt-4 text-base mt-3 text-gray-600">
           {post.excerpt}
         </h3>
       )}
