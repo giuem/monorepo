@@ -1,4 +1,4 @@
-import './zen.css';
+import * as styles from './zen.module.css';
 
 type LinkProps = {
   title: string;
@@ -14,7 +14,9 @@ export const LinkItem: React.FC<LinkProps> = ({
   slogan,
 }) => {
   return (
-    <li className="w-1/2 sm:w-1/3 md:w-1/4 text-center p-3 my-4 zen">
+    <li
+      className={`w-1/2 sm:w-1/3 md:w-1/4 text-center p-3 my-4 ${styles.zen}`}
+    >
       <a
         className="text-indigo-600"
         href={href}
