@@ -6,14 +6,14 @@ importers:
     specifiers:
       '@giuem/eslint-config': workspace:*
       eslint: 7.32.0
-      husky: 7.0.1
+      husky: 7.0.2
       lint-staged: 11.1.2
       prettier: 2.3.2
       typescript: 4.3.5
     devDependencies:
       '@giuem/eslint-config': link:configs/eslint-config
       eslint: 7.32.0
-      husky: 7.0.1
+      husky: 7.0.2
       lint-staged: 11.1.2
       prettier: 2.3.2
       typescript: 4.3.5
@@ -8150,8 +8150,8 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
 
-  /husky/7.0.1:
-    resolution: {integrity: sha512-gceRaITVZ+cJH9sNHqx5tFwbzlLCVxtVZcusME8JYQ8Edy5mpGDOqD8QBCdMhpyo9a+JXddnujQ4rpY2Ff9SJA==}
+  /husky/7.0.2:
+    resolution: {integrity: sha512-8yKEWNX4z2YsofXAMT7KvA1g8p+GxtB1ffV8XtpAEGuXNAbCV5wdNKH+qTpw8SM9fh4aMPDR+yQuKfgnreyZlg==}
     engines: {node: '>=12'}
     hasBin: true
     dev: true
