@@ -1,0 +1,31 @@
+name: Blog
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 14.x
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.14.2
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+      - name: Cache Gatsby
+        uses: actions/cache@v2
+        id: blog-gatsby-cache
+        with:
+          path: |
+            blog/website/.cache
+            blog/website/public
+          key: ${{ runner.os }}-blog-gatsby-cache-${{ github.sha }}
+          restore-keys: ${{ runner.os }}-blog-gatsby-cache-
+      - name: Installation Dependencies
+        run: pnpm install --filter @giuem/blog
+      - name: Build Blog
+        run: pnpm build --filter @giuem/blog
