@@ -3,30 +3,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
     <script
       key="dark-mode"
       dangerouslySetInnerHTML={{
-        __html: `(function() {
-            function getInitialColorMode() {
-              var preferTheme
-              try {
-                preferTheme = window.localStorage.getItem('theme')
-              } catch (e) {}
-
-              if (preferTheme == 'dark' || preferTheme == 'light') {
-                return preferTheme;
-              }
-
-              var mql = window.matchMedia('(prefers-color-scheme: dark)');
-              if (typeof mql.matches === 'boolean') {
-                return mql.matches ? 'dark' : 'light';
-              }
-              return 'light';
-            }
-            window.__currentTheme = getInitialColorMode()
-            if (window.__currentTheme === 'dark') {
-              document.documentElement.classList.add('dark')
-            } else {
-              document.documentElement.classList.remove('dark')
-            }
-      })()`,
+        __html: `(function() {window.__currentTheme=function(){var e;try{e=window.localStorage.getItem("theme")}catch(e){}if("dark"==e||"light"==e)return e;var t=window.matchMedia("(prefers-color-scheme: dark)");return"boolean"==typeof t.matches&&t.matches?"dark":"light"}(),"dark"===window.__currentTheme?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")})()`,
       }}
     />,
   ]);
