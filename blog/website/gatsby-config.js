@@ -134,14 +134,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        workboxConfig: {
-          globPatterns: ['**/icons*'],
-        },
-      },
-    },
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -151,7 +144,6 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#4F46E5`,
         icon: 'static/logo.svg',
-        cache_busting_mode: 'none',
         theme_color_in_head: false,
       },
     },
