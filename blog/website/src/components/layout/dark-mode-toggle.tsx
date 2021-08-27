@@ -1,43 +1,17 @@
-import nightwind from 'nightwind/helper';
-import { useState, useCallback } from 'react';
+import { useTheme } from '@giuem/gatsby-plugin-dark-mode';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
-function getInitialColorMode() {
-  try {
-    const persistedColorPreference =
-      window.localStorage.getItem('nightwind-mode');
-    const hasPersistedPreference = typeof persistedColorPreference === 'string';
-    if (hasPersistedPreference) {
-      return persistedColorPreference;
-    }
-    const mql = window.matchMedia('(prefers-color-scheme: dark)');
-    const hasMediaQueryPreference = typeof mql.matches === 'boolean';
-    if (hasMediaQueryPreference) {
-      return mql.matches ? 'dark' : 'light';
-    }
-    // eslint-disable-next-line no-empty
-  } catch (error) {}
-
-  return 'light';
-}
-
 export const DarkModeToggleButton: React.FC = () => {
-  const [theme, setTheme] = useState(getInitialColorMode());
+  const { theme, toggleTheme } = useTheme();
 
-  const toggle = useCallback(() => {
-    if (theme === 'light') {
-      nightwind.enable(true);
-      setTheme('dark');
-    } else {
-      nightwind.enable(false);
-      setTheme('light');
-    }
-  }, [theme]);
+  if (theme === undefined) {
+    return null;
+  }
 
   return (
     <button
-      className="text-lg hover:bg-gray-100 active:bg-gray-100 focus:ring-2 bg-gray-50 p-2 rounded"
-      onClick={toggle}
+      className="text-lg hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-100 focus:ring-2 bg-gray-50 dark:bg-gray-900 p-2 rounded"
+      onClick={toggleTheme}
     >
       {theme === 'light' ? <FiSun /> : <FiMoon />}
     </button>

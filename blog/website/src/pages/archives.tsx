@@ -46,7 +46,7 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({
         {posts.map((post) => (
           <h2 className="text-xl" key={post.fields.slug}>
             <Link
-              className="hover:bg-indigo-50 border-b-2 hover:border-indigo-400"
+              className="hover:bg-indigo-50 dark:hover:bg-indigo-900 border-b-2 hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors"
               href={getPostUrl(post.fields.slug)}
             >
               {post.frontmatter.title}

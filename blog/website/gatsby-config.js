@@ -162,6 +162,7 @@ module.exports = {
         enableWebVitalsTracking: true,
       },
     },
+    `@giuem/gatsby-plugin-dark-mode`,
   ],
   flags: {
     FAST_DEV: true,

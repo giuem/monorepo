@@ -21,7 +21,10 @@ const NotFoundPage: React.FC<PageProps> = () => {
             😔
           </span>{' '}
           哦豁，您要访问的页面似乎不在了，
-          <Link className="text-indigo-600 underline" to="/">
+          <Link
+            className="text-indigo-600 dark:text-indigo-300 underline"
+            to="/"
+          >
             回首页看看吧
           </Link>
         </p>

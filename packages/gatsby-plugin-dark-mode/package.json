@@ -1,0 +1,12 @@
+{
+  "name": "@giuem/gatsby-plugin-dark-mode",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "react": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": "17.0.2"
+  }
+}

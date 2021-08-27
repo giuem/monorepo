@@ -10,7 +10,7 @@ export const SiteFooter: React.FC = () => {
         <a
           href="/rss.xml"
           target="_blank"
-          className="text-indigo-600 flex items-center underline"
+          className="text-indigo-600 dark:text-indigo-300 flex items-center underline"
         >
           <FaRss />
           <span className="ml-1">RSS</span>

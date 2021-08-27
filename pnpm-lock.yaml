@@ -20,6 +20,7 @@ importers:
 
   blog/website:
     specifiers:
+      '@giuem/gatsby-plugin-dark-mode': workspace:*
       '@loadable/component': 5.15.0
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
@@ -53,7 +54,6 @@ importers:
       gatsby-source-filesystem: 3.12.0
       gatsby-transformer-sharp: 3.12.0
       lodash-es: 4.17.21
-      nightwind: 1.1.12
       postcss: 8.3.6
       prism-react-renderer: 1.2.1
       react: 17.0.2
@@ -65,6 +65,7 @@ importers:
       tailwindcss: 2.2.7
       typescript: 4.3.5
     dependencies:
+      '@giuem/gatsby-plugin-dark-mode': link:../../packages/gatsby-plugin-dark-mode
       '@loadable/component': 5.15.0_react@17.0.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
@@ -90,7 +91,6 @@ importers:
       gatsby-source-filesystem: 3.12.0_gatsby@3.12.0
       gatsby-transformer-sharp: 3.12.0_aa932f39d4b134108725fd7a9e580c3d
       lodash-es: 4.17.21
-      nightwind: 1.1.12_tailwindcss@2.2.7
       postcss: 8.3.6
       prism-react-renderer: 1.2.1_react@17.0.2
       react: 17.0.2
@@ -130,6 +130,12 @@ importers:
       eslint-plugin-prettier: 3.4.1_5a48a349ffec60f5257b5f148f5199c3
       eslint-plugin-react: 7.24.0_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
+
+  packages/gatsby-plugin-dark-mode:
+    specifiers:
+      react: 17.0.2
+    devDependencies:
+      react: 17.0.2
 
 packages:
 
@@ -9593,7 +9599,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /loud-rejection/1.6.0:
     resolution: {integrity: sha1-W0b4AUft7leIcPCG0Eghz5mOVR8=}
@@ -10302,14 +10307,6 @@ packages:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
     dev: false
 
-  /nightwind/1.1.12_tailwindcss@2.2.7:
-    resolution: {integrity: sha512-iJGJxeglk3vrRyFDH7shinvKuN/EcIbBtNVkko0Zni/XGVSHrBH0rsvqgp2HhkIf5B7iZU+2+kGhS2oItBnASQ==}
-    peerDependencies:
-      tailwindcss: ^2.0.0
-    dependencies:
-      tailwindcss: 2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3
-    dev: false
-
   /nlcst-to-string/2.0.4:
     resolution: {integrity: sha512-3x3jwTd6UPG7vi5k4GEzvxJ5rDA7hVUIRNHPblKuMVP9Z3xmlsd9cgLcpAMkc5uPOBna82EeshROFhsPkbnTZg==}
     dev: false
@@ -10482,7 +10479,6 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /object-copy/0.1.0:
     resolution: {integrity: sha1-fn2Fi3gb18mRpBupde04EnVOmYw=}
@@ -12096,7 +12092,6 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-    dev: false
 
   /read-pkg-up/1.0.1:
     resolution: {integrity: sha1-nWPBMnbAZZGNV/ACpX9AobZD+wI=}
