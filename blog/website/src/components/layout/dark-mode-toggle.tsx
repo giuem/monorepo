@@ -11,6 +11,7 @@ export const DarkModeToggleButton: React.FC = () => {
   return (
     <button
       className="text-lg hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-100 focus:ring-2 bg-gray-50 dark:bg-gray-900 p-2 rounded"
+      aria-label="深浅色主题切换按钮"
       onClick={toggleTheme}
     >
       {theme === 'light' ? <FiSun /> : <FiMoon />}
