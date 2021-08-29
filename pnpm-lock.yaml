@@ -119,7 +119,7 @@ importers:
       eslint-plugin-import: 2.24.2
       eslint-plugin-jsx-a11y: 6.4.1
       eslint-plugin-prettier: 3.4.1
-      eslint-plugin-react: 7.24.0
+      eslint-plugin-react: 7.25.0
       eslint-plugin-react-hooks: 4.2.0
     dependencies:
       '@typescript-eslint/eslint-plugin': 4.29.3_fd14c0002fbbfb85b8a0070d0dffb93d
@@ -128,7 +128,7 @@ importers:
       eslint-plugin-import: 2.24.2_eslint@7.32.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
       eslint-plugin-prettier: 3.4.1_5a48a349ffec60f5257b5f148f5199c3
-      eslint-plugin-react: 7.24.0_eslint@7.32.0
+      eslint-plugin-react: 7.25.0_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
 
   packages/gatsby-plugin-dark-mode:
@@ -5887,6 +5887,28 @@ packages:
       array.prototype.flatmap: 1.2.4
       doctrine: 2.1.0
       eslint: 7.32.0
+      has: 1.0.3
+      jsx-ast-utils: 3.2.0
+      minimatch: 3.0.4
+      object.entries: 1.1.4
+      object.fromentries: 2.0.4
+      object.values: 1.1.4
+      prop-types: 15.7.2
+      resolve: 2.0.0-next.3
+      string.prototype.matchall: 4.0.5
+    dev: false
+
+  /eslint-plugin-react/7.25.0_eslint@7.32.0:
+    resolution: {integrity: sha512-bZL+HeB+Qaimb4ryOc+OYYOX0XnOr6FX30ZXkzL8iSJA3tATTtZ1YgYyjK3jGvVDcZMejfUaeS/5wKDfTgyfVw==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      eslint: ^3 || ^4 || ^5 || ^6 || ^7
+    dependencies:
+      array-includes: 3.1.3
+      array.prototype.flatmap: 1.2.4
+      doctrine: 2.1.0
+      eslint: 7.32.0
+      estraverse: 5.2.0
       has: 1.0.3
       jsx-ast-utils: 3.2.0
       minimatch: 3.0.4
