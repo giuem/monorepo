@@ -4,13 +4,7 @@
     {
       "src": "/(.*)",
       "status": 404,
-      "dest": "/404.html",
-      "headers": [
-        {
-          "key": "cache-control",
-          "value": "maxage=0, s-maxage=0"
-        }
-      ]
+      "dest": "/404.html"
     }
   ]
 }
