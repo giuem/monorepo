@@ -36,7 +36,7 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
         shortname: 'giuem',
         siteName: siteTitle,
         identifier: slug,
-        url: `${siteUrl}/${url}/`.replace(/\/\//g, '/'),
+        url: siteUrl + `/${url}/`.replace(/\/\//g, '/'),
         title: title,
         api: 'https://disqus.giuem.com/',
         apikey:
