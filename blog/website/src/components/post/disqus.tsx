@@ -1,6 +1,7 @@
 import DisqusJS from 'disqusjs';
 import { useStaticQuery, graphql } from 'gatsby';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { useIntersection } from 'react-use';
 
 // eslint-disable-next-line import/no-unresolved
 import css from '!!raw-loader!disqusjs/dist/disqusjs.css';
@@ -27,11 +28,20 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
     }
   `);
 
+  const isLoaded = useRef(false);
+  const intersectionRef = useRef(null);
+  const intersection = useIntersection(intersectionRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0,
+  });
+
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
     }
-    setTimeout(() => {
+    if (!isLoaded.current && intersection?.isIntersecting) {
+      isLoaded.current = true;
       new DisqusJS({
         shortname: 'giuem',
         siteName: siteTitle,
@@ -44,11 +54,11 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
         admin: 'giuem',
         adminLabel: 'Mod',
       });
-    }, 1000);
-  }, [siteTitle, siteUrl, slug, title, url]);
+    }
+  }, [siteTitle, siteUrl, slug, title, url, intersection]);
 
   return (
-    <div className="mt-16 py-12">
+    <div className="mt-16 py-12" ref={intersectionRef}>
       <style id="disqus_thread_style">{css}</style>
       <div id="disqus_thread"></div>
     </div>
