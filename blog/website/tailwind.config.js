@@ -31,9 +31,9 @@ module.exports = {
           'Noto Color Emoji',
         ],
       },
-      // colors: {
-
-      // }
+      colors: {
+        black: '#121212',
+      },
       container: {
         screens: {
           sm: '640px',
