@@ -32,7 +32,7 @@ module.exports = {
         ],
       },
       colors: {
-        black: '#121212',
+        black: '#121315',
       },
       container: {
         screens: {
