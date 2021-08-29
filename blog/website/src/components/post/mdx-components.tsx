@@ -3,13 +3,11 @@ import { MDXProviderComponents } from '@mdx-js/react';
 import { Link } from '../link';
 
 import Codeblock from './codeblock';
+import { PROSE } from './prose';
 
 export const mdxComponents: MDXProviderComponents = {
   wrapper: (props) => (
-    <section
-      className="prose sm:prose-lg xl:prose-xl prose-indigo dark:prose-dark max-w-none text-justify"
-      {...props}
-    />
+    <section className={`${PROSE} text-justify`} {...props} />
   ),
   a: (props) => (
     <Link
@@ -20,5 +18,13 @@ export const mdxComponents: MDXProviderComponents = {
   pre: (props) => <div {...props} />,
   // eslint-disable-next-line jsx-a11y/alt-text
   img: (props) => <img {...props} decoding="async" />,
+  del: (props: any) => (
+    <del
+      {...props}
+      className="bg-gray-700 dark:bg-gray-300 hover:bg-transparent dark:hover:bg-transparent text-transparent hover:text-current no-underline cursor-pointer"
+      title="被你发现了"
+      aria-label={props.children}
+    />
+  ),
   code: Codeblock,
 };

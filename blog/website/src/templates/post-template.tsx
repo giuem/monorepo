@@ -8,6 +8,7 @@ import { SiteFooter } from '../components/layout/site-footer';
 import { SiteHeader } from '../components/layout/site-header';
 import { SiteLayout } from '../components/layout/site-layout';
 import { mdxComponents } from '../components/post/mdx-components';
+import { PostHeader } from '../components/post/post-header';
 import { SEO } from '../components/seo/seo';
 import { Post } from '../types/post';
 
@@ -28,6 +29,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        lead
       }
       fields {
         slug
@@ -54,11 +56,7 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
       <SiteHeader isPostPage />
       <SiteContent>
         <article>
-          <header className="mb-8 sm:mb-10 md:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-              {post.frontmatter.title}
-            </h1>
-          </header>
+          <PostHeader post={post} />
           <MDXProvider components={mdxComponents}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>

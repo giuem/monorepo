@@ -1,5 +1,6 @@
 export type PostFrontmatter = {
   title: string;
+  lead?: string;
 };
 
 export type Post = {
