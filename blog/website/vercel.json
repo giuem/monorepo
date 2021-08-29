@@ -3,6 +3,20 @@
     "silent": true,
     "autoJobCancelation": true
   },
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "maxage=0, s-maxage=0"
+        }
+      ]
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -14,22 +28,6 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, s-maxage=0"
-        }
-      ],
-      "has": [
-        {
-          "type": "header",
-          "key": "content-disposition",
-          "value": "*404.html*"
         }
       ]
     }
