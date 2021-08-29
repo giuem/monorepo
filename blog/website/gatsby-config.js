@@ -75,7 +75,7 @@ module.exports = {
               showCaptions: false,
               backgroundColor: 'none',
               quality: 50,
-              withWebp: { quality: 80 },
+              withWebp: { nearLossless: true, quality: 50 },
               // withAvif: { quality: 80 },
             },
           },
