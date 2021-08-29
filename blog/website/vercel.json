@@ -4,7 +4,8 @@
     {
       "src": "/(.*)",
       "status": 404,
-      "dest": "/404.html"
+      "dest": "/404.html",
+      "headers": { "cache-control": "max-age=0, s-maxage=0, no-cache" }
     }
   ]
 }
