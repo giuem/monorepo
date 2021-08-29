@@ -63,6 +63,7 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
         {css}
         {`
         .dark #dsqjs .dsqjs-post-body { color: #eee; }
+        .dark #dsqjs .dsqjs-no-comment { color: #ccc; }
         .dark #dsqjs .dsqjs-order-label { background-color: #343434; }
         .dark #dsqjs .dsqjs-post-list .dsqjs-post-header .dsqjs-meta { color: #ccc; }
         .dark #dsqjs .dsqjs-nav-tab { color: #ccc; }
