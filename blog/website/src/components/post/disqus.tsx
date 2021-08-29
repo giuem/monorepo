@@ -59,7 +59,16 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
 
   return (
     <div className="mt-16 py-12" ref={intersectionRef}>
-      <style id="disqus_thread_style">{css}</style>
+      <style id="disqus_thread_style">
+        {css}
+        {`
+        .dark #dsqjs .dsqjs-post-body { color: #eee; }
+        .dark #dsqjs .dsqjs-order-label { background-color: #343434; }
+        .dark #dsqjs .dsqjs-post-list .dsqjs-post-header .dsqjs-meta { color: #ccc; }
+        .dark #dsqjs .dsqjs-nav-tab { color: #ccc; }
+        .dark #dsqjs .dsqjs-tab-active { color: #eee; }
+        `}
+      </style>
       <div id="disqus_thread"></div>
     </div>
   );
