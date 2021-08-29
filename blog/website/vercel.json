@@ -25,11 +25,13 @@
           "value": "public, s-maxage=0"
         }
       ],
-      "has": {
-        "type": "header",
-        "key": "content-disposition",
-        "value": "*404.html*"
-      }
+      "has": [
+        {
+          "type": "header",
+          "key": "content-disposition",
+          "value": "*404.html*"
+        }
+      ]
     }
   ]
 }
