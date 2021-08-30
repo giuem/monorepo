@@ -80,6 +80,7 @@ module.exports = {
             },
           },
           `gatsby-remark-copy-linked-files`,
+          '@fec/remark-a11y-emoji/gatsby',
         ],
       },
     },

@@ -9,6 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fec/remark-a11y-emoji": "^3.1.0",
     "@giuem/gatsby-plugin-dark-mode": "workspace:*",
     "@loadable/component": "5.15.0",
     "@mdx-js/mdx": "1.6.22",
