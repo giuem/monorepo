@@ -1,7 +1,5 @@
-import {
-  getAssetFromKV,
-  mapRequestToAsset,
-} from '@cloudflare/kv-asset-handler';
+// eslint-disable-next-line import/no-unresolved
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
 
 /**
  * The DEBUG flag will do two things that help during development:
