@@ -1,4 +1,4 @@
 packages:
-  - 'blog/**'
+  - 'blog/*'
   - 'configs/*'
   - 'packages/*'

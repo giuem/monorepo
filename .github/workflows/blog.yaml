@@ -33,3 +33,8 @@ jobs:
           restore-keys: ${{ runner.os }}-blog-gatsby-cache-
       - name: Build Blog
         run: pnpm build --filter @giuem/blog
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          workingDirectory: 'blog/website'
