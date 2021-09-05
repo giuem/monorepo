@@ -122,6 +122,7 @@ module.exports = {
             {
               allMdx(
                 sort: { order: DESC, fields: [frontmatter___date] },
+                filter: { fields: { type: { eq: "posts" } } }
               ) {
                 edges {
                   node {
