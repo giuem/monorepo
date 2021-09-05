@@ -76,7 +76,7 @@ module.exports = {
               backgroundColor: 'none',
               quality: 50,
               withWebp: { nearLossless: true, quality: 50 },
-              // withAvif: { quality: 80 },
+              withAvif: { quality: 80 },
             },
           },
           `gatsby-remark-copy-linked-files`,
