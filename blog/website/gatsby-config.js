@@ -84,7 +84,12 @@ module.exports = {
               // withAvif: { quality: 50, speed: 1 },
             },
           },
-          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
           '@fec/remark-a11y-emoji/gatsby',
         ],
       },

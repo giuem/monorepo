@@ -62,7 +62,7 @@ async function handleEvent(event) {
       });
     }
 
-    if (path.startsWith('/static/') || /\.(css|js|gif|map)$/.test(path)) {
+    if (path.startsWith('/static/') || /\.(css|js|map)$/.test(path)) {
       const response = await getAssetFromKV(event, {
         cacheControl: {
           edgeTtl: 365 * 24 * 60 * 60,
