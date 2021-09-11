@@ -1,5 +1,5 @@
 {
-  "name": "@giuem/blog",
+  "name": "www.giuem.com",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",

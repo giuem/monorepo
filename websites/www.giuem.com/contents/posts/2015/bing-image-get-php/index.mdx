@@ -165,28 +165,28 @@ body {
 (function () {
   //bing pic load
   var $data = {
-    title: localStorage.getItem("bing_title")
-      ? localStorage.getItem("bing_title")
-      : "",
-    d: localStorage.getItem("bing_d") ? localStorage.getItem("bing_d") : "",
-    url: localStorage.getItem("bing_url")
-      ? localStorage.getItem("bing_url")
-      : "",
-    date: localStorage.getItem("bing_date")
-      ? localStorage.getItem("bing_date")
-      : "",
+    title: localStorage.getItem('bing_title')
+      ? localStorage.getItem('bing_title')
+      : '',
+    d: localStorage.getItem('bing_d') ? localStorage.getItem('bing_d') : '',
+    url: localStorage.getItem('bing_url')
+      ? localStorage.getItem('bing_url')
+      : '',
+    date: localStorage.getItem('bing_date')
+      ? localStorage.getItem('bing_date')
+      : '',
   };
   if (
     new Date().getDate() != $data.date ||
-    $data.title == "" ||
-    $data.d == "" ||
-    $data.url == ""
+    $data.title == '' ||
+    $data.d == '' ||
+    $data.url == ''
   ) {
-    ajax("GET", "//giuem.sinaapp.com/bing/", function ($data) {
-      localStorage.setItem("bing_title", $data.title);
-      localStorage.setItem("bing_d", $data.d);
-      localStorage.setItem("bing_url", $data.url);
-      localStorage.setItem("bing_date", new Date().getDate());
+    ajax('GET', '//giuem.sinaapp.com/bing/', function ($data) {
+      localStorage.setItem('bing_title', $data.title);
+      localStorage.setItem('bing_d', $data.d);
+      localStorage.setItem('bing_url', $data.url);
+      localStorage.setItem('bing_date', new Date().getDate());
       setHero($data);
     });
   } else {
@@ -194,25 +194,25 @@ body {
   }
 })();
 function setHero($data) {
-  var $hero = document.getElementById("hero");
+  var $hero = document.getElementById('hero');
   if (!$hero) {
     return;
   }
   if ($data) {
-    $hero.style.cssText += "background-image:url(" + $data.url + ")";
-    document.getElementById("hero-title").innerHTML = $data.title;
-    document.getElementById("hero-d").innerHTML = $data.d;
+    $hero.style.cssText += 'background-image:url(' + $data.url + ')';
+    document.getElementById('hero-title').innerHTML = $data.title;
+    document.getElementById('hero-d').innerHTML = $data.d;
   }
 }
 function ajax(type, url, opts, callback) {
   var xhr = new XMLHttpRequest();
-  if (typeof opts === "function") {
+  if (typeof opts === 'function') {
     callback = opts;
     opts = null;
   }
   xhr.open(type, url);
   var fd = new FormData();
-  if (type === "POST" && opts) {
+  if (type === 'POST' && opts) {
     for (var key in opts) {
       fd.append(key, JSON.stringify(opts[key]));
     }
