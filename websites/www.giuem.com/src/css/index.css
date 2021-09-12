@@ -10,4 +10,8 @@
   html.dark {
     color-scheme: dark;
   }
+
+  #disqus_thread iframe {
+    color-scheme: light;
+  }
 }
