@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@types/loadable__component": "5.13.4",
-    "@types/lodash-es": "4.17.4",
+    "@types/lodash-es": "4.17.5",
     "@types/mdx-js__react": "1.5.4",
     "@types/node": "15.14.9",
     "@types/react": "17.0.19",
