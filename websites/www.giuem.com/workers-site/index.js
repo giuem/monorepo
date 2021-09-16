@@ -107,13 +107,14 @@ async function handleEvent(event) {
             new Request(`${new URL(req.url).origin}/404.html`, req),
         });
 
-        return new Response(notFoundResponse.body, {
+        const response = new Response(notFoundResponse.body, {
           ...notFoundResponse,
           status: 404,
-          headers: {
-            'cache-control': 'public, max-age=30, no-cache',
-          },
         });
+
+        response.headers.set('cache-control', 'no-cache');
+
+        return response;
       } catch (e) {
         // empty catch block
       }
