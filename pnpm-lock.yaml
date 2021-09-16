@@ -8,14 +8,14 @@ importers:
       eslint: 7.32.0
       husky: 7.0.2
       lint-staged: 11.1.2
-      prettier: 2.3.2
+      prettier: 2.4.1
       typescript: 4.4.2
     devDependencies:
       '@giuem/eslint-config': link:configs/eslint-config
       eslint: 7.32.0
       husky: 7.0.2
       lint-staged: 11.1.2
-      prettier: 2.3.2
+      prettier: 2.4.1
       typescript: 4.4.2
 
   configs/eslint-config:
@@ -34,7 +34,7 @@ importers:
       eslint-config-prettier: 8.3.0_eslint@7.32.0
       eslint-plugin-import: 2.24.2_eslint@7.32.0
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
-      eslint-plugin-prettier: 4.0.0_5a48a349ffec60f5257b5f148f5199c3
+      eslint-plugin-prettier: 4.0.0_6e975bd57c7acf028c1a9ddbbf60c898
       eslint-plugin-react: 7.25.0_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
 
@@ -5297,7 +5297,7 @@ packages:
       language-tags: 1.0.5
     dev: false
 
-  /eslint-plugin-prettier/4.0.0_5a48a349ffec60f5257b5f148f5199c3:
+  /eslint-plugin-prettier/4.0.0_6e975bd57c7acf028c1a9ddbbf60c898:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -5310,7 +5310,7 @@ packages:
     dependencies:
       eslint: 7.32.0
       eslint-config-prettier: 8.3.0_eslint@7.32.0
-      prettier: 2.3.2
+      prettier: 2.4.1
       prettier-linter-helpers: 1.0.0
     dev: false
 
@@ -5991,6 +5991,7 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -10376,6 +10377,13 @@ packages:
     resolution: {integrity: sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: false
+
+  /prettier/2.4.1:
+    resolution: {integrity: sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /pretty-bytes/5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
