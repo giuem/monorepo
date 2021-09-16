@@ -56,7 +56,7 @@ importers:
       '@types/lodash-es': 4.17.4
       '@types/mdx-js__react': 1.5.4
       '@types/node': 15.14.9
-      '@types/react': 17.0.19
+      '@types/react': 17.0.21
       '@types/react-dom': 17.0.9
       '@types/react-helmet': 6.1.2
       '@types/tailwindcss': 2.2.1
@@ -136,7 +136,7 @@ importers:
       '@types/lodash-es': 4.17.4
       '@types/mdx-js__react': 1.5.4
       '@types/node': 15.14.9
-      '@types/react': 17.0.19
+      '@types/react': 17.0.21
       '@types/react-dom': 17.0.9
       '@types/react-helmet': 6.1.2
       '@types/tailwindcss': 2.2.1
@@ -2630,6 +2630,14 @@ packages:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
       csstype: 3.0.8
+
+  /@types/react/17.0.21:
+    resolution: {integrity: sha512-GzzXCpOthOjXvrAUFQwU/svyxu658cwu00Q9ugujS4qc1zXgLFaO0kS2SLOaMWLt2Jik781yuHCWB7UcYdGAeQ==}
+    dependencies:
+      '@types/prop-types': 15.7.4
+      '@types/scheduler': 0.16.2
+      csstype: 3.0.8
+    dev: true
 
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
