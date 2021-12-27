@@ -21,7 +21,6 @@ jobs:
         uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.14.2
-          run_install: true
       - name: Cache Gatsby
         uses: actions/cache@v2
         id: blog-gatsby-cache
@@ -31,6 +30,7 @@ jobs:
             websites/www.giuem.com/public
           key: ${{ runner.os }}-blog-gatsby-cache-${{ github.sha }}
           restore-keys: ${{ runner.os }}-blog-gatsby-cache-
+      - run: pnpm install
       - name: Build Blog
         run: pnpm build --filter www.giuem.com
       - name: Publish
