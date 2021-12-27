@@ -60,7 +60,7 @@ importers:
       '@types/react-dom': 17.0.9
       '@types/react-helmet': 6.1.2
       '@types/tailwindcss': 2.2.1
-      autoprefixer: 10.3.4
+      autoprefixer: 10.4.0
       disqusjs: 1.3.0
       gatsby: 3.14.6
       gatsby-plugin-feed: 3.14.0
@@ -99,7 +99,7 @@ importers:
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.7
-      autoprefixer: 10.3.4_postcss@8.3.8
+      autoprefixer: 10.4.0_postcss@8.3.8
       disqusjs: 1.3.0
       gatsby: 3.14.6_0d3cd51d9b6a81a791a116dcb17e41cf
       gatsby-plugin-feed: 3.14.0_bb263373920d81cf36b1665c075f4a49
@@ -129,7 +129,7 @@ importers:
       react-schemaorg: 2.0.0_5682505d7f4af9d1852f817a799311ab
       react-use: 17.3.1_react-dom@17.0.2+react@17.0.2
       schema-dts: 0.11.0_typescript@4.4.2
-      tailwindcss: 2.2.7_9b78b0390f47c8854fda23c07dce8c7f
+      tailwindcss: 2.2.7_74a9a910a9f2682d0f3d93762c030323
       typescript: 4.4.2
     devDependencies:
       '@types/loadable__component': 5.13.4
@@ -2513,7 +2513,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.7_9b78b0390f47c8854fda23c07dce8c7f
+      tailwindcss: 2.2.7_74a9a910a9f2682d0f3d93762c030323
     dev: false
 
   /@tokenizer/token/0.3.0:
@@ -3399,18 +3399,18 @@ packages:
     hasBin: true
     dev: false
 
-  /autoprefixer/10.3.4_postcss@8.3.8:
-    resolution: {integrity: sha512-EKjKDXOq7ug+jagLzmnoTRpTT0q1KVzEJqrJd0hCBa7FiG0WbFOBCcJCy2QkW1OckpO3qgttA1aWjVbeIPAecw==}
+  /autoprefixer/10.4.0_postcss@8.3.8:
+    resolution: {integrity: sha512-7FdJ1ONtwzV1G43GDD0kpVMn/qbiNqyOPMFTX5nRffI+7vgWoFEc6DcXOxHJxrWNDXrZh18eDsZjvZGUljSRGA==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.16.8
-      caniuse-lite: 1.0.30001252
-      colorette: 1.3.0
+      browserslist: 4.18.1
+      caniuse-lite: 1.0.30001282
       fraction.js: 4.1.1
       normalize-range: 0.1.2
+      picocolors: 1.0.0
       postcss: 8.3.8
       postcss-value-parser: 4.1.0
     dev: false
@@ -3795,8 +3795,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001252
-      electron-to-chromium: 1.3.813
+      caniuse-lite: 1.0.30001282
+      electron-to-chromium: 1.3.902
       escalade: 3.1.1
       node-releases: 1.1.75
     dev: false
@@ -3806,9 +3806,9 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001252
+      caniuse-lite: 1.0.30001282
       colorette: 1.3.0
-      electron-to-chromium: 1.3.813
+      electron-to-chromium: 1.3.902
       escalade: 3.1.1
       node-releases: 1.1.75
     dev: false
@@ -3960,10 +3960,6 @@ packages:
       caniuse-lite: 1.0.30001282
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
-    dev: false
-
-  /caniuse-lite/1.0.30001252:
-    resolution: {integrity: sha512-I56jhWDGMtdILQORdusxBOH+Nl/KgQSdDmpJezYddnAkVOmnoU8zwjTV9xAjMIYxr0iPreEAVylCGcmHCjfaOw==}
     dev: false
 
   /caniuse-lite/1.0.30001282:
@@ -5180,10 +5176,6 @@ packages:
 
   /ee-first/1.1.1:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
-    dev: false
-
-  /electron-to-chromium/1.3.813:
-    resolution: {integrity: sha512-YcSRImHt6JZZ2sSuQ4Bzajtk98igQ0iKkksqlzZLzbh4p0OIyJRSvUbsgqfcR8txdfsoYCc4ym306t4p2kP/aw==}
     dev: false
 
   /electron-to-chromium/1.3.902:
@@ -6885,7 +6877,7 @@ packages:
       '@vercel/webpack-asset-relocator-loader': 1.7.0
       address: 1.1.2
       anser: 2.0.1
-      autoprefixer: 10.3.4_postcss@8.3.8
+      autoprefixer: 10.4.0_postcss@8.3.8
       axios: 0.21.1_debug@3.2.7
       babel-loader: 8.2.2_e37f829d18a4aad48a8ffa9b9e6152c1
       babel-plugin-add-module-exports: 1.0.4
@@ -12361,7 +12353,7 @@ packages:
       string-width: 4.2.2
       strip-ansi: 6.0.0
 
-  /tailwindcss/2.2.7_9b78b0390f47c8854fda23c07dce8c7f:
+  /tailwindcss/2.2.7_74a9a910a9f2682d0f3d93762c030323:
     resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -12370,7 +12362,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.1
-      autoprefixer: 10.3.4_postcss@8.3.8
+      autoprefixer: 10.4.0_postcss@8.3.8
       bytes: 3.1.0
       chalk: 4.1.2
       chokidar: 3.5.2
@@ -13243,7 +13235,7 @@ packages:
       '@webassemblyjs/wasm-parser': 1.11.1
       acorn: 8.4.1
       acorn-import-assertions: 1.7.6_acorn@8.4.1
-      browserslist: 4.16.8
+      browserslist: 4.18.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.8.2
       es-module-lexer: 0.7.1
