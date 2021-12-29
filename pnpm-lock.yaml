@@ -57,7 +57,7 @@ importers:
       '@types/mdx-js__react': 1.5.4
       '@types/node': 15.14.9
       '@types/react': 17.0.38
-      '@types/react-dom': 17.0.9
+      '@types/react-dom': 17.0.11
       '@types/react-helmet': 6.1.2
       '@types/tailwindcss': 2.2.1
       autoprefixer: 10.4.0
@@ -137,7 +137,7 @@ importers:
       '@types/mdx-js__react': 1.5.4
       '@types/node': 15.14.9
       '@types/react': 17.0.38
-      '@types/react-dom': 17.0.9
+      '@types/react-dom': 17.0.11
       '@types/react-helmet': 6.1.2
       '@types/tailwindcss': 2.2.1
 
@@ -2741,8 +2741,8 @@ packages:
       '@types/react': 17.0.38
     dev: false
 
-  /@types/react-dom/17.0.9:
-    resolution: {integrity: sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==}
+  /@types/react-dom/17.0.11:
+    resolution: {integrity: sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==}
     dependencies:
       '@types/react': 17.0.38
     dev: true
