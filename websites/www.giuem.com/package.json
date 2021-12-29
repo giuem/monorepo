@@ -53,7 +53,7 @@
     "@types/lodash-es": "4.17.5",
     "@types/mdx-js__react": "1.5.4",
     "@types/node": "15.14.9",
-    "@types/react": "17.0.26",
+    "@types/react": "17.0.38",
     "@types/react-dom": "17.0.9",
     "@types/react-helmet": "6.1.2",
     "@types/tailwindcss": "2.2.1"
