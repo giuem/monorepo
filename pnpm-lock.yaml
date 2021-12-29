@@ -27,7 +27,7 @@ importers:
       eslint-plugin-jsx-a11y: 6.4.1
       eslint-plugin-prettier: 4.0.0
       eslint-plugin-react: 7.28.0
-      eslint-plugin-react-hooks: 4.2.0
+      eslint-plugin-react-hooks: 4.3.0
     dependencies:
       '@typescript-eslint/eslint-plugin': 4.33.0_00b37c941832412d4ceeacf6a0c59027
       '@typescript-eslint/parser': 4.33.0_eslint@7.32.0+typescript@4.4.2
@@ -36,7 +36,7 @@ importers:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.32.0
       eslint-plugin-prettier: 4.0.0_6e975bd57c7acf028c1a9ddbbf60c898
       eslint-plugin-react: 7.28.0_eslint@7.32.0
-      eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
+      eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
 
   packages/gatsby-plugin-dark-mode:
     specifiers:
@@ -5669,6 +5669,15 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    dependencies:
+      eslint: 7.32.0
+    dev: false
+
+  /eslint-plugin-react-hooks/4.3.0_eslint@7.32.0:
+    resolution: {integrity: sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
     dependencies:
       eslint: 7.32.0
     dev: false
