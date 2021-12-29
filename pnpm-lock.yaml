@@ -54,7 +54,7 @@ importers:
       '@tailwindcss/typography': 0.4.1
       '@types/loadable__component': 5.13.4
       '@types/lodash-es': 4.17.5
-      '@types/mdx-js__react': 1.5.4
+      '@types/mdx-js__react': 1.5.5
       '@types/node': 15.14.9
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
@@ -134,7 +134,7 @@ importers:
     devDependencies:
       '@types/loadable__component': 5.13.4
       '@types/lodash-es': 4.17.5
-      '@types/mdx-js__react': 1.5.4
+      '@types/mdx-js__react': 1.5.5
       '@types/node': 15.14.9
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
@@ -2683,8 +2683,8 @@ packages:
       '@types/unist': 2.0.6
     dev: false
 
-  /@types/mdx-js__react/1.5.4:
-    resolution: {integrity: sha512-hce+Hymj3cEMOma13eQRhpT3mhQrOkN4CAYEwKWB/qj2BiuUrrTpCkOShEERGmLVgDc3nxF4Dc0k7W999EQxnQ==}
+  /@types/mdx-js__react/1.5.5:
+    resolution: {integrity: sha512-k8pnaP6JXVlQh18HgL5X6sYFNC/qZnzO7R2+HsmwrwUd+JnnsU0d9lyyT0RQrHg1anxDU36S98TI/fsGtmYqqg==}
     dependencies:
       '@types/react': 17.0.38
     dev: true
