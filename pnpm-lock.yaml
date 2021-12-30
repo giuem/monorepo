@@ -50,7 +50,7 @@ importers:
     specifiers:
       '@fec/remark-a11y-emoji': 3.1.0
       '@giuem/gatsby-plugin-dark-mode': workspace:*
-      '@loadable/component': 5.15.0
+      '@loadable/component': 5.15.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
       '@tailwindcss/typography': 0.4.1
@@ -97,7 +97,7 @@ importers:
     dependencies:
       '@fec/remark-a11y-emoji': 3.1.0
       '@giuem/gatsby-plugin-dark-mode': link:../../packages/gatsby-plugin-dark-mode
-      '@loadable/component': 5.15.0_react@17.0.2
+      '@loadable/component': 5.15.2_react@17.0.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.7
@@ -1531,13 +1531,6 @@ packages:
       regenerator-runtime: 0.13.9
     dev: false
 
-  /@babel/runtime/7.15.3:
-    resolution: {integrity: sha512-OvwMLqNXkCXSz1kSm58sEsNuhqOx/fKpnUnKnFB5v8uDda5bLNEHNgKPvhDN6IU0LDcnHQ90LlJ0Q6jnyBSIBA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.13.9
-    dev: false
-
   /@babel/runtime/7.16.3:
     resolution: {integrity: sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==}
     engines: {node: '>=6.9.0'}
@@ -2273,13 +2266,13 @@ packages:
       regenerator-runtime: 0.13.9
     dev: false
 
-  /@loadable/component/5.15.0_react@17.0.2:
-    resolution: {integrity: sha512-g63rQzypPOZi0BeGsK4ST2MYhsFR+i7bhL8k/McUoWDNMDuTTdUlQ2GACKxqh5sI/dNC/6nVoPrycMnSylnAgQ==}
+  /@loadable/component/5.15.2_react@17.0.2:
+    resolution: {integrity: sha512-ryFAZOX5P2vFkUdzaAtTG88IGnr9qxSdvLRvJySXcUA4B4xVWurUNADu3AnKPksxOZajljqTrDEDcYjeL4lvLw==}
     engines: {node: '>=8'}
     peerDependencies:
       react: '>=16.3.0'
     dependencies:
-      '@babel/runtime': 7.15.3
+      '@babel/runtime': 7.16.3
       hoist-non-react-statics: 3.3.2
       react: 17.0.2
       react-is: 16.13.1
