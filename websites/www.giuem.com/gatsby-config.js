@@ -139,6 +139,7 @@ module.exports = {
             }
           `,
             output: '/rss.xml',
+            title: `${BLOG_NAME}'s RSS Feed`,
           },
         ],
       },
