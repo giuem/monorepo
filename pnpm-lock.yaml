@@ -90,7 +90,7 @@ importers:
       react-helmet: 6.1.0
       react-icons: 4.2.0
       react-schemaorg: 2.0.0
-      react-use: 17.3.1
+      react-use: 17.3.2
       schema-dts: 0.11.0
       tailwindcss: 2.2.7
       typescript: 4.4.2
@@ -129,7 +129,7 @@ importers:
       react-helmet: 6.1.0_react@17.0.2
       react-icons: 4.2.0_react@17.0.2
       react-schemaorg: 2.0.0_5682505d7f4af9d1852f817a799311ab
-      react-use: 17.3.1_react-dom@17.0.2+react@17.0.2
+      react-use: 17.3.2_react-dom@17.0.2+react@17.0.2
       schema-dts: 0.11.0_typescript@4.4.2
       tailwindcss: 2.2.7_cefe482e8d38053bbf3d5815e0c551b3
       typescript: 4.4.2
@@ -10977,8 +10977,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /react-use/17.3.1_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-hs7+tS4rRm1QLHPfanLCqXIi632tP4V7Sai1ENUP2WTufU6am++tU9uSw9YrNCFqbABiEv0ndKU1XCUcfu2tXA==}
+  /react-use/17.3.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-bj7OD0/1wL03KyWmzFXAFe425zziuTf7q8olwCYBfOeFHY1qfO1FAMjROQLsLZYwG4Rx63xAfb7XAbBrJsZmEw==}
     peerDependencies:
       react: ^16.8.0  || ^17.0.0
       react-dom: ^16.8.0  || ^17.0.0
