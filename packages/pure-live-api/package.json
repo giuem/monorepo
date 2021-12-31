@@ -2,9 +2,10 @@
   "name": "@giuem/pure-live-api",
   "version": "1.0.0",
   "description": "pure-live-api",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "start": "tsup --watch src",
     "build": "tsup",

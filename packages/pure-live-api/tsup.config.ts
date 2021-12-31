@@ -7,4 +7,5 @@ export default defineConfig({
   dts: true,
   format: ['cjs', 'esm'],
   platform: 'browser',
+  target: 'es6',
 });
