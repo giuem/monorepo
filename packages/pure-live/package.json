@@ -1,7 +1,7 @@
 {
-  "name": "@giuem/pure-live-api",
+  "name": "@giuem/pure-live",
   "version": "1.0.0",
-  "description": "pure-live-api",
+  "description": "pure-live client",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

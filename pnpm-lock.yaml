@@ -150,7 +150,7 @@ importers:
       '@infra/tsconfig': link:../../configs/tsconfig
       react: 17.0.2
 
-  packages/pure-live-api:
+  packages/pure-live:
     specifiers:
       tsup: 5.11.11
       typescript: 4.5.4
