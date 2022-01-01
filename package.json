@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@giuem/eslint-config": "workspace:*",
-    "eslint": "8.5.0",
+    "eslint": "8.6.0",
     "husky": "7.0.4",
     "lint-staged": "12.1.4",
     "prettier": "2.5.1",
