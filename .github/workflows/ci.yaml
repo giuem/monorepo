@@ -32,8 +32,8 @@ jobs:
         id: blog-gatsby-cache
         with:
           path: |
-            websites/www.giuem.com/.cache
-            websites/www.giuem.com/public
+            apps/www.giuem.com/.cache
+            apps/www.giuem.com/public
           key: gatsby-cache-${{ github.sha }}
           restore-keys: |
             gatsby-cache-
@@ -52,4 +52,4 @@ jobs:
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          workingDirectory: 'websites/www.giuem.com'
+          workingDirectory: 'apps/www.giuem.com'
