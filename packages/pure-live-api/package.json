@@ -8,7 +8,7 @@
   "scripts": {
     "start": "tsup --watch src",
     "build": "tsup",
-    "prepare": "pnpm build"
+    "prepublishOnly": "pnpm build"
   },
   "sideEffects": false,
   "author": "giuem",
