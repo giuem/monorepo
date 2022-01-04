@@ -28,7 +28,7 @@ importers:
       '@loadable/component': 5.15.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
-      '@tailwindcss/typography': 0.4.1
+      '@tailwindcss/typography': 0.5.0
       '@types/loadable__component': 5.13.4
       '@types/lodash-es': 4.17.5
       '@types/mdx-js__react': 1.5.5
@@ -75,7 +75,7 @@ importers:
       '@loadable/component': 5.15.2_react@17.0.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
-      '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
+      '@tailwindcss/typography': 0.5.0_tailwindcss@2.2.19
       autoprefixer: 10.4.1_postcss@8.4.5
       disqusjs: 1.3.0
       gatsby: 4.4.0_1bc199a3dbabeb24e16a6bee610173dd
@@ -138,6 +138,9 @@ importers:
       eslint-plugin-prettier: 4.0.0_1c588f61426b1faf18812943f1678311
       eslint-plugin-react: 7.28.0_eslint@8.6.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.6.0
+
+  configs/tsconfig:
+    specifiers: {}
 
   packages/gatsby-plugin-dark-mode:
     specifiers:
@@ -2444,10 +2447,10 @@ packages:
       defer-to-connect: 2.0.1
     dev: false
 
-  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.19:
-    resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
+  /@tailwindcss/typography/0.5.0_tailwindcss@2.2.19:
+    resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
-      tailwindcss: '>=2.0.0'
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
