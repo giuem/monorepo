@@ -1,3 +1,3 @@
 {
-  "extends": "@giuem/eslint-config"
+  "extends": "@infra/eslint-config"
 }
