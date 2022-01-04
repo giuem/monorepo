@@ -24,6 +24,7 @@ importers:
     specifiers:
       '@fec/remark-a11y-emoji': 3.1.0
       '@giuem/gatsby-plugin-dark-mode': workspace:*
+      '@infra/tsconfig': workspace:^0.0.0
       '@loadable/component': 5.15.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
@@ -108,6 +109,7 @@ importers:
       tailwindcss: 2.2.19_cefe482e8d38053bbf3d5815e0c551b3
       typescript: 4.5.4
     devDependencies:
+      '@infra/tsconfig': link:../../configs/tsconfig
       '@types/loadable__component': 5.13.4
       '@types/lodash-es': 4.17.5
       '@types/mdx-js__react': 1.5.5
@@ -139,8 +141,10 @@ importers:
 
   packages/gatsby-plugin-dark-mode:
     specifiers:
+      '@infra/tsconfig': workspace:^0.0.0
       react: 17.0.2
     devDependencies:
+      '@infra/tsconfig': link:../../configs/tsconfig
       react: 17.0.2
 
   packages/pure-live-api:

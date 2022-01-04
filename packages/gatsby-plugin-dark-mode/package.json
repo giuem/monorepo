@@ -4,6 +4,7 @@
   "private": true,
   "main": "src/index.ts",
   "devDependencies": {
+    "@infra/tsconfig": "workspace:^0.0.0",
     "react": "17.0.2"
   },
   "peerDependencies": {
