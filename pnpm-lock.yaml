@@ -36,7 +36,7 @@ importers:
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       '@types/react-helmet': 6.1.5
-      '@types/tailwindcss': 3.0.1
+      '@types/tailwindcss': 3.0.2
       autoprefixer: 10.4.1
       disqusjs: 1.3.0
       gatsby: 4.4.0
@@ -67,7 +67,7 @@ importers:
       react-schemaorg: 2.0.0
       react-use: 17.3.2
       schema-dts: 0.11.0
-      tailwindcss: 3.0.11
+      tailwindcss: 3.0.13
       typescript: 4.5.4
     dependencies:
       '@fec/remark-a11y-emoji': 3.1.0
@@ -75,7 +75,7 @@ importers:
       '@loadable/component': 5.15.2_react@17.0.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
-      '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.11
+      '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.13
       autoprefixer: 10.4.1_postcss@8.4.5
       disqusjs: 1.3.0
       gatsby: 4.4.0_1bc199a3dbabeb24e16a6bee610173dd
@@ -106,7 +106,7 @@ importers:
       react-schemaorg: 2.0.0_097e644abbcc6794c8a69c5e3b07fc87
       react-use: 17.3.2_react-dom@17.0.2+react@17.0.2
       schema-dts: 0.11.0_typescript@4.5.4
-      tailwindcss: 3.0.11_cefe482e8d38053bbf3d5815e0c551b3
+      tailwindcss: 3.0.13_cefe482e8d38053bbf3d5815e0c551b3
       typescript: 4.5.4
     devDependencies:
       '@infra/tsconfig': link:../../configs/tsconfig
@@ -117,7 +117,7 @@ importers:
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       '@types/react-helmet': 6.1.5
-      '@types/tailwindcss': 3.0.1
+      '@types/tailwindcss': 3.0.2
 
   configs/eslint-config:
     specifiers:
@@ -208,7 +208,7 @@ packages:
       gensync: 1.0.0-beta.2
       json5: 2.2.0
       lodash: 4.17.21
-      resolve: 1.20.0
+      resolve: 1.21.0
       semver: 5.7.1
       source-map: 0.5.7
     transitivePeerDependencies:
@@ -232,7 +232,7 @@ packages:
       gensync: 1.0.0-beta.2
       json5: 2.2.0
       lodash: 4.17.21
-      resolve: 1.20.0
+      resolve: 1.21.0
       semver: 5.7.1
       source-map: 0.5.7
     transitivePeerDependencies:
@@ -353,7 +353,7 @@ packages:
       '@babel/traverse': 7.16.3
       debug: 4.3.3
       lodash.debounce: 4.0.8
-      resolve: 1.20.0
+      resolve: 1.21.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -371,7 +371,7 @@ packages:
       '@babel/traverse': 7.16.3
       debug: 4.3.3
       lodash.debounce: 4.0.8
-      resolve: 1.20.0
+      resolve: 1.21.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -2447,7 +2447,7 @@ packages:
       defer-to-connect: 2.0.1
     dev: false
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.11:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.13:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -2456,7 +2456,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.11_cefe482e8d38053bbf3d5815e0c551b3
+      tailwindcss: 3.0.13_cefe482e8d38053bbf3d5815e0c551b3
     dev: false
 
   /@tokenizer/token/0.3.0:
@@ -2722,8 +2722,8 @@ packages:
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
 
-  /@types/tailwindcss/3.0.1:
-    resolution: {integrity: sha512-0uQS44Y4HYpANZO+xrrrQg9P82v6ZjGcZihbH5UpsZXCGQDMyY8oWUBhsx5LGJcJ/Nyfl3WdGq/4pXHNNyeD4Q==}
+  /@types/tailwindcss/3.0.2:
+    resolution: {integrity: sha512-4nilb5vk7aZXaQvMZin5dSHX+AIHZNDmKtDDRHfVKE/XNkQK9OjZ9V+zo+XHoH/fdLzureJno3+C5wIGdrBzgQ==}
     dev: true
 
   /@types/tmp/0.0.33:
@@ -3567,7 +3567,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.16.3
       cosmiconfig: 6.0.0
-      resolve: 1.20.0
+      resolve: 1.21.0
     dev: false
 
   /babel-plugin-polyfill-corejs2/0.2.2_@babel+core@7.16.0:
@@ -5733,7 +5733,7 @@ packages:
       is-glob: 4.0.3
       minimatch: 3.0.4
       object.values: 1.1.5
-      resolve: 1.20.0
+      resolve: 1.21.0
       tsconfig-paths: 3.11.0
     dev: false
 
@@ -10345,7 +10345,7 @@ packages:
       postcss: ^8.2.2
     dependencies:
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -10490,7 +10490,7 @@ packages:
       caniuse-api: 3.0.0
       cssnano-utils: 2.0.1_postcss@8.4.5
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
       vendors: 1.0.4
     dev: false
 
@@ -10538,7 +10538,7 @@ packages:
     dependencies:
       alphanum-sort: 1.0.2
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
     dev: false
 
   /postcss-modules-extract-imports/3.0.0_postcss@8.4.5:
@@ -10558,7 +10558,7 @@ packages:
     dependencies:
       icss-utils: 5.1.0_postcss@8.4.5
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -10569,7 +10569,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
     dev: false
 
   /postcss-modules-values/4.0.0_postcss@8.4.5:
@@ -10720,14 +10720,6 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-selector-parser/6.0.6:
-    resolution: {integrity: sha512-9LXrvaaX3+mcv5xkg5kFwqSzSH1JIObIx51PrndZwlmznwXRfxMddDvo9gve3gVR8ZTKgoFDdWkbRFmEhT4PMg==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-    dev: false
-
   /postcss-selector-parser/6.0.8:
     resolution: {integrity: sha512-D5PG53d209Z1Uhcc0qAZ5U3t5HagH3cxu+WLZ22jt3gLUpXM4eXXfiO14jiDWST3NNooX/E8wISfOhZ9eIjGTQ==}
     engines: {node: '>=4'}
@@ -10755,7 +10747,7 @@ packages:
     dependencies:
       alphanum-sort: 1.0.2
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
       uniqs: 2.0.0
     dev: false
 
@@ -11566,6 +11558,15 @@ packages:
     dependencies:
       is-core-module: 2.8.0
       path-parse: 1.0.7
+    dev: false
+
+  /resolve/1.21.0:
+    resolution: {integrity: sha512-3wCbTpk5WJlyE4mSOtDLhqQmGFi0/TD9VPwmiolnk8U0wRgMEktqCXd3vy5buTO3tljvalNvKrjHEfrd2WpEKA==}
+    hasBin: true
+    dependencies:
+      is-core-module: 2.8.0
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
     dev: false
 
   /resolve/2.0.0-next.3:
@@ -12468,7 +12469,7 @@ packages:
     dependencies:
       browserslist: 4.19.1
       postcss: 8.4.5
-      postcss-selector-parser: 6.0.6
+      postcss-selector-parser: 6.0.8
     dev: false
 
   /stylis/4.0.10:
@@ -12532,6 +12533,11 @@ packages:
     resolution: {integrity: sha512-Obv7ycoCTG51N7y175StI9BlAXrmgZrFhZOb0/PyjHBher/NmsdBgbbQ1Inhq+gIhz6+7Gb+jWF2Vqi7Mf1xnQ==}
     engines: {node: '>=12'}
     dev: true
+
+  /supports-preserve-symlinks-flag/1.0.0:
+    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
+    engines: {node: '>= 0.4'}
+    dev: false
 
   /svgo/1.3.2:
     resolution: {integrity: sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==}
@@ -12600,8 +12606,8 @@ packages:
       strip-ansi: 6.0.1
     dev: false
 
-  /tailwindcss/3.0.11_cefe482e8d38053bbf3d5815e0c551b3:
-    resolution: {integrity: sha512-JyMsQ2kPqpOvG8ow535XpauXj3wz3nQqcy2tVlXj4FQ0eNlsdzvlAqpRA3q5rPLboWirNG6r2DqKczwjW2uc8Q==}
+  /tailwindcss/3.0.13_cefe482e8d38053bbf3d5815e0c551b3:
+    resolution: {integrity: sha512-raRPGFwQSGXn/3h0ttHND9jyPYfqk/ur2NXtlQuK25+ZnrCjlH1s1j4/oPswHGMoZzGNykUVycZ/LcROanUE0A==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -12629,7 +12635,7 @@ packages:
       postcss-selector-parser: 6.0.8
       postcss-value-parser: 4.2.0
       quick-lru: 5.1.1
-      resolve: 1.20.0
+      resolve: 1.21.0
     transitivePeerDependencies:
       - ts-node
     dev: false
