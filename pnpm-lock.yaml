@@ -33,7 +33,7 @@ importers:
       react-dom: 17.0.2
       tailwindcss: 3.0.13
       typescript: 4.5.4
-      vite: 2.7.11
+      vite: 2.7.12
     dependencies:
       '@giuem/pure-live': link:../../packages/pure-live
       axios: 0.24.0
@@ -47,7 +47,7 @@ importers:
       autoprefixer: 10.4.2
       tailwindcss: 3.0.13_autoprefixer@10.4.2
       typescript: 4.5.4
-      vite: 2.7.11
+      vite: 2.7.12
 
   apps/www.giuem.com:
     specifiers:
@@ -13445,8 +13445,8 @@ packages:
       vfile-message: 2.0.4
     dev: false
 
-  /vite/2.7.11:
-    resolution: {integrity: sha512-W1OVwJmtuxnzt9HwZ1AebVLgvsgNpe4TK/sxvF+1x2y8MRnTEHvaPqxy9A67IYb5BR0Q+nENmLYa3QfESmp5GQ==}
+  /vite/2.7.12:
+    resolution: {integrity: sha512-KvPYToRQWhRfBeVkyhkZ5hASuHQkqZUUdUcE3xyYtq5oYEPIJ0h9LWiWTO6v990glmSac2cEPeYeXzpX5Z6qKQ==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
