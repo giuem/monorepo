@@ -28,7 +28,7 @@ importers:
       '@types/react-dom': 17.0.11
       '@vitejs/plugin-react': 1.1.4
       autoprefixer: 10.4.2
-      axios: 0.24.0
+      axios: 0.25.0
       react: 17.0.2
       react-dom: 17.0.2
       tailwindcss: 3.0.15
@@ -36,7 +36,7 @@ importers:
       vite: 2.7.12
     dependencies:
       '@giuem/pure-live': link:../../packages/pure-live
-      axios: 0.24.0
+      axios: 0.25.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
@@ -158,11 +158,11 @@ importers:
 
   packages/pure-live:
     specifiers:
-      axios: ^0.24.0
+      axios: ^0.25.0
       tsup: 5.11.11
       typescript: 4.5.4
     dependencies:
-      axios: 0.24.0
+      axios: 0.25.0
     devDependencies:
       tsup: 5.11.11_typescript@4.5.4
       typescript: 4.5.4
@@ -3461,8 +3461,8 @@ packages:
       - debug
     dev: false
 
-  /axios/0.24.0:
-    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+  /axios/0.25.0:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
     dependencies:
       follow-redirects: 1.14.7_debug@3.2.7
     transitivePeerDependencies:
