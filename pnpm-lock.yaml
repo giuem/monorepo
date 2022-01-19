@@ -7,7 +7,7 @@ importers:
       '@infra/eslint-config': workspace:*
       eslint: 8.7.0
       husky: 7.0.4
-      lint-staged: 12.2.0
+      lint-staged: 12.2.1
       prettier: 2.5.1
       turbo: 1.0.28
       typescript: 4.5.4
@@ -15,7 +15,7 @@ importers:
       '@infra/eslint-config': link:packages/shared-eslint-config
       eslint: 8.7.0
       husky: 7.0.4
-      lint-staged: 12.2.0
+      lint-staged: 12.2.1
       prettier: 2.5.1
       turbo: 1.0.28
       typescript: 4.5.4
@@ -8769,8 +8769,8 @@ packages:
   /lines-and-columns/1.1.6:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
 
-  /lint-staged/12.2.0:
-    resolution: {integrity: sha512-TnNciMBhmEqzqM+RvzqqdvrG4TsI8wCDMX1Vg9+rj2Y9uY70Nq84Mb1WOIiwxW9l5tUlCOqtY5La71RM2fSgfA==}
+  /lint-staged/12.2.1:
+    resolution: {integrity: sha512-VCVcA9C2Vt5HHxSR4EZVZFJcQRJH984CGBeY+cJ/xed4mBd+JidbM/xbKcCq5ASaygAV0iITtdsCTnID7h/1OQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
