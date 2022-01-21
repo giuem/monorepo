@@ -6,7 +6,7 @@
   "author": "Giuem",
   "engines": {
     "node": "14.x",
-    "pnpm": "^6"
+    "pnpm": "^6.27.1"
   },
   "scripts": {
     "prepare": "husky install",
