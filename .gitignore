@@ -6,3 +6,5 @@ package-lock.json
 *.log
 dist
 .turbo
+tsconfig.tsbuildinfo
+.env.local

@@ -1,10 +1,10 @@
 {
-  "name": "@giuem/pure-live-api",
+  "name": "@giuem/pure-live",
   "version": "1.0.0",
-  "description": "pure-live-api",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "description": "pure-live client",
+  "exports": "./dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "start": "tsup --watch src",
     "build": "tsup",
@@ -14,10 +14,13 @@
   "author": "giuem",
   "license": "ISC",
   "devDependencies": {
-    "tsup": "5.11.10",
+    "tsup": "5.11.11",
     "typescript": "4.5.4"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^0.25.0"
+  }
 }
