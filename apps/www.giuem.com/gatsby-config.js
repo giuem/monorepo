@@ -94,9 +94,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-typescript`,
-    },
     `gatsby-plugin-postcss`,
     'gatsby-plugin-pnpm',
     // "@giuem/gatsby-plugin-webpack-bundle-analyzer",
