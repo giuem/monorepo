@@ -18,12 +18,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version-file: '.nvmrc'
-      - name: Setup pnpm Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-
+          cache: 'pnpm'
       - run: pnpm install
       - run: pnpm lint
 
@@ -37,13 +32,6 @@ jobs:
           key: gatsby-cache-${{ github.sha }}
           restore-keys: |
             gatsby-cache-
-
-      # - name: Cache Turbo
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: .turbo
-      #     key: turbo-cache-${{ github.ref_name }}-${{ github.sha }}
-      #     restore-keys:
 
       - name: Build
         run: pnpm turbo run build --cache-dir=".turbo"
