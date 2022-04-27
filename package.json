@@ -30,24 +30,5 @@
     "*": [
       "prettier --ignore-unknown --write"
     ]
-  },
-  "turbo": {
-    "baseBranch": "origin/main",
-    "npmClient": "pnpm",
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "dist/**",
-          "build/**",
-          "public/**"
-        ]
-      },
-      "dev": {
-        "cache": false
-      }
-    }
   }
 }
