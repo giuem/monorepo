@@ -80,6 +80,7 @@ importers:
       gatsby-plugin-remove-serviceworker: 1.0.0
       gatsby-plugin-sharp: 4.13.0
       gatsby-plugin-sitemap: 5.13.0
+      gatsby-plugin-vercel: ^1.0.3
       gatsby-remark-autolink-headers: 5.13.0
       gatsby-remark-copy-linked-files: 5.13.0
       gatsby-remark-images: 6.13.0
@@ -118,6 +119,7 @@ importers:
       gatsby-plugin-remove-serviceworker: 1.0.0
       gatsby-plugin-sharp: 4.13.0_gatsby@4.13.0
       gatsby-plugin-sitemap: 5.13.0_60e9077536cdca96f13130be7d2e884e
+      gatsby-plugin-vercel: 1.0.3
       gatsby-remark-autolink-headers: 5.13.0_60e9077536cdca96f13130be7d2e884e
       gatsby-remark-copy-linked-files: 5.13.0_gatsby@4.13.0
       gatsby-remark-images: 6.13.0_919f472837f50a9443581d05b4ee4ab4
@@ -1616,6 +1618,12 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       core-js-pure: 3.16.2
+      regenerator-runtime: 0.13.9
+    dev: false
+
+  /@babel/runtime/7.12.1:
+    resolution: {integrity: sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==}
+    dependencies:
       regenerator-runtime: 0.13.9
     dev: false
 
@@ -7835,6 +7843,13 @@ packages:
       svgo: 2.8.0
     transitivePeerDependencies:
       - graphql
+    dev: false
+
+  /gatsby-plugin-vercel/1.0.3:
+    resolution: {integrity: sha512-sZU7E9uJdSwb2S+86LSoYrS4MUUJtg5ZA/mZZIwBQyZXXTsBSGSXHv48WMzyyPY1RasG0k2pDLFesp4Z7GT9rQ==}
+    dependencies:
+      '@babel/runtime': 7.12.1
+      web-vitals: 0.2.4
     dev: false
 
   /gatsby-react-router-scroll/5.13.0_e79e440aa138c33796214ce0f2cea230:
@@ -14543,6 +14558,10 @@ packages:
 
   /web-namespaces/1.1.4:
     resolution: {integrity: sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==}
+    dev: false
+
+  /web-vitals/0.2.4:
+    resolution: {integrity: sha512-6BjspCO9VriYy12z356nL6JBS0GYeEcA457YyRzD+dD6XYCQ75NKhcOHUMHentOE7OcVCIXXDvOm0jKFfQG2Gg==}
     dev: false
 
   /web-vitals/1.1.2:
