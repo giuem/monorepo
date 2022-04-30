@@ -59,7 +59,7 @@ importers:
       '@mdx-js/react': 1.6.22
       '@tailwindcss/typography': 0.5.0
       '@types/loadable__component': 5.13.4
-      '@types/lodash-es': 4.17.5
+      '@types/lodash-es': 4.17.6
       '@types/mdx-js__react': 1.5.5
       '@types/node': 15.14.9
       '@types/react': 17.0.38
@@ -140,7 +140,7 @@ importers:
     devDependencies:
       '@infra/tsconfig': link:../../packages/shared-tsconfig
       '@types/loadable__component': 5.13.4
-      '@types/lodash-es': 4.17.5
+      '@types/lodash-es': 4.17.6
       '@types/mdx-js__react': 1.5.5
       '@types/node': 15.14.9
       '@types/react': 17.0.38
@@ -3258,8 +3258,8 @@ packages:
       '@types/react': 17.0.38
     dev: true
 
-  /@types/lodash-es/4.17.5:
-    resolution: {integrity: sha512-SHBoI8/0aoMQWAgUHMQ599VM6ZiSKg8sh/0cFqqlQQMyY9uEplc0ULU5yQNzcvdR4ZKa0ey8+vFmahuRbOCT1A==}
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
     dependencies:
       '@types/lodash': 4.14.172
     dev: true
