@@ -25,7 +25,7 @@ importers:
       '@giuem/pure-live': workspace:^1.0.0
       '@infra/tsconfig': workspace:^0.0.0
       '@types/react': 17.0.44
-      '@types/react-dom': 17.0.11
+      '@types/react-dom': 17.0.16
       '@vitejs/plugin-react': 1.1.4
       autoprefixer: 10.4.2
       axios: 0.25.0
@@ -42,7 +42,7 @@ importers:
     devDependencies:
       '@infra/tsconfig': link:../../packages/shared-tsconfig
       '@types/react': 17.0.44
-      '@types/react-dom': 17.0.11
+      '@types/react-dom': 17.0.16
       '@vitejs/plugin-react': 1.1.4
       autoprefixer: 10.4.2
       tailwindcss: 3.0.15_autoprefixer@10.4.2
@@ -63,7 +63,7 @@ importers:
       '@types/mdx-js__react': 1.5.5
       '@types/node': 15.14.9
       '@types/react': 17.0.44
-      '@types/react-dom': 17.0.11
+      '@types/react-dom': 17.0.16
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.2
       autoprefixer: 10.4.2
@@ -144,7 +144,7 @@ importers:
       '@types/mdx-js__react': 1.5.5
       '@types/node': 15.14.9
       '@types/react': 17.0.44
-      '@types/react-dom': 17.0.11
+      '@types/react-dom': 17.0.16
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.2
 
@@ -3327,8 +3327,8 @@ packages:
       '@types/react': 17.0.44
     dev: false
 
-  /@types/react-dom/17.0.11:
-    resolution: {integrity: sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==}
+  /@types/react-dom/17.0.16:
+    resolution: {integrity: sha512-DWcXf8EbMrO/gWnQU7Z88Ws/p16qxGpPyjTKTpmBSFKeE+HveVubqGO1CVK7FrwlWD5MuOcvh8gtd0/XO38NdQ==}
     dependencies:
       '@types/react': 17.0.44
     dev: true
