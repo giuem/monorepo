@@ -57,7 +57,7 @@ importers:
       '@loadable/component': 5.15.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
-      '@tailwindcss/line-clamp': ^0.4.0
+      '@tailwindcss/line-clamp': 0.4.0
       '@tailwindcss/typography': 0.5.2
       '@types/loadable__component': 5.13.4
       '@types/lodash-es': 4.17.6
@@ -105,7 +105,7 @@ importers:
       '@loadable/component': 5.15.2_react@17.0.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@17.0.2
-      '@tailwindcss/line-clamp': registry.npmmirror.com/@tailwindcss/line-clamp/0.4.0_tailwindcss@3.0.24
+      '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.0.24
       '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
       autoprefixer: 10.4.5_postcss@8.4.13
       disqusjs: 1.3.0
@@ -3115,6 +3115,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       defer-to-connect: 2.0.1
+    dev: false
+
+  /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.0.24:
+    resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.0.24
     dev: false
 
   /@tailwindcss/typography/0.5.2_tailwindcss@3.0.24:
@@ -14985,15 +14993,4 @@ packages:
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
-    dev: false
-
-  registry.npmmirror.com/@tailwindcss/line-clamp/0.4.0_tailwindcss@3.0.24:
-    resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tailwindcss/line-clamp/-/line-clamp-0.4.0.tgz}
-    id: registry.npmmirror.com/@tailwindcss/line-clamp/0.4.0
-    name: '@tailwindcss/line-clamp'
-    version: 0.4.0
-    peerDependencies:
-      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
-    dependencies:
-      tailwindcss: 3.0.24
     dev: false
