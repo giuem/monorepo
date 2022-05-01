@@ -148,13 +148,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: BLOG_NAME,
-        short_name: BLOG_NAME,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#4F46E5`,
         icon: 'static/logo.svg',
-        theme_color_in_head: false,
+        cache_busting_mode: `name`,
       },
     },
     {
