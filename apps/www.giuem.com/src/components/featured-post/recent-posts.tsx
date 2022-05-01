@@ -30,7 +30,7 @@ export const RecentPosts: React.FC<{
       <header>
         <h2 className="text-lg font-semibold">近期文章</h2>
       </header>
-      <section className="flex flex-col gap-1 my-4">
+      <section className="flex flex-col gap-1 my-6">
         {posts.map((post) => (
           <RecentPost key={post.fields.slug} post={post} />
         ))}
@@ -38,10 +38,10 @@ export const RecentPosts: React.FC<{
       <footer className="flex">
         <Link
           className="
-          text-base rounded-md transition-colors
+          text-sm rounded-md transition-colors
           bg-gray-100 hover:bg-indigo-50
           dark:bg-gray-800 hover:dark:bg-indigo-900
-          px-2 -mx-2 py-2"
+          px-3 -mx-2 py-2"
           href="/archives"
         >
           更多文章…
