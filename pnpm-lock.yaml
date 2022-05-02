@@ -96,7 +96,7 @@ importers:
       react-icons: 4.3.1
       react-schemaorg: 2.0.0
       react-use: 17.3.2
-      schema-dts: 0.11.0
+      schema-dts: 1.1.0
       tailwindcss: 3.0.24
       typescript: 4.6.4
     dependencies:
@@ -134,9 +134,9 @@ importers:
       react-dom: 17.0.2_react@17.0.2
       react-helmet: 6.1.0_react@17.0.2
       react-icons: 4.3.1_react@17.0.2
-      react-schemaorg: 2.0.0_416cd721b002b8331fc0c6aee40e69aa
+      react-schemaorg: 2.0.0_bda6e14d12a11430d05ab41cf3f7a13d
       react-use: 17.3.2_react-dom@17.0.2+react@17.0.2
-      schema-dts: 0.11.0_typescript@4.6.4
+      schema-dts: 1.1.0_typescript@4.6.4
       tailwindcss: 3.0.24
       typescript: 4.6.4
     devDependencies:
@@ -12362,7 +12362,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-schemaorg/2.0.0_416cd721b002b8331fc0c6aee40e69aa:
+  /react-schemaorg/2.0.0_bda6e14d12a11430d05ab41cf3f7a13d:
     resolution: {integrity: sha512-UqciFKA203ewNjn0zC09uYKuJSvMD8L75L1s/cW4rc7cS64w8l7vaI3SYkuoI/nwCBkJRmOkSJedWDUZBlYZwg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -12371,7 +12371,7 @@ packages:
       typescript: '>=3.1.6'
     dependencies:
       react: 17.0.2
-      schema-dts: 0.11.0_typescript@4.6.4
+      schema-dts: 1.1.0_typescript@4.6.4
       typescript: 4.6.4
     dev: false
 
@@ -12907,8 +12907,8 @@ packages:
       object-assign: 4.1.1
     dev: false
 
-  /schema-dts/0.11.0_typescript@4.6.4:
-    resolution: {integrity: sha512-vQgm1BTUb+PYNayCFXb3R6xXovzdigRIDKZ4BWthmJwqrxJZHNGsDXE7k/iXVcPI8vxHVcAaeQ7QNP9RrlQDEw==}
+  /schema-dts/1.1.0_typescript@4.6.4:
+    resolution: {integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ==}
     peerDependencies:
       typescript: '>=4.1.0'
     dependencies:
