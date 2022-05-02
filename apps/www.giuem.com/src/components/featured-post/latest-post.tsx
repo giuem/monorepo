@@ -15,7 +15,7 @@ export const LatestPost: React.FC<FeaturedPostItemProps> = ({ post }) => {
   // };
 
   return (
-    <article className="mb-12">
+    <article className="mb-16">
       <h2 className="text-2xl font-semibold">
         <Link
           className="
@@ -28,9 +28,22 @@ export const LatestPost: React.FC<FeaturedPostItemProps> = ({ post }) => {
         </Link>
       </h2>
       {post.excerpt && (
-        <h3 className="text-lg mt-4 text-gray-600 dark:text-gray-300 text-justify line-clamp-4 sm:line-clamp-none">
-          {post.excerpt}
-        </h3>
+        <>
+          <h3 className="text-lg mt-4 text-gray-600 dark:text-gray-300 text-justify line-clamp-4 sm:line-clamp-none">
+            {post.excerpt}
+          </h3>
+          <div className="flex mt-4 ">
+            <Link
+              className="text-sm rounded-md transition-colors
+            bg-gray-100 hover:bg-indigo-50
+            dark:bg-gray-800 hover:dark:bg-indigo-900
+            px-3 -mx-2 py-2"
+              href={href}
+            >
+              继续阅读
+            </Link>
+          </div>
+        </>
       )}
     </article>
   );

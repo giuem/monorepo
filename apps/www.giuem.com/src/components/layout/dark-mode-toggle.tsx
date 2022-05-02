@@ -10,7 +10,10 @@ export const DarkModeToggleButton: React.FC = () => {
 
   return (
     <button
-      className="text-lg hover:bg-gray-100 dark:hover:bg-gray-800 active:bg-gray-100 bg-gray-50 dark:bg-gray-900 p-2 rounded"
+      className="
+      bg-gray-100 hover:bg-indigo-50 
+      dark:bg-gray-800 dark:hover:bg-indigo-900 
+      p-2 rounded-md transition-colors"
       aria-label="深浅色主题切换按钮"
       onClick={toggleTheme}
     >
