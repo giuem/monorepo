@@ -1,8 +1,6 @@
-const BLOG_NAME = 'x Homology';
-
 module.exports = {
   siteMetadata: {
-    title: BLOG_NAME,
+    title: 'Homology',
     titleTemplate: '%s | Blog @ GIUEM',
     description:
       'GIUEM(@giuemcom) 的博客，平常会简单开箱测评买到的科技数码产品，也会记录分享日常的折腾奇奇怪怪的东西，技术向的文章会偏前端、信息安全',
@@ -136,7 +134,7 @@ module.exports = {
             }
           `,
             output: '/rss.xml',
-            title: `${BLOG_NAME}'s RSS Feed`,
+            title: `Giuem Blog RSS Feed`,
           },
         ],
       },
