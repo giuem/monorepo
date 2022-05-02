@@ -8,9 +8,9 @@ export const FeaturedPosts: React.FC<{
   recentPosts: Post[];
 }> = ({ latestPost, recentPosts }) => {
   return (
-    <div>
+    <>
       {latestPost && <LatestPost post={latestPost} />}
       <RecentPosts posts={recentPosts} />
-    </div>
+    </>
   );
 };
