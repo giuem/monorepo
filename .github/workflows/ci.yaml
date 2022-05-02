@@ -26,7 +26,7 @@ jobs:
       - run: pnpm lint
 
       - name: Cache Gatsby
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: blog-gatsby-cache
         with:
           path: |
