@@ -9,7 +9,7 @@ importers:
       husky: 7.0.4
       lint-staged: 12.4.1
       prettier: 2.6.2
-      turbo: 1.2.6
+      turbo: 1.2.8
       typescript: 4.6.4
     devDependencies:
       '@infra/eslint-config': link:packages/shared-eslint-config
@@ -17,7 +17,7 @@ importers:
       husky: 7.0.4
       lint-staged: 12.4.1
       prettier: 2.6.2
-      turbo: 1.2.6
+      turbo: 1.2.8
       typescript: 4.6.4
 
   apps/www.giuem.com:
@@ -5722,7 +5722,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: false
 
   /chokidar/3.5.3:
@@ -5737,7 +5737,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: false
 
   /chownr/1.1.4:
@@ -7938,6 +7938,14 @@ packages:
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
 
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: false
@@ -8492,6 +8500,16 @@ packages:
       unist-util-visit-parents: 3.1.1
     dev: false
 
+  /gatsby-sharp/0.7.0:
+    resolution: {integrity: sha512-NB7F1CuLr/y+xCadycds9TmMIZ65BiBINFPFssGPbn4HXgeNxEnxAnH9lWv4UlzpOk0YcvoMSPThtSKsjiWVcg==}
+    engines: {node: '>=14.15.0'}
+    requiresBuild: true
+    dependencies:
+      '@types/sharp': 0.30.2
+      sharp: 0.30.4
+    dev: false
+    optional: true
+
   /gatsby-source-filesystem/4.13.0_gatsby@4.13.1:
     resolution: {integrity: sha512-PRr/6tWY5BtnfVv67JSWvQTorfWteWBxzbcs7DvgoP7zHfIWR1tH6saONwuPbo9tCwQ73ZlLYz1LgGdOfJGPzA==}
     engines: {node: '>=14.15.0'}
@@ -8728,7 +8746,7 @@ packages:
       xstate: 4.26.1
       yaml-loader: 0.6.0
     optionalDependencies:
-      gatsby-sharp: registry.npmmirror.com/gatsby-sharp/0.7.0
+      gatsby-sharp: 0.7.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@types/node'
@@ -10087,7 +10105,7 @@ packages:
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.8
+      graceful-fs: 4.2.8
     dev: false
 
   /jsx-ast-utils/3.2.1:
@@ -10224,6 +10242,54 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
+  /lmdb-darwin-arm64/2.3.6:
+    resolution: {integrity: sha512-E2MnbFtsrr/EOsrBdZg913OgIAeiQDx8IMIOuqnDv3tghpvgSbdC8vx9phFZipqBPjZB7VV31tpyXyM3mxatqg==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /lmdb-darwin-x64/2.3.6:
+    resolution: {integrity: sha512-Sz+3FuA66PXq5iZnGC+0wJcMOpf5dO5m4xgZs1yTM1EvCMjd28KPq59CtDBlLX1Y+5oDOYEVeiLOOLDeZIgTLw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /lmdb-linux-arm/2.3.6:
+    resolution: {integrity: sha512-U6UojWtQH4CbRwStbe5b9PnHg7nPObWLKWhBudmU93lvA1Ncm2FrRqRKJRFDAr4HZ9uSMdKgaOOCWNbaJEcPQA==}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /lmdb-linux-arm64/2.3.6:
+    resolution: {integrity: sha512-ZGHCulnZGMWYRs6pyLrRmX+DpBI/IUy3X5c+S69Cd6XD0//+xlyYnDXnhGNFaAE8ch1PWtr7Npd1lkpVeY9Z4A==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /lmdb-linux-x64/2.3.6:
+    resolution: {integrity: sha512-z38fR4ijnxGN6E2bgzx2osAW1KfGjW7cDSjOXmyMFBHCfdB2wdmJU7+Lq2VY6oiZSpszPgHNQVyLkPjVr9Wrvg==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /lmdb-win32-x64/2.3.6:
+    resolution: {integrity: sha512-Yzsj9xfpo4qBWWfEjJZWm7+riGTjuyUBkYJ/chsIjlcixU+Yws+lhHnJO6w/34beoPnmxZhn+cZvsHCrNJSeQw==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /lmdb/2.2.4:
     resolution: {integrity: sha512-gto+BB2uEob8qRiTlOq+R3uX0YNHsX9mjxj9Sbdue/LIKqu6IlZjrsjKeGyOMquc/474GEqFyX2pdytpydp0rQ==}
     requiresBuild: true
@@ -10257,12 +10323,12 @@ packages:
       ordered-binary: 1.2.5
       weak-lru-cache: 1.2.2
     optionalDependencies:
-      lmdb-darwin-arm64: registry.npmmirror.com/lmdb-darwin-arm64/2.3.6
-      lmdb-darwin-x64: registry.npmmirror.com/lmdb-darwin-x64/2.3.6
-      lmdb-linux-arm: registry.npmmirror.com/lmdb-linux-arm/2.3.6
-      lmdb-linux-arm64: registry.npmmirror.com/lmdb-linux-arm64/2.3.6
-      lmdb-linux-x64: registry.npmmirror.com/lmdb-linux-x64/2.3.6
-      lmdb-win32-x64: registry.npmmirror.com/lmdb-win32-x64/2.3.6
+      lmdb-darwin-arm64: 2.3.6
+      lmdb-darwin-x64: 2.3.6
+      lmdb-linux-arm: 2.3.6
+      lmdb-linux-arm64: 2.3.6
+      lmdb-linux-x64: 2.3.6
+      lmdb-win32-x64: 2.3.6
     dev: false
 
   /load-bmfont/1.4.1:
@@ -10875,10 +10941,73 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: false
 
+  /msgpackr-extract-darwin-arm64/1.1.0:
+    resolution: {integrity: sha512-s1kHoT12tS2cCQOv+Wl3I+/cYNJXBPtwQqGA+dPYoXmchhXiE0Nso+BIfvQ5PxbmAyjj54Q5o7PnLTqVquNfZA==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /msgpackr-extract-darwin-x64/1.1.0:
+    resolution: {integrity: sha512-yx/H/i12IKg4eWGu/eKdKzJD4jaYvvujQSaVmeOMCesbSQnWo5X6YR9TFjoiNoU9Aexk1KufzL9gW+1DozG1yw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /msgpackr-extract-linux-arm/1.1.0:
+    resolution: {integrity: sha512-0VvSCqi12xpavxl14gMrauwIzHqHbmSChUijy/uo3mpjB1Pk4vlisKpZsaOZvNJyNKj0ACi5jYtbWnnOd7hYGw==}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /msgpackr-extract-linux-arm64/1.1.0:
+    resolution: {integrity: sha512-AxFle3fHNwz2V4CYDIGFxI6o/ZuI0lBKg0uHI8EcCMUmDE5mVAUWYge5WXmORVvb8sVWyVgFlmi3MTu4Ve6tNQ==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /msgpackr-extract-linux-x64/1.1.0:
+    resolution: {integrity: sha512-O+XoyNFWpdB8oQL6O/YyzffPpmG5rTNrr1nKLW70HD2ENJUhcITzbV7eZimHPzkn8LAGls1tBaMTHQezTBpFOw==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /msgpackr-extract-win32-x64/1.1.0:
+    resolution: {integrity: sha512-6AJdM5rNsL4yrskRfhujVSPEd6IBpgvsnIT/TPowKNLQ62iIdryizPY2PJNFiW3AJcY249AHEiDBXS1cTDPxzA==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /msgpackr-extract/1.1.4:
+    resolution: {integrity: sha512-WQbHvsThprXh+EqZYy+SQFEs7z6bNM7a0vgirwUfwUcphWGT2mdPcpyLCNiRsN6w5q5VKJUMblHY+tNEyceb9Q==}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build-optional-packages: 4.3.2
+    optionalDependencies:
+      msgpackr-extract-darwin-arm64: 1.1.0
+      msgpackr-extract-darwin-x64: 1.1.0
+      msgpackr-extract-linux-arm: 1.1.0
+      msgpackr-extract-linux-arm64: 1.1.0
+      msgpackr-extract-linux-x64: 1.1.0
+      msgpackr-extract-win32-x64: 1.1.0
+    dev: false
+    optional: true
+
   /msgpackr/1.5.6:
     resolution: {integrity: sha512-Y1Ia1AYKcz30JOAUyyC0jCicI7SeP8NK+SVCGZIeLg2oQs28wSwW2GbHXktk4ZZmrq9/v2jU0JAbvbp2d1ewpg==}
     optionalDependencies:
-      msgpackr-extract: registry.npmmirror.com/msgpackr-extract/1.1.4
+      msgpackr-extract: 1.1.4
     dev: false
 
   /multer/1.4.3:
@@ -13450,7 +13579,7 @@ packages:
       mime: 2.5.2
       negotiator: 0.6.2
     optionalDependencies:
-      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.8
+      graceful-fs: 4.2.8
     dev: false
 
   /stable/0.1.8:
@@ -14216,24 +14345,128 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /turbo/1.2.6:
-    resolution: {integrity: sha512-7zh48qI2dTb1ktVhTyVLvleRWYVIDNlYnZt9rb8nA/evwZJC5x7ETK4a86f0f4WBAzp3A/TRbE8HNF4cGSkWvw==}
+  /turbo-darwin-64/1.2.8:
+    resolution: {integrity: sha512-W46D05e1EUBE5TpRYjAHZXvR01EGhY8AcZUZa1mQCLmOb/W3knS1jHDAMEfXoPuDhdlolejEcbSHFCmqFRQ6OQ==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-darwin-arm64/1.2.8:
+    resolution: {integrity: sha512-hDcbQzUnKDa5j+MPnt8hbhcENeGD+dxee9O8LkRUGgHFQzqME0YVZsRDwwMCnpRSmr9ZlvZYQJPRELhBdary9Q==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-freebsd-64/1.2.8:
+    resolution: {integrity: sha512-Bd91gNJ9QdsJOjGTpY0YYIa/BIS9BP21gKcpcjZHl4pRpPHraeT9M+RYtpv9bWH3BUWYf0HUzfagOHubrkKq+g==}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-freebsd-arm64/1.2.8:
+    resolution: {integrity: sha512-T+fVnbZNFfQ990F8xazsC16EkV98PkQy091NDKYqbYD6C+PtyV6VpAXX61XDzw01JVJ0GxH/8eiLNttP5lfmnA==}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-32/1.2.8:
+    resolution: {integrity: sha512-wdhssIJQJfYPz9x4XTWZQSRI0mbzsU0Qf3+4kM2XeGsP9k4mi+1g+4PbGutOLBzIWd9OY619dXz/ut43RWqepA==}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-64/1.2.8:
+    resolution: {integrity: sha512-9OZhxejgl8qQptTUdGnvNXJeFD+I6xF5jkW/tzu5sY9XcdtVvGJ5S4nXYbzG9kPgg4sC6I2gajMCb1l3f5jxSA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-arm/1.2.8:
+    resolution: {integrity: sha512-RFLScvJPiuVoTDl83iCFNhXICi+F26A0dhBRaOdD9xP5CjcRTS7ITrPpfiELZ/oQzDdZpk3kD+6MxJPtWxoUkg==}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-arm64/1.2.8:
+    resolution: {integrity: sha512-S7Xu5mhEiTOQNVSaERdCEwWn3IdY0hBIBSoU6TNPD8uIR1jw8r2oV/v/hyuNRRbUfq7as+5tmVXW+RXY/dSkEA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-mips64le/1.2.8:
+    resolution: {integrity: sha512-JXakBXqVhQrNwwe9t/qw1XowTxKuwv4zh3XVjIX4lKrIPjZZq4XRb3zjLRmtNK7MOV9VZ6Tg6JGc87CNYtp2eA==}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-linux-ppc64le/1.2.8:
+    resolution: {integrity: sha512-GBFcyV6y+KHmBCylJmk9/b8YO7O5jknWf3Radva3YYcfihzn7gm6pCWd17ML28ZLMEvJfWEtbHrU4gDFk+k7Mw==}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-windows-32/1.2.8:
+    resolution: {integrity: sha512-z6FSmbPDtDxz0vDbP5Odd1wJx7aACtxQ8XvIRB5sR+dvSCW40RZZLh9LTjWb49y3l7YsnqVdjEE0/bTu56M7hQ==}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-windows-64/1.2.8:
+    resolution: {integrity: sha512-RiIy6ZfuEquje7k53DXNI9zR34AN5/8JJwZLnVhPzdqYdth9EXROS9pOKNNnYEvcWoG34xbgISezsxTXzcHVAA==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo-windows-arm64/1.2.8:
+    resolution: {integrity: sha512-usARU7a51r8bY+Z6d7bO3N+97x2C4d2PftbDQaTTBuHQCdbYoZSKhiTPTJfrij8FaxVWjtfoTBxlTCh3mzuNOQ==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /turbo/1.2.8:
+    resolution: {integrity: sha512-Ms5ZvRlTjl3RF+ccWuGK2Gzgm4Zvr6mtaNwtBJR48u8gcDRjg1eSrpkwvCD+ENEVeQ39MxKjNS51ZYPIBnnhUw==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: registry.npmmirror.com/turbo-darwin-64/1.2.6
-      turbo-darwin-arm64: registry.npmmirror.com/turbo-darwin-arm64/1.2.6
-      turbo-freebsd-64: registry.npmmirror.com/turbo-freebsd-64/1.2.6
-      turbo-freebsd-arm64: registry.npmmirror.com/turbo-freebsd-arm64/1.2.6
-      turbo-linux-32: registry.npmmirror.com/turbo-linux-32/1.2.6
-      turbo-linux-64: registry.npmmirror.com/turbo-linux-64/1.2.6
-      turbo-linux-arm: registry.npmmirror.com/turbo-linux-arm/1.2.6
-      turbo-linux-arm64: registry.npmmirror.com/turbo-linux-arm64/1.2.6
-      turbo-linux-mips64le: registry.npmmirror.com/turbo-linux-mips64le/1.2.6
-      turbo-linux-ppc64le: registry.npmmirror.com/turbo-linux-ppc64le/1.2.6
-      turbo-windows-32: registry.npmmirror.com/turbo-windows-32/1.2.6
-      turbo-windows-64: registry.npmmirror.com/turbo-windows-64/1.2.6
-      turbo-windows-arm64: registry.npmmirror.com/turbo-windows-arm64/1.2.6
+      turbo-darwin-64: 1.2.8
+      turbo-darwin-arm64: 1.2.8
+      turbo-freebsd-64: 1.2.8
+      turbo-freebsd-arm64: 1.2.8
+      turbo-linux-32: 1.2.8
+      turbo-linux-64: 1.2.8
+      turbo-linux-arm: 1.2.8
+      turbo-linux-arm64: 1.2.8
+      turbo-linux-mips64le: 1.2.8
+      turbo-linux-ppc64le: 1.2.8
+      turbo-windows-32: 1.2.8
+      turbo-windows-64: 1.2.8
+      turbo-windows-arm64: 1.2.8
     dev: true
 
   /type-check/0.4.0:
@@ -14734,7 +14967,7 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       glob-to-regexp: 0.4.1
-      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.8
+      graceful-fs: 4.2.8
     dev: false
 
   /weak-lru-cache/1.2.2:
@@ -15129,16 +15362,6 @@ packages:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: false
 
-  registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   registry.npmmirror.com/gatsby-sharp/0.7.0:
     resolution: {integrity: sha512-NB7F1CuLr/y+xCadycds9TmMIZ65BiBINFPFssGPbn4HXgeNxEnxAnH9lWv4UlzpOk0YcvoMSPThtSKsjiWVcg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gatsby-sharp/-/gatsby-sharp-0.7.0.tgz}
     name: gatsby-sharp
@@ -15154,270 +15377,3 @@ packages:
     name: graceful-fs
     version: 4.2.8
     dev: false
-
-  registry.npmmirror.com/lmdb-darwin-arm64/2.3.6:
-    resolution: {integrity: sha512-E2MnbFtsrr/EOsrBdZg913OgIAeiQDx8IMIOuqnDv3tghpvgSbdC8vx9phFZipqBPjZB7VV31tpyXyM3mxatqg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lmdb-darwin-arm64/-/lmdb-darwin-arm64-2.3.6.tgz}
-    name: lmdb-darwin-arm64
-    version: 2.3.6
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/lmdb-darwin-x64/2.3.6:
-    resolution: {integrity: sha512-Sz+3FuA66PXq5iZnGC+0wJcMOpf5dO5m4xgZs1yTM1EvCMjd28KPq59CtDBlLX1Y+5oDOYEVeiLOOLDeZIgTLw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lmdb-darwin-x64/-/lmdb-darwin-x64-2.3.6.tgz}
-    name: lmdb-darwin-x64
-    version: 2.3.6
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/lmdb-linux-arm/2.3.6:
-    resolution: {integrity: sha512-U6UojWtQH4CbRwStbe5b9PnHg7nPObWLKWhBudmU93lvA1Ncm2FrRqRKJRFDAr4HZ9uSMdKgaOOCWNbaJEcPQA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lmdb-linux-arm/-/lmdb-linux-arm-2.3.6.tgz}
-    name: lmdb-linux-arm
-    version: 2.3.6
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/lmdb-linux-arm64/2.3.6:
-    resolution: {integrity: sha512-ZGHCulnZGMWYRs6pyLrRmX+DpBI/IUy3X5c+S69Cd6XD0//+xlyYnDXnhGNFaAE8ch1PWtr7Npd1lkpVeY9Z4A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lmdb-linux-arm64/-/lmdb-linux-arm64-2.3.6.tgz}
-    name: lmdb-linux-arm64
-    version: 2.3.6
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/lmdb-linux-x64/2.3.6:
-    resolution: {integrity: sha512-z38fR4ijnxGN6E2bgzx2osAW1KfGjW7cDSjOXmyMFBHCfdB2wdmJU7+Lq2VY6oiZSpszPgHNQVyLkPjVr9Wrvg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lmdb-linux-x64/-/lmdb-linux-x64-2.3.6.tgz}
-    name: lmdb-linux-x64
-    version: 2.3.6
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/lmdb-win32-x64/2.3.6:
-    resolution: {integrity: sha512-Yzsj9xfpo4qBWWfEjJZWm7+riGTjuyUBkYJ/chsIjlcixU+Yws+lhHnJO6w/34beoPnmxZhn+cZvsHCrNJSeQw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lmdb-win32-x64/-/lmdb-win32-x64-2.3.6.tgz}
-    name: lmdb-win32-x64
-    version: 2.3.6
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract-darwin-arm64/1.1.0:
-    resolution: {integrity: sha512-s1kHoT12tS2cCQOv+Wl3I+/cYNJXBPtwQqGA+dPYoXmchhXiE0Nso+BIfvQ5PxbmAyjj54Q5o7PnLTqVquNfZA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract-darwin-arm64/-/msgpackr-extract-darwin-arm64-1.1.0.tgz}
-    name: msgpackr-extract-darwin-arm64
-    version: 1.1.0
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract-darwin-x64/1.1.0:
-    resolution: {integrity: sha512-yx/H/i12IKg4eWGu/eKdKzJD4jaYvvujQSaVmeOMCesbSQnWo5X6YR9TFjoiNoU9Aexk1KufzL9gW+1DozG1yw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract-darwin-x64/-/msgpackr-extract-darwin-x64-1.1.0.tgz}
-    name: msgpackr-extract-darwin-x64
-    version: 1.1.0
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract-linux-arm/1.1.0:
-    resolution: {integrity: sha512-0VvSCqi12xpavxl14gMrauwIzHqHbmSChUijy/uo3mpjB1Pk4vlisKpZsaOZvNJyNKj0ACi5jYtbWnnOd7hYGw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract-linux-arm/-/msgpackr-extract-linux-arm-1.1.0.tgz}
-    name: msgpackr-extract-linux-arm
-    version: 1.1.0
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract-linux-arm64/1.1.0:
-    resolution: {integrity: sha512-AxFle3fHNwz2V4CYDIGFxI6o/ZuI0lBKg0uHI8EcCMUmDE5mVAUWYge5WXmORVvb8sVWyVgFlmi3MTu4Ve6tNQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract-linux-arm64/-/msgpackr-extract-linux-arm64-1.1.0.tgz}
-    name: msgpackr-extract-linux-arm64
-    version: 1.1.0
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract-linux-x64/1.1.0:
-    resolution: {integrity: sha512-O+XoyNFWpdB8oQL6O/YyzffPpmG5rTNrr1nKLW70HD2ENJUhcITzbV7eZimHPzkn8LAGls1tBaMTHQezTBpFOw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract-linux-x64/-/msgpackr-extract-linux-x64-1.1.0.tgz}
-    name: msgpackr-extract-linux-x64
-    version: 1.1.0
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract-win32-x64/1.1.0:
-    resolution: {integrity: sha512-6AJdM5rNsL4yrskRfhujVSPEd6IBpgvsnIT/TPowKNLQ62iIdryizPY2PJNFiW3AJcY249AHEiDBXS1cTDPxzA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract-win32-x64/-/msgpackr-extract-win32-x64-1.1.0.tgz}
-    name: msgpackr-extract-win32-x64
-    version: 1.1.0
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/msgpackr-extract/1.1.4:
-    resolution: {integrity: sha512-WQbHvsThprXh+EqZYy+SQFEs7z6bNM7a0vgirwUfwUcphWGT2mdPcpyLCNiRsN6w5q5VKJUMblHY+tNEyceb9Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/msgpackr-extract/-/msgpackr-extract-1.1.4.tgz}
-    name: msgpackr-extract
-    version: 1.1.4
-    requiresBuild: true
-    dependencies:
-      node-gyp-build-optional-packages: 4.3.2
-    optionalDependencies:
-      msgpackr-extract-darwin-arm64: registry.npmmirror.com/msgpackr-extract-darwin-arm64/1.1.0
-      msgpackr-extract-darwin-x64: registry.npmmirror.com/msgpackr-extract-darwin-x64/1.1.0
-      msgpackr-extract-linux-arm: registry.npmmirror.com/msgpackr-extract-linux-arm/1.1.0
-      msgpackr-extract-linux-arm64: registry.npmmirror.com/msgpackr-extract-linux-arm64/1.1.0
-      msgpackr-extract-linux-x64: registry.npmmirror.com/msgpackr-extract-linux-x64/1.1.0
-      msgpackr-extract-win32-x64: registry.npmmirror.com/msgpackr-extract-win32-x64/1.1.0
-    dev: false
-    optional: true
-
-  registry.npmmirror.com/turbo-darwin-64/1.2.6:
-    resolution: {integrity: sha512-YNH49cZKw6rrq6ef/PMuryk3lKzE9QI0R72Yj3lcA4C5FIekUA7RZY8xZK7152r6YNgZ6aPWOQN9lauSN58gPQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-darwin-64/-/turbo-darwin-64-1.2.6.tgz}
-    name: turbo-darwin-64
-    version: 1.2.6
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-darwin-arm64/1.2.6:
-    resolution: {integrity: sha512-1yk0UK59qGQjFkhmSnrNrGMIVxTeMZSaJ9YhJquyQG7PPHxIpCnz4uQQkZFRb0HQDGMEmsPC49Sx4h6UBQ/3aA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-darwin-arm64/-/turbo-darwin-arm64-1.2.6.tgz}
-    name: turbo-darwin-arm64
-    version: 1.2.6
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-freebsd-64/1.2.6:
-    resolution: {integrity: sha512-m5G86zILy0Qc/fy/2Auu74c5St/yS+SQi8ka2Wb/uVMPQjh7VpM3mB/z7U5pZTv92w2HJ8q5krC0uLT+pH4n8Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-freebsd-64/-/turbo-freebsd-64-1.2.6.tgz}
-    name: turbo-freebsd-64
-    version: 1.2.6
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-freebsd-arm64/1.2.6:
-    resolution: {integrity: sha512-tjbrRoN8fMuyfyKJ/Dw97cNy9CVlzoT8zZbpo1rVZkMRYpnizIDECdecoiMttBZIP9/ktNcj6nJVHh40+a0EMw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-freebsd-arm64/-/turbo-freebsd-arm64-1.2.6.tgz}
-    name: turbo-freebsd-arm64
-    version: 1.2.6
-    cpu: [arm64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-32/1.2.6:
-    resolution: {integrity: sha512-NBCeqsNbTQKuP+5rTwfd4dyd/LTdfUuX+4B6FxXswz6IuCHymUaCRwmRfN6TdeGRFnSP4y2tAymU5zqrI4/Leg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-32/-/turbo-linux-32-1.2.6.tgz}
-    name: turbo-linux-32
-    version: 1.2.6
-    cpu: [ia32]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-64/1.2.6:
-    resolution: {integrity: sha512-27NGdEaAOkM/2Bj/QwSNI0b8VxWj9TrfqIE7ATENaMV4B+ukFgFvUkXQuJhnmb4InMxZSc8q01KaSou5P034Sw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-64/-/turbo-linux-64-1.2.6.tgz}
-    name: turbo-linux-64
-    version: 1.2.6
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-arm/1.2.6:
-    resolution: {integrity: sha512-a0aw0kUfvUVLRV7K+5CjscJKDCLwLtb8p28KLHpjvy8EP7Us+n9DH0tZ2M/CAy02cZI7yOzbWEx0L4Q3a1Dajw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-arm/-/turbo-linux-arm-1.2.6.tgz}
-    name: turbo-linux-arm
-    version: 1.2.6
-    cpu: [arm]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-arm64/1.2.6:
-    resolution: {integrity: sha512-zvk7vQ3N3QU2kKKJQ/qalAen3wkPhcoBD3NIlEwKVL2OYaSCa4UDgOSjpwLw+FAmbWh0zB5Jm8mcLXcok9xyUQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-arm64/-/turbo-linux-arm64-1.2.6.tgz}
-    name: turbo-linux-arm64
-    version: 1.2.6
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-mips64le/1.2.6:
-    resolution: {integrity: sha512-5sLTNpXedD4aPCtKzbGOo3THImQVgywivFzbLgD5apkF5eYImG/1oRPH0tjdIN/uEqKFJdxniN5EnLE3uUA76g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-mips64le/-/turbo-linux-mips64le-1.2.6.tgz}
-    name: turbo-linux-mips64le
-    version: 1.2.6
-    cpu: [mips64el]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-linux-ppc64le/1.2.6:
-    resolution: {integrity: sha512-dNIDtCXZolAdm84tCWynntcTbaOErCEbT0onuWwwhJ3CZfC68vqghkYJu7o4T8rMek0RLLcIh/Y4dNM3bp1Mvg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-linux-ppc64le/-/turbo-linux-ppc64le-1.2.6.tgz}
-    name: turbo-linux-ppc64le
-    version: 1.2.6
-    cpu: [ppc64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-windows-32/1.2.6:
-    resolution: {integrity: sha512-1rzktj68Ohqi+OPeSvWqbb6Er0yS7FidRku8IQIZJ0bmwP/a5OMqIHXHoIEbn5/ceXry6vJm8aYDgm1FAKkbZw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-windows-32/-/turbo-windows-32-1.2.6.tgz}
-    name: turbo-windows-32
-    version: 1.2.6
-    cpu: [ia32]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-windows-64/1.2.6:
-    resolution: {integrity: sha512-91m+np5oxTRVORjkFVf2BypYjrhB+Q7ZaKqti5q4A0qLIvYs0dqGitT45j547XKWtlk2dP2ziXhYs2btDOCr4w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-windows-64/-/turbo-windows-64-1.2.6.tgz}
-    name: turbo-windows-64
-    version: 1.2.6
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  registry.npmmirror.com/turbo-windows-arm64/1.2.6:
-    resolution: {integrity: sha512-92vhzWNu+ZrjMK1D6y1bjHTQjIVx0YViYCHDSQNY56STQgUleRW+aColVGs2MnZ4lv7vHhA9FIDJ19CRYpTiNA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/turbo-windows-arm64/-/turbo-windows-arm64-1.2.6.tgz}
-    name: turbo-windows-arm64
-    version: 1.2.6
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
