@@ -20,15 +20,15 @@ module.exports = {
       },
       {
         title: '文章',
-        href: '/archives/',
+        href: '/archives',
       },
       {
         title: '链接',
-        href: '/links/',
+        href: '/links',
       },
       {
         title: '关于',
-        href: '/about/',
+        href: '/about',
       },
     ],
     links: require('./contents/links.json'),
