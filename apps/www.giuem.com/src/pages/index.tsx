@@ -30,6 +30,7 @@ export const pageQuery = graphql`
         }
         fields {
           slug
+          href
         }
         excerpt(pruneLength: 240)
       }
@@ -45,6 +46,7 @@ export const pageQuery = graphql`
         }
         fields {
           slug
+          href
         }
       }
     }

@@ -1,7 +1,6 @@
 // import { navigate } from 'gatsby';
 
 import { Post } from '../../types/post';
-import { getPostUrl } from '../../utils/get-post-url';
 import { Link } from '../link';
 
 export type FeaturedPostItemProps = {
@@ -9,7 +8,7 @@ export type FeaturedPostItemProps = {
 };
 
 export const LatestPost: React.FC<FeaturedPostItemProps> = ({ post }) => {
-  const href = getPostUrl(post.fields.slug);
+  const href = post.fields.href;
   // const handleClick = () => {
   //   navigate(href);
   // };

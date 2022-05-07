@@ -102,7 +102,7 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
-                const url = `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}/`;
+                const url = `${site.siteMetadata.siteUrl}${edge.node.fields.href}`;
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
@@ -123,7 +123,7 @@ module.exports = {
                   node {
                     excerpt
                     html
-                    fields { slug }
+                    fields { href }
                     frontmatter {
                       title
                       date
@@ -162,4 +162,6 @@ module.exports = {
     FAST_DEV: true,
     DEV_SSR: false,
   },
+  trailingSlash: 'never',
+  jsxRuntime: 'automatic',
 };

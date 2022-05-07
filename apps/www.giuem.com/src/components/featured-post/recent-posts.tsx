@@ -15,7 +15,7 @@ export const RecentPosts: React.FC<{
       </header>
       <section className="flex flex-col gap-1 my-4">
         {posts.map((post) => (
-          <ArchivesPostItem key={post.fields.slug} post={post} />
+          <ArchivesPostItem key={post.fields.href} post={post} />
         ))}
       </section>
       <footer className="flex">
