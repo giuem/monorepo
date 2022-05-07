@@ -25,6 +25,7 @@ export const pageQuery = graphql`
         }
         fields {
           slug
+          href
         }
       }
     }
@@ -44,7 +45,7 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({
         <h1 className="text-2xl font-semibold mb-4">所有文章</h1>
         <section className="flex flex-col gap-2">
           {posts.map((post) => (
-            <ArchivesPostItem key={post.fields.slug} post={post} />
+            <ArchivesPostItem key={post.fields.href} post={post} />
           ))}
         </section>
       </main>

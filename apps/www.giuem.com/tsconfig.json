@@ -1,4 +1,4 @@
 {
   "extends": "@infra/tsconfig/react/tsconfig.json",
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "gatsby-*.ts"]
 }

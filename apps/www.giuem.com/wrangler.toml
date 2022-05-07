@@ -1,9 +1,0 @@
-name = "blog"
-type = "webpack"
-route = "www.giuem.com/*"
-account_id = "1dbfd22c96a540a16e4e20e86c7ed65d"
-zone_id = "0b5e1b82b3bfeb166ef0a4cd264f1f70"
-usage_model = ""
-compatibility_flags = []
-workers_dev = false
-site = {bucket = "./public",entry-point = "workers-site"}
