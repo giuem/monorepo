@@ -157,6 +157,13 @@ module.exports = {
       },
     },
     `@giuem/gatsby-plugin-dark-mode`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#4f46e5`,
+        showSpinner: true,
+      },
+    },
   ],
   flags: {
     FAST_DEV: true,

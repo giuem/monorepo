@@ -46,6 +46,7 @@ importers:
       gatsby-plugin-image: 2.13.0
       gatsby-plugin-manifest: 4.13.0
       gatsby-plugin-mdx: 3.13.0
+      gatsby-plugin-nprogress: ^4.13.0
       gatsby-plugin-pnpm: 1.2.10
       gatsby-plugin-postcss: 5.13.0
       gatsby-plugin-react-helmet: 5.13.0
@@ -87,6 +88,7 @@ importers:
       gatsby-plugin-image: 2.13.0_4a0aaa280ac164148fe108cfb778ff65
       gatsby-plugin-manifest: 4.13.0_gatsby@4.13.1
       gatsby-plugin-mdx: 3.13.0_08d3bd966f35af1caf95be0752ee8d56
+      gatsby-plugin-nprogress: registry.npmmirror.com/gatsby-plugin-nprogress/4.13.0_gatsby@4.13.1
       gatsby-plugin-pnpm: 1.2.10_gatsby@4.13.1
       gatsby-plugin-postcss: 5.13.0_gatsby@4.13.1+postcss@8.4.13
       gatsby-plugin-react-helmet: 5.13.0_gatsby@4.13.1+react-helmet@6.1.0
@@ -2477,7 +2479,7 @@ packages:
   /@babel/runtime/7.12.1:
     resolution: {integrity: sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==}
     dependencies:
-      regenerator-runtime: 0.13.9
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
     dev: false
 
   /@babel/runtime/7.16.3:
@@ -5238,7 +5240,7 @@ packages:
       gatsby: ^4.0.0-next
     dependencies:
       '@babel/core': 7.17.10
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       gatsby: 4.13.1_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.13.0
     dev: false
@@ -5250,7 +5252,7 @@ packages:
       '@babel/core': ^7.0.0
       gatsby: ^4.0.0-next
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       gatsby: 4.13.1_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.13.0
     dev: false
@@ -5276,7 +5278,7 @@ packages:
       '@babel/plugin-transform-spread': 7.16.0_@babel+core@7.17.10
       '@babel/preset-env': 7.16.4_@babel+core@7.17.10
       '@babel/preset-react': 7.14.5_@babel+core@7.17.10
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       babel-plugin-dynamic-import-node: 2.3.3
       babel-plugin-macros: 2.8.0
       babel-plugin-transform-react-remove-prop-types: 0.4.24
@@ -7084,7 +7086,7 @@ packages:
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       graphql: 15.8.0
       graphql-config: 3.4.1_ce89a9703b1e6cda2053f11ae8a89476
       lodash.flatten: 4.4.0
@@ -7147,7 +7149,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       aria-query: 4.2.2
       array-includes: 3.1.4
       ast-types-flow: 0.0.7
@@ -7959,7 +7961,7 @@ packages:
       '@babel/generator': 7.17.10
       '@babel/helper-plugin-utils': 7.16.7
       '@babel/preset-typescript': 7.16.7_@babel+core@7.17.10
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       '@babel/template': 7.16.7
       '@babel/types': 7.17.10
       '@types/common-tags': 1.8.1
@@ -8029,13 +8031,13 @@ packages:
     resolution: {integrity: sha512-xUX3PultKJ4dmRFK3ofvm0MCih8pcISSgZC+wlZ7VkhFrunMGyfOFO9tcoNNGB+YHC1jJZGLFzdBQLtHfQOW4g==}
     engines: {node: '>=14.15.0'}
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
     dev: false
 
   /gatsby-legacy-polyfills/2.13.0:
     resolution: {integrity: sha512-n5Lle2Asbc2oIaShbWMtxCkXsP0rPtkl3r5jgfJZICK2I2j7QBICnItiUu2swziE0xu6HnURNIZZNPhWlJvyvw==}
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       core-js-compat: 3.9.0
     dev: false
 
@@ -8047,7 +8049,7 @@ packages:
       react: ^16.9.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       '@gatsbyjs/reach-router': 1.3.6_react-dom@18.1.0+react@18.1.0
       '@types/reach__router': 1.3.10
       gatsby-page-utils: 2.13.0
@@ -8060,7 +8062,7 @@ packages:
     resolution: {integrity: sha512-XBGyFEAAMNHTAqYEndu8i8qSr83pKOC89g9umqR2jQrbdshsZwNh7O0jR5yAeLsJf1xP3udsYj28+Gk7hYcyMw==}
     engines: {node: '>=14.15.0'}
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       bluebird: 3.7.2
       chokidar: 3.5.3
       fs-exists-cached: 1.0.0
@@ -8246,7 +8248,7 @@ packages:
     peerDependencies:
       gatsby: ^4.0.0-next
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       '@babel/traverse': 7.17.10
       '@sindresorhus/slugify': 1.1.2
       chokidar: 3.5.3
@@ -8365,7 +8367,7 @@ packages:
       '@babel/plugin-proposal-numeric-separator': 7.16.0_@babel+core@7.17.10
       '@babel/plugin-proposal-optional-chaining': 7.16.0_@babel+core@7.17.10
       '@babel/preset-typescript': 7.16.7_@babel+core@7.17.10
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       babel-plugin-remove-graphql-queries: 4.13.0_24ec959943669f6bd84bc5509c310f52
       gatsby: 4.13.1_c31d3c9c1bb14e09921f631b64e89a04
     transitivePeerDependencies:
@@ -8431,7 +8433,7 @@ packages:
       react: ^16.9.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       '@gatsbyjs/reach-router': 1.3.6_react-dom@18.1.0+react@18.1.0
       prop-types: 15.8.1
       react: 18.1.0
@@ -8522,7 +8524,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@babel/code-frame': 7.16.7
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       '@turist/fetch': 7.1.7_node-fetch@2.6.7
       '@turist/time': 0.0.2
       async-retry-ng: 2.0.1
@@ -8562,7 +8564,7 @@ packages:
     engines: {node: '>=14.15.0'}
     dependencies:
       '@babel/core': 7.17.10
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -9964,7 +9966,7 @@ packages:
       '@jimp/custom': 0.16.1
       '@jimp/plugins': 0.16.1_@jimp+custom@0.16.1
       '@jimp/types': 0.16.1_@jimp+custom@0.16.1
-      regenerator-runtime: 0.13.9
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
     dev: false
 
   /joi/17.4.2:
@@ -12567,7 +12569,7 @@ packages:
   /redux/4.1.2:
     resolution: {integrity: sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==}
     dependencies:
-      '@babel/runtime': 7.16.3
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
     dev: false
 
   /regenerate-unicode-properties/8.2.0:
@@ -15096,6 +15098,12 @@ packages:
     version: 1.9.5
     dev: false
 
+  registry.npmmirror.com/accessible-nprogress/2.1.2:
+    resolution: {integrity: sha512-reIwMbbt+ZGOmQLWPXGcPf5X1F4fzsZAekY9alCxpekxizRhQMAd/QInaA8k7WtwTcGMzD9hnYswGLcaJDRY/A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/accessible-nprogress/-/accessible-nprogress-2.1.2.tgz}
+    name: accessible-nprogress
+    version: 2.1.2
+    dev: false
+
   registry.npmmirror.com/copy-to-clipboard/3.3.1:
     resolution: {integrity: sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/copy-to-clipboard/-/copy-to-clipboard-3.3.1.tgz}
     name: copy-to-clipboard
@@ -15170,6 +15178,20 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  registry.npmmirror.com/gatsby-plugin-nprogress/4.13.0_gatsby@4.13.1:
+    resolution: {integrity: sha512-JjWjYtg7qO37vKHhkdMGX4zPpMvV3DEuS+Huv4KyOtc2n7WK8eMc6BfgEgWC6JygjQfVfKQrmVQMS93TheUM5g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-4.13.0.tgz}
+    id: registry.npmmirror.com/gatsby-plugin-nprogress/4.13.0
+    name: gatsby-plugin-nprogress
+    version: 4.13.0
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      gatsby: ^4.0.0-next
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
+      accessible-nprogress: registry.npmmirror.com/accessible-nprogress/2.1.2
+      gatsby: 4.13.1_c31d3c9c1bb14e09921f631b64e89a04
+    dev: false
 
   registry.npmmirror.com/gatsby-sharp/0.7.0:
     resolution: {integrity: sha512-NB7F1CuLr/y+xCadycds9TmMIZ65BiBINFPFssGPbn4HXgeNxEnxAnH9lWv4UlzpOk0YcvoMSPThtSKsjiWVcg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gatsby-sharp/-/gatsby-sharp-0.7.0.tgz}
