@@ -44,4 +44,5 @@ export const mdxComponents: MDXProviderComponents = {
     />
   ),
   code: Codeblock,
+  undefined: (props) => <>{props.children}</>,
 };
