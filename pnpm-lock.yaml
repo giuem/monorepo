@@ -53,6 +53,7 @@ importers:
       gatsby-plugin-remove-serviceworker: 1.0.0
       gatsby-plugin-sharp: 4.13.0
       gatsby-plugin-sitemap: 5.13.0
+      gatsby-plugin-umami: ^0.1.3
       gatsby-plugin-vercel: 1.0.3
       gatsby-remark-autolink-headers: 5.13.0
       gatsby-remark-copy-linked-files: 5.13.0
@@ -95,6 +96,7 @@ importers:
       gatsby-plugin-remove-serviceworker: 1.0.0
       gatsby-plugin-sharp: 4.13.0_gatsby@4.13.1
       gatsby-plugin-sitemap: 5.13.0_336bc4a82f2883ea28265545bcacad6a
+      gatsby-plugin-umami: registry.npmmirror.com/gatsby-plugin-umami/0.1.3
       gatsby-plugin-vercel: 1.0.3
       gatsby-remark-autolink-headers: 5.13.0_336bc4a82f2883ea28265545bcacad6a
       gatsby-remark-copy-linked-files: 5.13.0_gatsby@4.13.1
@@ -2486,7 +2488,7 @@ packages:
     resolution: {integrity: sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      regenerator-runtime: 0.13.9
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
     dev: false
 
   /@babel/template/7.16.7:
@@ -12583,10 +12585,6 @@ packages:
     resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
     dev: false
 
-  /regenerator-runtime/0.13.9:
-    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
-    dev: false
-
   /regenerator-transform/0.14.5:
     resolution: {integrity: sha512-eOf6vka5IO151Jfsw2NO9WpGX58W6wWmefK3I1zEGr0lOD0u8rwPaNqQL1aRxUaxLeKO3ArNh3VYg1KbaD+FFw==}
     dependencies:
@@ -15104,12 +15102,29 @@ packages:
     version: 2.1.2
     dev: false
 
+  registry.npmmirror.com/babel-runtime/6.26.0:
+    resolution: {integrity: sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/babel-runtime/-/babel-runtime-6.26.0.tgz}
+    name: babel-runtime
+    version: 6.26.0
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/2.6.12
+      regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.11.1
+    dev: false
+
   registry.npmmirror.com/copy-to-clipboard/3.3.1:
     resolution: {integrity: sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/copy-to-clipboard/-/copy-to-clipboard-3.3.1.tgz}
     name: copy-to-clipboard
     version: 3.3.1
     dependencies:
       toggle-selection: registry.npmmirror.com/toggle-selection/1.0.6
+    dev: false
+
+  registry.npmmirror.com/core-js/2.6.12:
+    resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/-/core-js-2.6.12.tgz}
+    name: core-js
+    version: 2.6.12
+    deprecated: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+    requiresBuild: true
     dev: false
 
   registry.npmmirror.com/css-in-js-utils/2.0.1:
@@ -15191,6 +15206,14 @@ packages:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.16.3
       accessible-nprogress: registry.npmmirror.com/accessible-nprogress/2.1.2
       gatsby: 4.13.1_c31d3c9c1bb14e09921f631b64e89a04
+    dev: false
+
+  registry.npmmirror.com/gatsby-plugin-umami/0.1.3:
+    resolution: {integrity: sha512-leUlkkU6YlFDt11vT2FFb7TdayBFTlvp6jF9kB9xa+IluzeM2FAi43lFefST5vWKFal4seUq5iFQzMQg49Sezw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gatsby-plugin-umami/-/gatsby-plugin-umami-0.1.3.tgz}
+    name: gatsby-plugin-umami
+    version: 0.1.3
+    dependencies:
+      babel-runtime: registry.npmmirror.com/babel-runtime/6.26.0
     dev: false
 
   registry.npmmirror.com/gatsby-sharp/0.7.0:
@@ -15464,6 +15487,12 @@ packages:
       throttle-debounce: registry.npmmirror.com/throttle-debounce/3.0.1
       ts-easing: registry.npmmirror.com/ts-easing/0.2.0
       tslib: registry.npmmirror.com/tslib/2.3.1
+    dev: false
+
+  registry.npmmirror.com/regenerator-runtime/0.11.1:
+    resolution: {integrity: sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz}
+    name: regenerator-runtime
+    version: 0.11.1
     dev: false
 
   registry.npmmirror.com/regenerator-runtime/0.13.9:

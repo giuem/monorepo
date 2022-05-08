@@ -1,5 +1,5 @@
 import './zen.css';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+// import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 type LinkProps = {
   title: string;
@@ -16,9 +16,9 @@ export const LinkItem: React.FC<LinkProps> = ({
 }) => {
   return (
     <>
-      <OutboundLink
-        eventAction="click"
-        eventCategory="friend-link"
+      <a
+        // eventAction="click"
+        // eventCategory="friend-link"
         className="text-indigo-600 dark:text-indigo-300 zen"
         href={href}
         target="_blank"
@@ -42,7 +42,7 @@ export const LinkItem: React.FC<LinkProps> = ({
           />
         </div>
         <p className="font-semibold text-lg mt-2">{title}</p>
-      </OutboundLink>
+      </a>
       <p className="mt-2">{slogan}</p>
     </>
   );

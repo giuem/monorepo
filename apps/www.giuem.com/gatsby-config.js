@@ -150,18 +150,27 @@ module.exports = {
         cache_busting_mode: `name`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-102578664-1',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: 'UA-102578664-1',
+    //   },
+    // },
     `@giuem/gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#4f46e5`,
         showSpinner: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: 'c6b67d7c-b6ed-4ed3-9b76-287955224503',
+        srcUrl: 'https://umami.giuem.com/umami.js',
+        includeInDevelopment: false,
+        autoTrack: true,
       },
     },
   ],
