@@ -1,13 +1,10 @@
 import { PageProps, graphql } from 'gatsby';
 import { sortBy } from 'lodash-es';
 
-import { SiteContent } from '../components/layout/site-content';
-import { SiteFooter } from '../components/layout/site-footer';
-import { SiteHeader } from '../components/layout/site-header';
-import { SiteLayout } from '../components/layout/site-layout';
+import { Layout } from '../components/layout';
 import { LinkContainer } from '../components/links/link-container';
 import { LinkItem } from '../components/links/link-item';
-import { SEO } from '../components/seo/seo';
+import { SEO } from '../components/seo';
 
 export const pageQuery = graphql`
   query {
@@ -37,18 +34,14 @@ const LinksPage: React.FC<
   const links = sortBy(props.data.site.siteMetadata.links, 'title');
 
   return (
-    <SiteLayout>
+    <Layout>
       <SEO title="链接" pathname={props.path} />
-      <SiteHeader></SiteHeader>
-      <SiteContent>
-        <LinkContainer>
-          {links.map((link) => (
-            <LinkItem key={link.href} {...link} />
-          ))}
-        </LinkContainer>
-      </SiteContent>
-      <SiteFooter />
-    </SiteLayout>
+      <LinkContainer>
+        {links.map((link) => (
+          <LinkItem key={link.href} {...link} />
+        ))}
+      </LinkContainer>
+    </Layout>
   );
 };
 

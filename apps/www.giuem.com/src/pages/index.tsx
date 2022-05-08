@@ -1,11 +1,8 @@
 import { graphql, PageProps } from 'gatsby';
 
 import { FeaturedPosts } from '../components/featured-post/featured-posts';
-import { SiteContent } from '../components/layout/site-content';
-import { SiteFooter } from '../components/layout/site-footer';
-import { SiteHeader } from '../components/layout/site-header';
-import { SiteLayout } from '../components/layout/site-layout';
-import { SEO } from '../components/seo/seo';
+import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
 import { Post } from '../types/post';
 
 type IndexQueryProps = {
@@ -58,14 +55,10 @@ const IndexPage: React.FC<PageProps<IndexQueryProps>> = ({ data, path }) => {
   const recentPosts = data.recentPosts.nodes;
 
   return (
-    <SiteLayout>
+    <Layout>
       <SEO pathname={path} />
-      <SiteHeader />
-      <SiteContent>
-        <FeaturedPosts latestPost={latestPost} recentPosts={recentPosts} />
-      </SiteContent>
-      <SiteFooter />
-    </SiteLayout>
+      <FeaturedPosts latestPost={latestPost} recentPosts={recentPosts} />
+    </Layout>
   );
 };
 

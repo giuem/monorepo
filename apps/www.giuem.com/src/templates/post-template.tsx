@@ -3,13 +3,10 @@ import { MDXProvider } from '@mdx-js/react';
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { SiteContent } from '../components/layout/site-content';
-import { SiteFooter } from '../components/layout/site-footer';
-import { SiteHeader } from '../components/layout/site-header';
-import { SiteLayout } from '../components/layout/site-layout';
+import { Layout } from '../components/layout';
 import { mdxComponents } from '../components/post/mdx-components';
 import { PostHeader } from '../components/post/post-header';
-import { SEO } from '../components/seo/seo';
+import { SEO } from '../components/seo';
 import { Post } from '../types/post';
 
 const LoadableDisqus = loadable(
@@ -47,30 +44,26 @@ const PostTemplate: React.FC<PageProps<PostTemplateQueryProps>> = ({
   const { post } = data;
 
   return (
-    <SiteLayout>
+    <Layout isPost>
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
         pathname={path}
       />
-      <SiteHeader isPostPage />
-      <SiteContent>
-        <article>
-          <PostHeader post={post} />
-          <MDXProvider components={mdxComponents}>
-            <MDXRenderer>{post.body}</MDXRenderer>
-          </MDXProvider>
-          <footer>
-            <LoadableDisqus
-              title={post.frontmatter.title}
-              slug={post.fields.slug}
-              url={path}
-            />
-          </footer>
-        </article>
-      </SiteContent>
-      <SiteFooter />
-    </SiteLayout>
+      <article>
+        <PostHeader post={post} />
+        <MDXProvider components={mdxComponents}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
+        <footer>
+          <LoadableDisqus
+            title={post.frontmatter.title}
+            slug={post.fields.slug}
+            url={path}
+          />
+        </footer>
+      </article>
+    </Layout>
   );
 };
 

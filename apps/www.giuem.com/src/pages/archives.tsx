@@ -1,10 +1,8 @@
 import { graphql, PageProps } from 'gatsby';
 
 import { ArchivesPostItem } from '../components/archives/post-item';
-import { SiteFooter } from '../components/layout/site-footer';
-import { SiteHeader } from '../components/layout/site-header';
-import { SiteLayout } from '../components/layout/site-layout';
-import { SEO } from '../components/seo/seo';
+import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
 import { Post } from '../types/post';
 
 type ArchivesQueryProps = {
@@ -38,9 +36,8 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({
 }) => {
   const posts = data.allMdx.nodes;
   return (
-    <SiteLayout>
+    <Layout isPost>
       <SEO title="所有文章" pathname={path} />
-      <SiteHeader isPostPage></SiteHeader>
       <main className="flex-1 flex flex-col">
         <h1 className="text-2xl font-semibold mb-4">所有文章</h1>
         <section className="flex flex-col gap-2">
@@ -49,8 +46,7 @@ const ArchivesPage: React.FC<PageProps<ArchivesQueryProps>> = ({
           ))}
         </section>
       </main>
-      <SiteFooter />
-    </SiteLayout>
+    </Layout>
   );
 };
 
