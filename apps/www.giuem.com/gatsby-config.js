@@ -88,7 +88,7 @@ module.exports = {
               destinationDir: 'static',
             },
           },
-          '@fec/remark-a11y-emoji/gatsby',
+          // '@fec/remark-a11y-emoji/gatsby',
         ],
       },
     },

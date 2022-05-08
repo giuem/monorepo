@@ -1,9 +1,11 @@
 import { MDXProviderComponents } from '@mdx-js/react';
+import Zoom from 'react-medium-image-zoom';
 
 import { Link } from '../link';
 
 import Codeblock from './codeblock';
 import { PROSE } from './prose';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export const mdxComponents: MDXProviderComponents = {
   wrapper: (props) => (
@@ -16,8 +18,23 @@ export const mdxComponents: MDXProviderComponents = {
     />
   ),
   pre: (props) => <div {...props} />,
-  // eslint-disable-next-line jsx-a11y/alt-text
-  img: (props) => <img {...props} decoding="async" />,
+  img: (props) => <img {...props} decoding="async" alt={props.alt} />,
+  picture: (props) => (
+    <Zoom
+      wrapElement="span"
+      wrapStyle={{
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+      }}
+      overlayBgColorStart="rgba(0,0,0,0)"
+      overlayBgColorEnd="rgba(0,0,0,0.95)"
+    >
+      <picture {...props} />
+    </Zoom>
+  ),
   del: (props) => (
     <del
       {...props}
