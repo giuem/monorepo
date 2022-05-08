@@ -1,8 +1,8 @@
 import { graphql, PageProps } from 'gatsby';
 
 import { FeaturedPosts } from '../components/featured-post/featured-posts';
-import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
+import { Layout } from '../components/Layout';
+import { SEO } from '../components/SEO';
 import { Post } from '../types/post';
 
 type IndexQueryProps = {

@@ -1,8 +1,8 @@
 import { graphql, PageProps } from 'gatsby';
 
-import { ArchivesPostItem } from '../components/archives/post-item';
-import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
+import { Layout } from '../components/Layout';
+import { ArchivesPostItem } from '../components/PostItem';
+import { SEO } from '../components/SEO';
 import { Post } from '../types/post';
 
 type ArchivesQueryProps = {

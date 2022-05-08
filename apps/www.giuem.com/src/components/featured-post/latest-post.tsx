@@ -1,7 +1,7 @@
 // import { navigate } from 'gatsby';
 
 import { Post } from '../../types/post';
-import { Link } from '../link';
+import { Link } from '../Link';
 
 export type FeaturedPostItemProps = {
   post: Post;

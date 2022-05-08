@@ -2,7 +2,7 @@ import { MDXProviderComponents } from '@mdx-js/react';
 import { useCallback, useState } from 'react';
 import Zoom from 'react-medium-image-zoom';
 
-import { Link } from '../link';
+import { Link } from '../Link';
 
 import Codeblock from './codeblock';
 import { PROSE } from './prose';

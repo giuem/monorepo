@@ -1,7 +1,7 @@
 import { Link, PageProps } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import { Layout } from '../components/layout';
+import { Layout } from '../components/Layout';
 
 // markup
 const NotFoundPage: React.FC<PageProps> = () => {

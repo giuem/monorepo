@@ -1,5 +1,6 @@
-import { Post } from '../../types/post';
-import { Link } from '../link';
+import { Post } from '../types/post';
+
+import { Link } from './Link';
 
 export const ArchivesPostItem: React.FC<{
   post: Post;

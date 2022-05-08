@@ -1,10 +1,10 @@
 import { PageProps, graphql } from 'gatsby';
 import { sortBy } from 'lodash-es';
 
-import { Layout } from '../components/layout';
+import { Layout } from '../components/Layout';
 import { LinkContainer } from '../components/links/link-container';
 import { LinkItem } from '../components/links/link-item';
-import { SEO } from '../components/seo';
+import { SEO } from '../components/SEO';
 
 export const pageQuery = graphql`
   query {

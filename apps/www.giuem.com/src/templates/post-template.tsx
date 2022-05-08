@@ -3,10 +3,10 @@ import { MDXProvider } from '@mdx-js/react';
 import { graphql, PageProps } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Layout } from '../components/layout';
+import { Layout } from '../components/Layout';
 import { mdxComponents } from '../components/post/mdx-components';
 import { PostHeader } from '../components/post/post-header';
-import { SEO } from '../components/seo';
+import { SEO } from '../components/SEO';
 import { Post } from '../types/post';
 
 const LoadableDisqus = loadable(

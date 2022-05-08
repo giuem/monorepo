@@ -1,6 +1,6 @@
 import { Post } from '../../types/post';
-import { ArchivesPostItem } from '../archives/post-item';
-import { Link } from '../link';
+import { Link } from '../Link';
+import { ArchivesPostItem } from '../PostItem';
 
 export const RecentPosts: React.FC<{
   posts: Post[];
