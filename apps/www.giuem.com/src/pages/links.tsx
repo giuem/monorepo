@@ -2,7 +2,6 @@ import { PageProps, graphql } from 'gatsby';
 import { sortBy } from 'lodash-es';
 
 import { Layout } from '../components/Layout';
-import { LinkContainer } from '../components/links/link-container';
 import { LinkItem } from '../components/links/link-item';
 import { SEO } from '../components/SEO';
 
@@ -36,11 +35,16 @@ const LinksPage: React.FC<
   return (
     <Layout>
       <SEO title="链接" pathname={props.path} />
-      <LinkContainer>
+      <ul className="flex flex-wrap">
         {links.map((link) => (
-          <LinkItem key={link.href} {...link} />
+          <li
+            key={link.href}
+            className="w-1/2 sm:w-1/3 md:w-1/4 text-center p-3 my-4"
+          >
+            <LinkItem {...link} />
+          </li>
         ))}
-      </LinkContainer>
+      </ul>
     </Layout>
   );
 };

@@ -15,11 +15,11 @@ export const LinkItem: React.FC<LinkProps> = ({
   slogan,
 }) => {
   return (
-    <li className="w-1/2 sm:w-1/3 md:w-1/4 text-center p-3 my-4 zen">
+    <>
       <OutboundLink
         eventAction="click"
         eventCategory="friend-link"
-        className="text-indigo-600 dark:text-indigo-300"
+        className="text-indigo-600 dark:text-indigo-300 zen"
         href={href}
         target="_blank"
         rel="noopener noreferrer"
@@ -44,6 +44,6 @@ export const LinkItem: React.FC<LinkProps> = ({
         <p className="font-semibold text-lg mt-2">{title}</p>
       </OutboundLink>
       <p className="mt-2">{slogan}</p>
-    </li>
+    </>
   );
 };
