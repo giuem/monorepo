@@ -33,7 +33,10 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({ isPost = false }) => {
   return (
     <header className="flex flex-col mt-10 mb-20">
       <div className="flex items-center justify-between">
-        <Link className="flex items-center mr-4" href="/">
+        <Link
+          className="flex items-center mr-4 umami--click--site-title"
+          href="/"
+        >
           <Title
             className="font-semibold text-3xl from-indigo-600 to-rose-600 bg-gradient-to-r bg-clip-text text-transparent"
             style={{ lineHeight: '48px' }}
@@ -52,7 +55,9 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({ isPost = false }) => {
         {navItems.map(({ title, href }) => (
           <Link
             key={href}
-            className="rounded-md md:hover:bg-indigo-50 md:hover:dark:bg-indigo-900 py-1 md:px-3 transition-colors"
+            className={`
+              rounded-md md:hover:bg-indigo-50 md:hover:dark:bg-indigo-900 py-1 md:px-3 transition-colors 
+              umami--click--nav-item-${title}`}
             activeClassName="md:bg-indigo-50 md:dark:bg-indigo-900 md:no-underline underline"
             href={href}
           >

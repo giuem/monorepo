@@ -19,7 +19,7 @@ export const LinkItem: React.FC<LinkProps> = ({
       <a
         // eventAction="click"
         // eventCategory="friend-link"
-        className="text-indigo-600 dark:text-indigo-300 zen"
+        className="text-indigo-600 dark:text-indigo-300 zen umami--click--link-item"
         href={href}
         target="_blank"
         rel="noopener noreferrer"

@@ -20,7 +20,7 @@ export const LatestPost: React.FC<FeaturedPostItemProps> = ({ post }) => {
           className="
           border-b-2 border-gray-200 dark:border-gray-700 hover:border-indigo-400 dark:hover:border-indigo-600
           hover:bg-indigo-50 dark:hover:bg-indigo-900 
-          transition-colors"
+          transition-colors umami--click--latest-post-title-text"
           href={href}
         >
           {post.frontmatter.title}
@@ -36,7 +36,7 @@ export const LatestPost: React.FC<FeaturedPostItemProps> = ({ post }) => {
               className="text-sm rounded-md transition-colors font-semibold
             bg-gray-100 hover:bg-indigo-50
             dark:bg-gray-800 hover:dark:bg-indigo-900
-            px-4 -mx-2 py-2"
+            px-4 -mx-2 py-2 umami--click--latest-post-read-more-button"
               href={href}
             >
               继续阅读

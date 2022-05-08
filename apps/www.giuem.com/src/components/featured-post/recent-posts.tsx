@@ -24,7 +24,7 @@ export const RecentPosts: React.FC<{
           text-sm rounded-md transition-colors font-semibold
           bg-gray-100 hover:bg-indigo-50
           dark:bg-gray-800 hover:dark:bg-indigo-900
-          px-4 -mx-2 py-2"
+          px-4 -mx-2 py-2 umami--click--recent-posts-more-button"
           href="/archives"
         >
           更多文章
