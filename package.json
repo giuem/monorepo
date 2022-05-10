@@ -10,25 +10,13 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "turbo run lint",
     "bootstrap": "npm i -g pnpm@^6 && pnpm install"
   },
   "devDependencies": {
-    "@infra/eslint-config": "workspace:*",
-    "eslint": "8.15.0",
     "husky": "7.0.4",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
-    "turbo": "1.2.8",
-    "typescript": "4.6.4"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "*": [
-      "prettier --ignore-unknown --write"
-    ]
+    "turbo": "1.2.8"
   }
 }

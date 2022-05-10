@@ -1,18 +1,5 @@
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: [
-      'tsconfig.lint.json',
-      './apps/*/tsconfig.json',
-      './packages/*/tsconfig.json',
-    ],
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
   env: {
     es6: true,
     node: true,
@@ -39,6 +26,15 @@ module.exports = {
       },
     },
     {
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: ['tsconfig.json'],
+        ecmaFeatures: {
+          jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
       files: ['*.ts', '*.tsx'],
       rules: {
         'no-dupe-class-members': 'off',
