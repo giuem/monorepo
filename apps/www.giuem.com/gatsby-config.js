@@ -177,7 +177,7 @@ module.exports = {
   flags: {
     FAST_DEV: true,
     DEV_SSR: true,
-    PARALLEL_SOURCING: true,
+    PARALLEL_SOURCING: false,
   },
   trailingSlash: 'never',
   jsxRuntime: 'automatic',
