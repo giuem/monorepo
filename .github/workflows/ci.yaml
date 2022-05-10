@@ -32,7 +32,7 @@ jobs:
           path: |
             apps/www.giuem.com/.cache
             apps/www.giuem.com/public
-          key: gatsby-cache-v2-${{ github.sha }}
+          key: v2-gatsby-cache-${{ github.sha }}
           restore-keys: |
             gatsby-cache-
 
