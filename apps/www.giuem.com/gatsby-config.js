@@ -15,20 +15,20 @@ module.exports = {
     },
     nav: [
       {
-        title: '主页',
+        title: '🏠 Home',
         href: '/',
       },
       {
-        title: '文章',
+        title: '👨‍💻 Blog',
         href: '/archives',
       },
       {
-        title: '链接',
-        href: '/links',
+        title: '👋 About',
+        href: '/about',
       },
       {
-        title: '关于',
-        href: '/about',
+        title: '🤺 Link',
+        href: '/links',
       },
     ],
     links: require('./contents/links.json'),
@@ -177,7 +177,7 @@ module.exports = {
   flags: {
     FAST_DEV: true,
     DEV_SSR: true,
-    PARALLEL_SOURCING: true,
+    PARALLEL_SOURCING: false,
   },
   trailingSlash: 'never',
   jsxRuntime: 'automatic',
