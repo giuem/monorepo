@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@infra/eslint-config': workspace:*
       eslint: 8.15.0
-      husky: 7.0.4
+      husky: 8.0.1
       lint-staged: 12.4.1
       prettier: 2.6.2
       turbo: 1.2.8
@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@infra/eslint-config': link:packages/shared-eslint-config
       eslint: 8.15.0
-      husky: 7.0.4
+      husky: 8.0.1
       lint-staged: 12.4.1
       prettier: 2.6.2
       turbo: 1.2.8
@@ -9501,9 +9501,9 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
 
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
