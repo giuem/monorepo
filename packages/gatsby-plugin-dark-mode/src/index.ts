@@ -21,14 +21,14 @@ export const useTheme = () => {
     setTheme(window.__currentTheme);
 
     const doc = document.documentElement;
-    // const onTransitionDone = () => {
-    //   doc.classList.remove('toggle-theme');
-    //   doc.removeEventListener('transitionend', onTransitionDone);
-    // };
-    // doc.addEventListener('transitionend', onTransitionDone);
-    // if (!doc.classList.contains('toggle-theme')) {
-    //   doc.classList.add('toggle-theme');
-    // }
+    const onTransitionDone = () => {
+      doc.classList.remove('toggle-theme');
+      doc.removeEventListener('transitionend', onTransitionDone);
+    };
+    doc.addEventListener('transitionend', onTransitionDone);
+    if (!doc.classList.contains('toggle-theme')) {
+      doc.classList.add('toggle-theme');
+    }
 
     if (window.__currentTheme === 'dark') {
       doc.classList.add('dark');
