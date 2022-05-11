@@ -1,6 +1,6 @@
 import { useTheme } from '@giuem/gatsby-plugin-dark-mode';
+import { useSpring, animated } from '@react-spring/web';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import { useSpring, animated } from 'react-spring';
 import { useFirstMountState } from 'react-use';
 
 export const DarkModeToggleButton: React.FC = () => {
@@ -15,8 +15,8 @@ export const DarkModeToggleButton: React.FC = () => {
   return (
     <button
       className="
-      bg-gray-100 hover:bg-indigo-50 transition-colors 
-      dark:bg-gray-800 dark:hover:bg-indigo-900 
+      bg-gray-100 hover:bg-indigo-50 transition-colors
+      dark:bg-gray-800 dark:hover:bg-indigo-900
       p-2 rounded-md umami--click--dark-mode-toggle-button"
       aria-label="深浅色主题切换按钮"
       onClick={toggleTheme}
