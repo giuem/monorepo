@@ -37,6 +37,7 @@
         "babel-eslint"
       ],
       "allowedVersions": {
+        "react-dom": "18",
         "react": "18"
       }
     }
