@@ -175,6 +175,9 @@ module.exports = {
         enablePreload: true,
       },
     },
+    {
+      resolve: `@giuem/gatsby-plugin-vercel-json`,
+    },
   ],
   flags: {
     FAST_DEV: true,
