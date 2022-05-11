@@ -22,6 +22,7 @@ importers:
 
   apps/www.giuem.com:
     specifiers:
+      '@babel/core': ^7.17.10
       '@fec/remark-a11y-emoji': 3.1.0
       '@giuem/gatsby-plugin-dark-mode': workspace:*
       '@giuem/gatsby-plugin-umami': workspace:^1.0.0
@@ -30,6 +31,7 @@ importers:
       '@loadable/component': 5.15.2
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22
+      '@react-spring/web': ^9.4.5
       '@tailwindcss/line-clamp': 0.4.0
       '@tailwindcss/typography': 0.5.2
       '@types/loadable__component': 5.13.4
@@ -60,6 +62,7 @@ importers:
       gatsby-remark-images: 6.14.0
       gatsby-source-filesystem: 4.14.0
       gatsby-transformer-sharp: 4.14.0
+      graphql: ^16.5.0
       lodash-es: 4.17.21
       postcss: 8.4.13
       prism-react-renderer: 1.3.1
@@ -69,11 +72,11 @@ importers:
       react-icons: 4.3.1
       react-medium-image-zoom: ^4.3.7
       react-schemaorg: 2.0.0
-      react-spring: ^9.4.5
       react-use: 17.3.2
       schema-dts: 1.1.0
       tailwindcss: 3.0.24
       typescript: 4.6.4
+      webpack: ^5.72.1
     dependencies:
       '@fec/remark-a11y-emoji': 3.1.0
       '@giuem/gatsby-plugin-dark-mode': link:../../packages/gatsby-plugin-dark-mode
@@ -82,21 +85,22 @@ importers:
       '@loadable/component': 5.15.2_react@18.1.0
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@18.1.0
+      '@react-spring/web': 9.4.5_react-dom@18.1.0+react@18.1.0
       '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.0.24
       '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
       autoprefixer: 10.4.7_postcss@8.4.13
       disqusjs: 1.3.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
-      gatsby-plugin-feed: 4.14.0_1a39c46a8c546be1ba8fe64e1126074e
-      gatsby-plugin-image: 2.14.0_511b9276d0bd72d79e5669ba12565eac
-      gatsby-plugin-manifest: 4.14.0_gatsby@4.14.0
+      gatsby-plugin-feed: 4.14.0_3f183b2701daf0cfb1a6811c74cb9663
+      gatsby-plugin-image: 2.14.0_c9dcf6e329627692292e6bbbd3d7b212
+      gatsby-plugin-manifest: 4.14.0_gatsby@4.14.0+graphql@16.5.0
       gatsby-plugin-mdx: 3.14.0_5c07e0b8e9b7db1574600b93bcf77c09
       gatsby-plugin-nprogress: 4.14.0_gatsby@4.14.0
       gatsby-plugin-pnpm: 1.2.10_gatsby@4.14.0
-      gatsby-plugin-postcss: 5.14.0_gatsby@4.14.0+postcss@8.4.13
+      gatsby-plugin-postcss: 5.14.0_4d49c0cb8b25de2ceef3ebc01ad07547
       gatsby-plugin-react-helmet: 5.14.0_gatsby@4.14.0+react-helmet@6.1.0
       gatsby-plugin-remove-serviceworker: 1.0.0
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0
+      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
       gatsby-plugin-sitemap: 5.14.0_1a39c46a8c546be1ba8fe64e1126074e
       gatsby-plugin-vercel: 1.0.3
       gatsby-remark-autolink-headers: 5.14.0_1a39c46a8c546be1ba8fe64e1126074e
@@ -104,6 +108,7 @@ importers:
       gatsby-remark-images: 6.14.0_d1da0f9732c712c5e6a759573f38f62e
       gatsby-source-filesystem: 4.14.0_gatsby@4.14.0
       gatsby-transformer-sharp: 4.14.0_d1da0f9732c712c5e6a759573f38f62e
+      graphql: 16.5.0
       lodash-es: 4.17.21
       postcss: 8.4.13
       prism-react-renderer: 1.3.1_react@18.1.0
@@ -113,12 +118,12 @@ importers:
       react-icons: 4.3.1_react@18.1.0
       react-medium-image-zoom: 4.3.7_react-dom@18.1.0+react@18.1.0
       react-schemaorg: 2.0.0_0796f18e0962bdc1073ccc37d89ce86b
-      react-spring: 9.4.5_react-dom@18.1.0+react@18.1.0
       react-use: 17.3.2_react-dom@18.1.0+react@18.1.0
       schema-dts: 1.1.0_typescript@4.6.4
       tailwindcss: 3.0.24
       typescript: 4.6.4
     devDependencies:
+      '@babel/core': 7.17.10
       '@infra/tsconfig': link:../../packages/shared-tsconfig
       '@types/loadable__component': 5.13.4
       '@types/lodash-es': 4.17.6
@@ -128,6 +133,7 @@ importers:
       '@types/react-dom': 18.0.3
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.10
+      webpack: 5.72.1
 
   packages/gatsby-plugin-dark-mode:
     specifiers:
@@ -2979,33 +2985,6 @@ packages:
       react: 18.1.0
     dev: false
 
-  /@react-spring/konva/9.4.5_react@18.1.0:
-    resolution: {integrity: sha512-b3wTs7YT5102+Gs488r2JCNBoyZQd+SWg35AdxmiI6FARBFvBjIA0z7VJx8ILAlmTVBows5UwiDWvk2vmWmLLw==}
-    peerDependencies:
-      konva: '>=2.6'
-      react: ^16.8.0  || >=17.0.0 || >=18.0.0
-      react-konva: ^16.8.0  || ^17.0.0
-    dependencies:
-      '@react-spring/animated': 9.4.5_react@18.1.0
-      '@react-spring/core': 9.4.5_react@18.1.0
-      '@react-spring/shared': 9.4.5_react@18.1.0
-      '@react-spring/types': 9.4.5
-      react: 18.1.0
-    dev: false
-
-  /@react-spring/native/9.4.5_react@18.1.0:
-    resolution: {integrity: sha512-11GcqFZfIhOOVQI25FcDLdeJLOSVOgIh2AF6WMXpCNWguhIv6N33zLL8d4cYfhYhsLOVXprU/8uefNorj7/h3g==}
-    peerDependencies:
-      react: ^16.8.0  || >=17.0.0 || >=18.0.0
-      react-native: '>=0.58'
-    dependencies:
-      '@react-spring/animated': 9.4.5_react@18.1.0
-      '@react-spring/core': 9.4.5_react@18.1.0
-      '@react-spring/shared': 9.4.5_react@18.1.0
-      '@react-spring/types': 9.4.5
-      react: 18.1.0
-    dev: false
-
   /@react-spring/rafz/9.4.5:
     resolution: {integrity: sha512-swGsutMwvnoyTRxvqhfJBtGM8Ipx6ks0RkIpNX9F/U7XmyPvBMGd3GgX/mqxZUpdlsuI1zr/jiYw+GXZxAlLcQ==}
     dev: false
@@ -3020,20 +2999,6 @@ packages:
       react: 18.1.0
     dev: false
 
-  /@react-spring/three/9.4.5_react@18.1.0:
-    resolution: {integrity: sha512-mArxfIhg9kyFL/8Y09TarS/ZKLd/qAWS4T3Ro/B46ILPfPnoPywDdw9/rknZihy/tslnviCgMrB4pZ29X1Dfxw==}
-    peerDependencies:
-      '@react-three/fiber': '>=6.0'
-      react: ^16.11.0  || >=17.0.0 || >=18.0.0
-      three: '>=0.126'
-    dependencies:
-      '@react-spring/animated': 9.4.5_react@18.1.0
-      '@react-spring/core': 9.4.5_react@18.1.0
-      '@react-spring/shared': 9.4.5_react@18.1.0
-      '@react-spring/types': 9.4.5
-      react: 18.1.0
-    dev: false
-
   /@react-spring/types/9.4.5:
     resolution: {integrity: sha512-mpRIamoHwql0ogxEUh9yr4TP0xU5CWyZxVQeccGkHHF8kPMErtDXJlxyo0lj+telRF35XNihtPTWoflqtyARmg==}
     dev: false
@@ -3043,22 +3008,6 @@ packages:
     peerDependencies:
       react: ^16.8.0  || >=17.0.0 || >=18.0.0
       react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
-    dependencies:
-      '@react-spring/animated': 9.4.5_react@18.1.0
-      '@react-spring/core': 9.4.5_react@18.1.0
-      '@react-spring/shared': 9.4.5_react@18.1.0
-      '@react-spring/types': 9.4.5
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
-    dev: false
-
-  /@react-spring/zdog/9.4.5_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-STrePM34ZK1T3oK8mo71pvKxvIzELJTpVi0U0qDh0s15e9rmN6XYkd406LqFtuchhmLoy24lD4ds7LAqhIEraw==}
-    peerDependencies:
-      react: ^16.8.0  || >=17.0.0 || >=18.0.0
-      react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
-      react-zdog: '>=1.0'
-      zdog: '>=1.0'
     dependencies:
       '@react-spring/animated': 9.4.5_react@18.1.0
       '@react-spring/core': 9.4.5_react@18.1.0
@@ -4158,20 +4107,8 @@ packages:
     dependencies:
       '@babel/core': 7.17.10
       '@babel/runtime': 7.17.9
-      gatsby: 4.14.0_853b6f339e2bccf32f9530bd4179d4f3
-      gatsby-core-utils: 3.14.0
-
-  /babel-plugin-remove-graphql-queries/4.14.0_gatsby@4.14.0:
-    resolution: {integrity: sha512-rqCih6maArH0nbkndAP9UKKQCUWZy1NBxG+nSOoIZpvLkMqTweAuiTpMDJVHWDk9CycFlLfl09/Ayk/nciVKhA==}
-    engines: {node: '>=14.15.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      gatsby: ^4.0.0-next
-    dependencies:
-      '@babel/runtime': 7.17.9
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-    dev: false
 
   /babel-plugin-syntax-trailing-function-commas/7.0.0-beta.0:
     resolution: {integrity: sha512-Xj9XuRuz3nTSbaTXWv3itLOcxyF4oPD8douBBmj7U9BBC6nEBYfyOJYQMf/8PJAFotC62UY5dFfIGEPr7WswzQ==}
@@ -6827,7 +6764,7 @@ packages:
       '@parcel/transformer-raw': 2.5.0_@parcel+core@2.5.0
       '@parcel/transformer-react-refresh-wrap': 2.5.0_@parcel+core@2.5.0
 
-  /gatsby-plugin-feed/4.14.0_1a39c46a8c546be1ba8fe64e1126074e:
+  /gatsby-plugin-feed/4.14.0_3f183b2701daf0cfb1a6811c74cb9663:
     resolution: {integrity: sha512-1s9R4usqdqHQzDkQyo2cYwT23AB3KhugefpqnL1A2biDUvy0Dmu2tHnUXMYb62BqcRF3YTSbpUTxkdw8bxcamg==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -6840,7 +6777,7 @@ packages:
       common-tags: 1.8.2
       fs-extra: 10.1.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
-      gatsby-plugin-utils: 3.8.0_gatsby@4.14.0
+      gatsby-plugin-utils: 3.8.0_gatsby@4.14.0+graphql@16.5.0
       lodash.merge: 4.6.2
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
@@ -6849,7 +6786,7 @@ packages:
       - graphql
     dev: false
 
-  /gatsby-plugin-image/2.14.0_511b9276d0bd72d79e5669ba12565eac:
+  /gatsby-plugin-image/2.14.0_c9dcf6e329627692292e6bbbd3d7b212:
     resolution: {integrity: sha512-LfM8V7kJVkkvq9S0UaVYlUakMNMdrL2RTjnnAUjclFhA+QQpI1uOuSY9iQe0zcy9VUZN4XNaRnubmrQp2MlL2w==}
     peerDependencies:
       '@babel/core': ^7.12.3
@@ -6860,18 +6797,19 @@ packages:
       react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/code-frame': 7.16.7
+      '@babel/core': 7.17.10
       '@babel/parser': 7.17.10
       '@babel/runtime': 7.17.9
       '@babel/traverse': 7.17.10
       babel-jsx-utils: 1.1.0
-      babel-plugin-remove-graphql-queries: 4.14.0_gatsby@4.14.0
+      babel-plugin-remove-graphql-queries: 4.14.0_043d748065eef582fb1d38160329ae55
       camelcase: 5.3.1
       chokidar: 3.5.3
       common-tags: 1.8.2
       fs-extra: 10.1.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0
+      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
       gatsby-source-filesystem: 4.14.0_gatsby@4.14.0
       objectFitPolyfill: 2.3.5
       prop-types: 15.8.1
@@ -6881,7 +6819,7 @@ packages:
       - supports-color
     dev: false
 
-  /gatsby-plugin-manifest/4.14.0_gatsby@4.14.0:
+  /gatsby-plugin-manifest/4.14.0_gatsby@4.14.0+graphql@16.5.0:
     resolution: {integrity: sha512-vwN5ZasR6/I9Xd1Ar3+UhMaYN6EU7PJhJKY6aQMAtG1Qxva5lDjmrWNzUlm8NHL/XmB4VSS+A4TZUZHyoygZ7Q==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -6890,7 +6828,7 @@ packages:
       '@babel/runtime': 7.17.9
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-      gatsby-plugin-utils: 3.8.0_gatsby@4.14.0
+      gatsby-plugin-utils: 3.8.0_gatsby@4.14.0+graphql@16.5.0
       semver: 7.3.7
       sharp: 0.30.4
     transitivePeerDependencies:
@@ -6975,7 +6913,7 @@ packages:
       '@sindresorhus/slugify': 1.1.2
       chokidar: 3.5.3
       fs-exists-cached: 1.0.0
-      gatsby: 4.14.0_853b6f339e2bccf32f9530bd4179d4f3
+      gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
       gatsby-page-utils: 2.14.0
       gatsby-plugin-utils: 3.8.0_gatsby@4.14.0+graphql@15.8.0
@@ -6997,7 +6935,7 @@ packages:
       lodash.uniq: 4.5.0
     dev: false
 
-  /gatsby-plugin-postcss/5.14.0_gatsby@4.14.0+postcss@8.4.13:
+  /gatsby-plugin-postcss/5.14.0_4d49c0cb8b25de2ceef3ebc01ad07547:
     resolution: {integrity: sha512-ShT37gIMR4hXnPxOlaa5YLjg/j1+txX2qVBSujp+2EZJ2MTtG106Q9RQ6beFVYuZVPY+1kbBt99+yfzJrsV3rg==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -7007,7 +6945,7 @@ packages:
       '@babel/runtime': 7.17.9
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       postcss: 8.4.13
-      postcss-loader: 4.3.0_postcss@8.4.13
+      postcss-loader: 4.3.0_postcss@8.4.13+webpack@5.72.1
     transitivePeerDependencies:
       - webpack
     dev: false
@@ -7028,7 +6966,7 @@ packages:
     resolution: {integrity: sha1-n7QzvIvXZuFOHTcRxKxvBR4d/3w=}
     dev: false
 
-  /gatsby-plugin-sharp/4.14.0_gatsby@4.14.0:
+  /gatsby-plugin-sharp/4.14.0_gatsby@4.14.0+graphql@16.5.0:
     resolution: {integrity: sha512-5xBF9+esTS/mkZx/NLdovjmyVu/EefDAPbTckh9UkXYTSe3BmhUjZ8wFN9xr1NQUTuDBta9csjBDWs8whvBzVw==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -7043,7 +6981,7 @@ packages:
       fs-extra: 10.1.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-      gatsby-plugin-utils: 3.8.0_gatsby@4.14.0
+      gatsby-plugin-utils: 3.8.0_gatsby@4.14.0+graphql@16.5.0
       gatsby-telemetry: 3.14.0
       got: 11.8.3
       lodash: 4.17.21
@@ -7090,11 +7028,11 @@ packages:
       '@babel/preset-typescript': 7.16.7_@babel+core@7.17.10
       '@babel/runtime': 7.17.9
       babel-plugin-remove-graphql-queries: 4.14.0_043d748065eef582fb1d38160329ae55
-      gatsby: 4.14.0_853b6f339e2bccf32f9530bd4179d4f3
+      gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
     transitivePeerDependencies:
       - supports-color
 
-  /gatsby-plugin-utils/3.8.0_gatsby@4.14.0:
+  /gatsby-plugin-utils/3.8.0_gatsby@4.14.0+graphql@15.8.0:
     resolution: {integrity: sha512-dLFk+4E2BJrSuPz5/cLUyw4/dDbyMtruLww2XnFk34DVxg16FHIBYcY7p5IbfmDiBmMtlgJFqxBHj1zt8l6syw==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -7106,28 +7044,6 @@ packages:
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
       gatsby-sharp: 0.8.0
-      graphql-compose: 9.0.8
-      import-from: 4.0.0
-      joi: 17.6.0
-      mime: 3.0.0
-      mini-svg-data-uri: 1.4.4
-      svgo: 2.8.0
-    transitivePeerDependencies:
-      - graphql
-    dev: false
-
-  /gatsby-plugin-utils/3.8.0_gatsby@4.14.0+graphql@15.8.0:
-    resolution: {integrity: sha512-dLFk+4E2BJrSuPz5/cLUyw4/dDbyMtruLww2XnFk34DVxg16FHIBYcY7p5IbfmDiBmMtlgJFqxBHj1zt8l6syw==}
-    engines: {node: '>=14.15.0'}
-    peerDependencies:
-      gatsby: ^4.0.0-next
-    dependencies:
-      '@babel/runtime': 7.17.9
-      '@gatsbyjs/potrace': 2.2.0
-      fs-extra: 10.1.0
-      gatsby: 4.14.0_853b6f339e2bccf32f9530bd4179d4f3
-      gatsby-core-utils: 3.14.0
-      gatsby-sharp: 0.8.0
       graphql-compose: 9.0.8_graphql@15.8.0
       import-from: 4.0.0
       joi: 17.6.0
@@ -7136,6 +7052,28 @@ packages:
       svgo: 2.8.0
     transitivePeerDependencies:
       - graphql
+
+  /gatsby-plugin-utils/3.8.0_gatsby@4.14.0+graphql@16.5.0:
+    resolution: {integrity: sha512-dLFk+4E2BJrSuPz5/cLUyw4/dDbyMtruLww2XnFk34DVxg16FHIBYcY7p5IbfmDiBmMtlgJFqxBHj1zt8l6syw==}
+    engines: {node: '>=14.15.0'}
+    peerDependencies:
+      gatsby: ^4.0.0-next
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@gatsbyjs/potrace': 2.2.0
+      fs-extra: 10.1.0
+      gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
+      gatsby-core-utils: 3.14.0
+      gatsby-sharp: 0.8.0
+      graphql-compose: 9.0.8_graphql@16.5.0
+      import-from: 4.0.0
+      joi: 17.6.0
+      mime: 3.0.0
+      mini-svg-data-uri: 1.4.4
+      svgo: 2.8.0
+    transitivePeerDependencies:
+      - graphql
+    dev: false
 
   /gatsby-plugin-vercel/1.0.3:
     resolution: {integrity: sha512-sZU7E9uJdSwb2S+86LSoYrS4MUUJtg5ZA/mZZIwBQyZXXTsBSGSXHv48WMzyyPY1RasG0k2pDLFesp4Z7GT9rQ==}
@@ -7206,7 +7144,7 @@ packages:
       cheerio: 1.0.0-rc.10
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0
+      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
       is-relative-url: 3.0.0
       lodash: 4.17.21
       mdast-util-definitions: 4.0.0
@@ -7277,7 +7215,7 @@ packages:
       common-tags: 1.8.2
       fs-extra: 10.1.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0
+      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
       probe-image-size: 7.2.3
       semver: 7.3.7
       sharp: 0.30.4
@@ -7882,14 +7820,6 @@ packages:
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
 
-  /graphql-compose/9.0.8:
-    resolution: {integrity: sha512-I3zvygpVz5hOWk2cYL6yhbgfKbNWbiZFNXlWkv/55U+lX6Y3tL+SyY3zunw7QWrN/qtwG2DqZb13SHTv2MgdEQ==}
-    peerDependencies:
-      graphql: ^14.2.0 || ^15.0.0 || ^16.0.0
-    dependencies:
-      graphql-type-json: 0.3.2
-    dev: false
-
   /graphql-compose/9.0.8_graphql@15.8.0:
     resolution: {integrity: sha512-I3zvygpVz5hOWk2cYL6yhbgfKbNWbiZFNXlWkv/55U+lX6Y3tL+SyY3zunw7QWrN/qtwG2DqZb13SHTv2MgdEQ==}
     peerDependencies:
@@ -7897,6 +7827,15 @@ packages:
     dependencies:
       graphql: 15.8.0
       graphql-type-json: 0.3.2_graphql@15.8.0
+
+  /graphql-compose/9.0.8_graphql@16.5.0:
+    resolution: {integrity: sha512-I3zvygpVz5hOWk2cYL6yhbgfKbNWbiZFNXlWkv/55U+lX6Y3tL+SyY3zunw7QWrN/qtwG2DqZb13SHTv2MgdEQ==}
+    peerDependencies:
+      graphql: ^14.2.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.5.0
+      graphql-type-json: 0.3.2_graphql@16.5.0
+    dev: false
 
   /graphql-config/3.4.1_ce89a9703b1e6cda2053f11ae8a89476:
     resolution: {integrity: sha512-g9WyK4JZl1Ko++FSyE5Ir2g66njfxGzrDDhBOwnkoWf/t3TnnZG6BBkWP+pkqVJ5pqMJGPKHNrbew8jRxStjhw==}
@@ -7971,18 +7910,20 @@ packages:
       graphql: 15.8.0
       tslib: 2.4.0
 
-  /graphql-type-json/0.3.2:
-    resolution: {integrity: sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==}
-    peerDependencies:
-      graphql: '>=0.8.0'
-    dev: false
-
   /graphql-type-json/0.3.2_graphql@15.8.0:
     resolution: {integrity: sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==}
     peerDependencies:
       graphql: '>=0.8.0'
     dependencies:
       graphql: 15.8.0
+
+  /graphql-type-json/0.3.2_graphql@16.5.0:
+    resolution: {integrity: sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==}
+    peerDependencies:
+      graphql: '>=0.8.0'
+    dependencies:
+      graphql: 16.5.0
+    dev: false
 
   /graphql-ws/4.9.0_graphql@15.8.0:
     resolution: {integrity: sha512-sHkK9+lUm20/BGawNEWNtVAeJzhZeBg21VmvmLoT5NdGVeZWv5PdIhkcayQIAgjSyyQ17WMKmbDijIPG2On+Ag==}
@@ -7995,6 +7936,11 @@ packages:
   /graphql/15.8.0:
     resolution: {integrity: sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw==}
     engines: {node: '>= 10.x'}
+
+  /graphql/16.5.0:
+    resolution: {integrity: sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
+    dev: false
 
   /gray-matter/4.0.3:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
@@ -10316,7 +10262,7 @@ packages:
       yaml: 1.10.2
     dev: false
 
-  /postcss-loader/4.3.0_postcss@8.4.13:
+  /postcss-loader/4.3.0_postcss@8.4.13+webpack@5.72.1:
     resolution: {integrity: sha512-M/dSoIiNDOo8Rk0mUqoj4kpGq91gcxCfb9PoyZVdZ76/AuhxylHDYZblNE8o+EQ9AMSASeMFEKxZf5aU6wlx1Q==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -10329,6 +10275,7 @@ packages:
       postcss: 8.4.13
       schema-utils: 3.1.1
       semver: 7.3.7
+      webpack: 5.72.1
     dev: false
 
   /postcss-loader/5.3.0_postcss@8.4.13+webpack@5.72.1:
@@ -10931,27 +10878,6 @@ packages:
       react: ^16.3.0 || ^17.0.0
     dependencies:
       react: 18.1.0
-    dev: false
-
-  /react-spring/9.4.5_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-FRIXQGR+jG+Fx4UcqhF0b5jMEU3Q5QcZ8rEVWKqZgrrn92C1HcqtuZy7dH+rZ6uNGjnlV7HBf8iprJaJ+350LA==}
-    dependencies:
-      '@react-spring/core': 9.4.5_react@18.1.0
-      '@react-spring/konva': 9.4.5_react@18.1.0
-      '@react-spring/native': 9.4.5_react@18.1.0
-      '@react-spring/three': 9.4.5_react@18.1.0
-      '@react-spring/web': 9.4.5_react-dom@18.1.0+react@18.1.0
-      '@react-spring/zdog': 9.4.5_react-dom@18.1.0+react@18.1.0
-    transitivePeerDependencies:
-      - '@react-three/fiber'
-      - konva
-      - react
-      - react-dom
-      - react-konva
-      - react-native
-      - react-zdog
-      - three
-      - zdog
     dev: false
 
   /react-universal-interface/0.6.2_react@18.1.0+tslib@2.4.0:

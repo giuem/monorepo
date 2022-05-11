@@ -35,7 +35,10 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "babel-eslint"
-      ]
+      ],
+      "allowedVersions": {
+        "react": "18"
+      }
     }
   }
 }
