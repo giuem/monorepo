@@ -165,12 +165,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-umami`,
+      resolve: `@giuem/gatsby-plugin-umami`,
       options: {
+        src: 'https://umami.giuem.com/main.js',
         websiteId: 'c6b67d7c-b6ed-4ed3-9b76-287955224503',
-        srcUrl: 'https://umami.giuem.com/umami.js',
-        includeInDevelopment: false,
         autoTrack: true,
+        respectDNT: true,
+        enableInDev: true,
+        enablePreload: true,
       },
     },
   ],

@@ -1,0 +1,15 @@
+{
+  "name": "@giuem/gatsby-plugin-umami",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "@infra/tsconfig": "workspace:^0.0.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "gatsby": "4.14.0"
+  },
+  "peerDependencies": {
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
+  }
+}
