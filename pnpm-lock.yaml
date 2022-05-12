@@ -46,7 +46,7 @@ importers:
       disqusjs: 1.3.0
       gatsby: 4.14.0
       gatsby-plugin-feed: 4.14.0
-      gatsby-plugin-image: 2.14.0
+      gatsby-plugin-image: 2.14.1
       gatsby-plugin-manifest: 4.14.0
       gatsby-plugin-mdx: 3.14.0
       gatsby-plugin-nprogress: 4.14.0
@@ -54,7 +54,7 @@ importers:
       gatsby-plugin-postcss: 5.14.0
       gatsby-plugin-react-helmet: 5.14.0
       gatsby-plugin-remove-serviceworker: 1.0.0
-      gatsby-plugin-sharp: 4.14.0
+      gatsby-plugin-sharp: 4.14.1
       gatsby-plugin-sitemap: 5.14.0
       gatsby-plugin-vercel: 1.0.3
       gatsby-remark-autolink-headers: 5.14.0
@@ -92,7 +92,7 @@ importers:
       disqusjs: 1.3.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-plugin-feed: 4.14.0_3f183b2701daf0cfb1a6811c74cb9663
-      gatsby-plugin-image: 2.14.0_c9dcf6e329627692292e6bbbd3d7b212
+      gatsby-plugin-image: 2.14.1_d57a2a253302001aa8794980531efc4e
       gatsby-plugin-manifest: 4.14.0_gatsby@4.14.0+graphql@16.5.0
       gatsby-plugin-mdx: 3.14.0_5c07e0b8e9b7db1574600b93bcf77c09
       gatsby-plugin-nprogress: 4.14.0_gatsby@4.14.0
@@ -100,14 +100,14 @@ importers:
       gatsby-plugin-postcss: 5.14.0_4d49c0cb8b25de2ceef3ebc01ad07547
       gatsby-plugin-react-helmet: 5.14.0_gatsby@4.14.0+react-helmet@6.1.0
       gatsby-plugin-remove-serviceworker: 1.0.0
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
+      gatsby-plugin-sharp: 4.14.1_gatsby@4.14.0+graphql@16.5.0
       gatsby-plugin-sitemap: 5.14.0_1a39c46a8c546be1ba8fe64e1126074e
       gatsby-plugin-vercel: 1.0.3
       gatsby-remark-autolink-headers: 5.14.0_1a39c46a8c546be1ba8fe64e1126074e
       gatsby-remark-copy-linked-files: 5.14.0_gatsby@4.14.0
-      gatsby-remark-images: 6.14.0_d1da0f9732c712c5e6a759573f38f62e
+      gatsby-remark-images: 6.14.0_819cd036644d301bb4bab6debaa71aba
       gatsby-source-filesystem: 4.14.0_gatsby@4.14.0
-      gatsby-transformer-sharp: 4.14.0_d1da0f9732c712c5e6a759573f38f62e
+      gatsby-transformer-sharp: 4.14.0_819cd036644d301bb4bab6debaa71aba
       graphql: 16.5.0
       lodash-es: 4.17.21
       postcss: 8.4.13
@@ -5466,7 +5466,7 @@ packages:
   /domutils/1.5.1:
     resolution: {integrity: sha1-3NhIiib1Y9YQeeSMn3t+Mjc2gs8=}
     dependencies:
-      dom-serializer: 0.1.1
+      dom-serializer: 0.2.2
       domelementtype: 1.3.1
     dev: false
 
@@ -6880,8 +6880,8 @@ packages:
       - graphql
     dev: false
 
-  /gatsby-plugin-image/2.14.0_c9dcf6e329627692292e6bbbd3d7b212:
-    resolution: {integrity: sha512-LfM8V7kJVkkvq9S0UaVYlUakMNMdrL2RTjnnAUjclFhA+QQpI1uOuSY9iQe0zcy9VUZN4XNaRnubmrQp2MlL2w==}
+  /gatsby-plugin-image/2.14.1_d57a2a253302001aa8794980531efc4e:
+    resolution: {integrity: sha512-9ez7/MqjZLwvFqY37miFO3IAcqF3rkhUMyrwct+JMk2c1AcXgGyG1acgKGkJU6maiQoIqSKtyzjoQD8+o3f0Hg==}
     peerDependencies:
       '@babel/core': ^7.12.3
       gatsby: ^4.0.0-next
@@ -6903,7 +6903,7 @@ packages:
       fs-extra: 10.1.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
+      gatsby-plugin-sharp: 4.14.1_gatsby@4.14.0+graphql@16.5.0
       gatsby-source-filesystem: 4.14.0_gatsby@4.14.0
       objectFitPolyfill: 2.3.5
       prop-types: 15.8.1
@@ -7060,8 +7060,8 @@ packages:
     resolution: {integrity: sha1-n7QzvIvXZuFOHTcRxKxvBR4d/3w=}
     dev: false
 
-  /gatsby-plugin-sharp/4.14.0_gatsby@4.14.0+graphql@16.5.0:
-    resolution: {integrity: sha512-5xBF9+esTS/mkZx/NLdovjmyVu/EefDAPbTckh9UkXYTSe3BmhUjZ8wFN9xr1NQUTuDBta9csjBDWs8whvBzVw==}
+  /gatsby-plugin-sharp/4.14.1_gatsby@4.14.0+graphql@16.5.0:
+    resolution: {integrity: sha512-izYl9XcnWdAY+rDtZtnKfzZ/djBioGSDg/k84cgLVbTzLB29jgqipw3PkjV7IlvmJmlw2v78YCHO5mk3bfcitg==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       gatsby: ^4.0.0-next
@@ -7227,7 +7227,7 @@ packages:
       - supports-color
     dev: false
 
-  /gatsby-remark-images/6.14.0_d1da0f9732c712c5e6a759573f38f62e:
+  /gatsby-remark-images/6.14.0_819cd036644d301bb4bab6debaa71aba:
     resolution: {integrity: sha512-IGNZ8xUVvbThmg4NeRavX+5BDG4DEGus4hKi/GdWYX1kVGn+I3q4H8O7Kpa7NDpruIF+eY2EvbtTmoNpVrk/Ag==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -7240,7 +7240,7 @@ packages:
       cheerio: 1.0.0-rc.10
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
       gatsby-core-utils: 3.14.0
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
+      gatsby-plugin-sharp: 4.14.1_gatsby@4.14.0+graphql@16.5.0
       is-relative-url: 3.0.0
       lodash: 4.17.21
       mdast-util-definitions: 4.0.0
@@ -7298,7 +7298,7 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  /gatsby-transformer-sharp/4.14.0_d1da0f9732c712c5e6a759573f38f62e:
+  /gatsby-transformer-sharp/4.14.0_819cd036644d301bb4bab6debaa71aba:
     resolution: {integrity: sha512-V8tpCavnmK05GK7LoSAUyd/KZBoZr2NK4IdyIbBdxOcXBqtsD/yrThOyLP00hEV03myTv/6nzSIBZdEL+AGG5g==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -7311,7 +7311,7 @@ packages:
       common-tags: 1.8.2
       fs-extra: 10.1.0
       gatsby: 4.14.0_c31d3c9c1bb14e09921f631b64e89a04
-      gatsby-plugin-sharp: 4.14.0_gatsby@4.14.0+graphql@16.5.0
+      gatsby-plugin-sharp: 4.14.1_gatsby@4.14.0+graphql@16.5.0
       probe-image-size: 7.2.3
       semver: 7.3.7
       sharp: 0.30.4
