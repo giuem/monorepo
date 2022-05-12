@@ -1,11 +1,13 @@
-import type { GatsbyNode } from 'gatsby';
+// @ts-check
+// import type { GatsbyNode } from 'gatsby';
 
-import { PluginOptions } from './plugin';
+// import { PluginOptions } from './plugin';
 
-export const pluginOptionsSchema: GatsbyNode['pluginOptionsSchema'] = ({
-  Joi,
-}) => {
-  return Joi.object<PluginOptions>({
+/**
+ * @type {import('gatsby').GatsbyNode['pluginOptionsSchema']}
+ */
+exports.pluginOptionsSchema = ({ Joi }) => {
+  return Joi.object({
     src: Joi.string().required(),
     websiteId: Joi.string().required(),
 

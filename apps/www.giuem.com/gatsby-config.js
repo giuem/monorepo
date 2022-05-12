@@ -177,6 +177,29 @@ module.exports = {
     },
     {
       resolve: `@giuem/gatsby-plugin-vercel-json`,
+      options: {
+        trailingSlash: false,
+        cleanUrls: true,
+        headers: [
+          {
+            source: '/(.*)',
+            headers: [
+              {
+                key: 'X-Content-Type-Options',
+                value: 'nosniff',
+              },
+              {
+                key: 'X-Frame-Options',
+                value: 'DENY',
+              },
+              {
+                key: 'X-XSS-Protection',
+                value: '1; mode=block',
+              },
+            ],
+          },
+        ],
+      },
     },
   ],
   flags: {
