@@ -70,7 +70,7 @@ importers:
       react-dom: 18.1.0
       react-helmet: 6.1.0
       react-icons: 4.3.1
-      react-medium-image-zoom: 4.3.7
+      react-medium-image-zoom: 4.4.0
       react-schemaorg: 2.0.0
       react-use: 17.3.2
       schema-dts: 1.1.0
@@ -116,7 +116,7 @@ importers:
       react-dom: 18.1.0_react@18.1.0
       react-helmet: 6.1.0_react@18.1.0
       react-icons: 4.3.1_react@18.1.0
-      react-medium-image-zoom: 4.3.7_react-dom@18.1.0+react@18.1.0
+      react-medium-image-zoom: 4.4.0_react-dom@18.1.0+react@18.1.0
       react-schemaorg: 2.0.0_0796f18e0962bdc1073ccc37d89ce86b
       react-use: 17.3.2_react-dom@18.1.0+react@18.1.0
       schema-dts: 1.1.0_typescript@4.6.4
@@ -6587,8 +6587,8 @@ packages:
   /flatted/3.2.5:
     resolution: {integrity: sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==}
 
-  /focus-options-polyfill/1.2.0:
-    resolution: {integrity: sha512-4sgXxV/zU4WHM2IHWpjUmEWazbF6ie+M93/uo8ipfAbQ1GHopn+/V+Ca+PR0ndxswNQbisCNrjbnvWEq14MkTA==}
+  /focus-options-polyfill/1.5.1:
+    resolution: {integrity: sha512-7yH20IePROHJLLbJvqqtsG420jE6DuukccapiB/WagtUpnc98r9NzHbX5rnjCDgdZqLgcqlzGjn+8l0Zb8Zf9w==}
     dev: false
 
   /follow-redirects/1.15.0_debug@3.2.7:
@@ -10946,16 +10946,15 @@ packages:
   /react-lifecycles-compat/3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
 
-  /react-medium-image-zoom/4.3.7_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-Vg1M8CIX1EfhfSsmNc2tHP+8KjPDo9e5/zEDaSsfeTBHI82wjEvW3Lgb4k3jdWILPZVOWhM+7QHyDaAzghlvaQ==}
+  /react-medium-image-zoom/4.4.0_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-Y+1enQKyeM/ASAmvlKkLw0USbHePP5dbdjNSclHDBvzGLD8+tUqgxjjtTS54tMvvll7OSxTThVaXxrvO0uYO6A==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
-      focus-options-polyfill: 1.2.0
+      focus-options-polyfill: 1.5.1
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
-      react-use: 17.3.2_react-dom@18.1.0+react@18.1.0
       tslib: 2.4.0
     dev: false
 
