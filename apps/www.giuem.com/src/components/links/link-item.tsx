@@ -30,7 +30,8 @@ export const LinkItem: React.FC<LinkProps> = ({
           style={{ width: '90%', paddingBottom: '90%' }}
         >
           <img
-            className="absolute inset-0 w-full h-full object-cover border-2 border-indigo-600 dark:border-indigo-300 transition-all duration-700"
+            className="absolute inset-0 w-full h-full object-cover border-2 border-indigo-600 dark:border-indigo-300 transition-all duration-700
+            bg-gray-100 dark:bg-gray-800"
             style={{
               borderRadius: 'var(--border-radius)',
               transform: 'var(--transform)',
