@@ -175,7 +175,7 @@ importers:
       eslint-plugin-import: 2.26.0
       eslint-plugin-jsx-a11y: 6.5.1
       eslint-plugin-prettier: 4.0.0
-      eslint-plugin-react: 7.29.4
+      eslint-plugin-react: 7.30.0
       eslint-plugin-react-hooks: 4.5.0
       resolve.exports: 1.1.0
     dependencies:
@@ -185,7 +185,7 @@ importers:
       eslint-plugin-import: 2.26.0_23a3d2c79632a80e14face771e0a0a11
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.15.0
       eslint-plugin-prettier: 4.0.0_440b30a60bbe5bb6e3ad0057150b2782
-      eslint-plugin-react: 7.29.4_eslint@8.15.0
+      eslint-plugin-react: 7.30.0_eslint@8.15.0
       eslint-plugin-react-hooks: 4.5.0_eslint@8.15.0
       resolve.exports: 1.1.0
 
@@ -6223,8 +6223,8 @@ packages:
       semver: 6.3.0
       string.prototype.matchall: 4.0.7
 
-  /eslint-plugin-react/7.29.4_eslint@8.15.0:
-    resolution: {integrity: sha512-CVCXajliVh509PcZYRFyu/BoUEz452+jtQJq2b3Bae4v3xBUWPLCmtmBM+ZinG4MzwmxJgJ2M5rMqhqLVn7MtQ==}
+  /eslint-plugin-react/7.30.0_eslint@8.15.0:
+    resolution: {integrity: sha512-RgwH7hjW48BleKsYyHK5vUAvxtE9SMPDKmcPRQgtRCYaZA0XQPt5FSkrU3nhz5ifzMZcA8opwmRJ2cmOO8tr5A==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
