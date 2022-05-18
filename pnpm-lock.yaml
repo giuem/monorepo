@@ -43,7 +43,7 @@ importers:
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.10
       autoprefixer: 10.4.7
-      disqusjs: 1.3.0
+      disqusjs: 3.0.0
       gatsby: 4.14.1
       gatsby-plugin-feed: 4.14.0
       gatsby-plugin-image: 2.14.1
@@ -89,7 +89,7 @@ importers:
       '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.0.24
       '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
       autoprefixer: 10.4.7_postcss@8.4.13
-      disqusjs: 1.3.0
+      disqusjs: 3.0.0_react@18.1.0
       gatsby: 4.14.1_a3d70c04ae6913bd588e439dd72692ca
       gatsby-plugin-feed: 4.14.0_bb6fd8dc1606332e0c703706808b9d0c
       gatsby-plugin-image: 2.14.1_18102b68a464dc7999e4b1b7fed634f9
@@ -5434,8 +5434,21 @@ packages:
     dependencies:
       path-type: 4.0.0
 
-  /disqusjs/1.3.0:
-    resolution: {integrity: sha512-m9eu1FjydynqxcbdH6C74be6JB961wseQWhs3JrkZg7frvpsV7zyC43yR7f2oK6ooxhjuvk6ek9Z84BTkn0/ww==}
+  /disqusjs/3.0.0_react@18.1.0:
+    resolution: {integrity: sha512-SwxQLe5r+hd6CvZCYvgFIKTVhJ0Ok004pIVHfFtGpB/bt8N0PIGIAlTkzUZrpZbe5qGUSY25mR7G9671FNHInA==}
+    peerDependencies:
+      preact: ^10.7.1
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0 || 18
+    peerDependenciesMeta:
+      preact:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.1.0
+      zustand: 4.0.0-rc.1_react@18.1.0
+    transitivePeerDependencies:
+      - immer
     dev: false
 
   /dlv/1.1.3:
@@ -12997,6 +13010,14 @@ packages:
       querystring: 0.2.0
     dev: false
 
+  /use-sync-external-store/1.1.0_react@18.1.0:
+    resolution: {integrity: sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
+    dependencies:
+      react: 18.1.0
+    dev: false
+
   /utif/2.0.1:
     resolution: {integrity: sha512-Z/S1fNKCicQTf375lIP9G8Sa1H/phcysstNrrSdZKj1f9g58J4NMgb5IgiEZN9/nLMPDwF0W7hdOe9Qq2IYoLg==}
     dependencies:
@@ -13441,6 +13462,22 @@ packages:
       is-ci: 2.0.0
       read: 1.0.7
       strip-ansi: 5.2.0
+
+  /zustand/4.0.0-rc.1_react@18.1.0:
+    resolution: {integrity: sha512-qgcs7zLqBdHu0PuT3GW4WCIY5SgXdsv30GQMu9Qpp1BA2aS+sNS8l4x0hWuyEhjXkN+701aGWawhKDv6oWJAcw==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      immer: '>=9.0'
+      react: '>=16.8 || 18'
+    peerDependenciesMeta:
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.1.0
+      use-sync-external-store: 1.1.0_react@18.1.0
+    dev: false
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
