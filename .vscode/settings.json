@@ -1,3 +1,4 @@
 {
-  "npm.validate.enable": false
+  "npm.validate.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

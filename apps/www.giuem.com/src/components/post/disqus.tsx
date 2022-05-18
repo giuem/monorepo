@@ -1,10 +1,7 @@
-import DisqusJS from 'disqusjs';
+import { DisqusJS } from 'disqusjs/react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { useEffect, useRef } from 'react';
-import { useIntersection } from 'react-use';
 
-// eslint-disable-next-line import/no-unresolved
-import css from '!!raw-loader!disqusjs/dist/disqusjs.css';
+import 'disqusjs/react/styles/disqusjs.css';
 
 type DisqusProps = {
   title: string;
@@ -28,39 +25,10 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
     }
   `);
 
-  const isLoaded = useRef(false);
-  const intersectionRef = useRef(null);
-  const intersection = useIntersection(intersectionRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0,
-  });
-
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-    if (!isLoaded.current && intersection?.isIntersecting) {
-      isLoaded.current = true;
-      new DisqusJS({
-        shortname: 'giuem',
-        siteName: siteTitle,
-        identifier: slug,
-        url: siteUrl + `/${url}/`.replace(/\/\//g, '/'),
-        title: title,
-        api: 'https://disqus.giuem.com/',
-        apikey:
-          'aQpOK5Wj0ZjWy8bAPxcC5se1OhNhuVjmSDp0h50D2JmtcPoSaBCLXTeasNZYUuxU',
-        admin: 'giuem',
-        adminLabel: 'Mod',
-      });
-    }
-  }, [siteTitle, siteUrl, slug, title, url, intersection]);
-
   return (
-    <div className="mt-16 py-12" ref={intersectionRef}>
+    <div className="mt-16 py-12">
       <style id="disqus_thread_style">
-        {css}
+        {/* {css} */}
         {`
         .dark #dsqjs .dsqjs-post-body { color: #eee; }
         .dark #dsqjs .dsqjs-no-comment { color: #ccc; }
@@ -70,7 +38,18 @@ export const Disqus: React.FC<DisqusProps> = ({ title, slug, url }) => {
         .dark #dsqjs .dsqjs-tab-active { color: #eee; }
         `}
       </style>
-      <div id="disqus_thread"></div>
+      <DisqusJS
+        shortname="giuem"
+        siteName={siteTitle}
+        identifier={slug}
+        url={siteUrl + `/${url}/`.replace(/\/\//g, '/')}
+        title={title}
+        api="https://disqus.giuem.com/"
+        apikey="aQpOK5Wj0ZjWy8bAPxcC5se1OhNhuVjmSDp0h50D2JmtcPoSaBCLXTeasNZYUuxU"
+        admin="giuem"
+        adminLabel="Mod"
+        nocomment="还没有评论哦"
+      />
     </div>
   );
 };
