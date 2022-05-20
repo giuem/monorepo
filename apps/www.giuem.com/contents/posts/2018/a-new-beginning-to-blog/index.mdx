@@ -28,6 +28,6 @@ tags:
 
 > 博客的架构也进行了一次大改版。
 
-之前我博客的部署流程是比较麻烦的，使用 Travis CI, GitHub Webhook（见[《使用 Travis CI 自动部署 HEXO 博客》](/deploy-via-travis-ci/)）。这次也是简化了流程，直接在云主机上搭了一个 [Minio](https://www.minio.io/) 私有云存储，然后在 CI 构建的时候直接把静态文件 push 过去。之前因为 GitHub 在国内访问速度不佳，导致主动拉取的速度很慢很慢，有时候还会 timeout。这次改版后，构建发布的时间基本**不超过一分半**。
+之前我博客的部署流程是比较麻烦的，使用 Travis CI, GitHub Webhook（见[《使用 Travis CI 自动部署 HEXO 博客》](/blog/deploy-via-travis-ci/)）。这次也是简化了流程，直接在云主机上搭了一个 [Minio](https://www.minio.io/) 私有云存储，然后在 CI 构建的时候直接把静态文件 push 过去。之前因为 GitHub 在国内访问速度不佳，导致主动拉取的速度很慢很慢，有时候还会 timeout。这次改版后，构建发布的时间基本**不超过一分半**。
 
 博客的 CDN 也做了修改，国内仍然是使用腾讯云主机。国外之前的使用 Firebase Hosting，速度是还可以，但是配置不太灵活，这次换成了 CloudFlare 回源 Netlify 的方式。CloudFlare 是 Pro Plan（由[云锤](https://cloudhammer.org/cloudflare-pro/)提供），可以直接 CNAME 接入，方便 GeoDNS；还有 30 条 Page Rules。

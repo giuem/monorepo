@@ -1,23 +1,19 @@
-import { Link as GatsbyLink } from 'gatsby';
+import { Link as GatsbyLink, GatsbyLinkProps } from 'gatsby';
 import { BiLink } from 'react-icons/bi';
 
-type LinkProps = {
-  href: string;
-  // @TODO: Fix types
-  [key: string]: unknown;
-};
+type LinkProps<TState> = GatsbyLinkProps<TState>;
 
-export const Link: React.FC<React.PropsWithChildren<LinkProps>> = ({
-  href,
+export const Link = <TState,>({
+  to,
   children,
   ...props
-}) => {
-  const isInternalLink = /^\/(?!\/)/.test(href) && props.target !== '_blank';
-  const isHash = /^#/.test(href);
+}: React.PropsWithoutRef<LinkProps<TState>>) => {
+  const isInternalLink = /^\/(?!\/)/.test(to) && props.target !== '_blank';
+  const isHash = /^#/.test(to);
 
   if (isInternalLink) {
     return (
-      <GatsbyLink to={href} activeClassName="active" {...props}>
+      <GatsbyLink<TState> to={to} activeClassName="active" {...props}>
         {children}
       </GatsbyLink>
     );
@@ -25,14 +21,14 @@ export const Link: React.FC<React.PropsWithChildren<LinkProps>> = ({
 
   if (isHash) {
     return (
-      <a href={href} {...props}>
+      <a href={to} {...props}>
         {children}
       </a>
     );
   }
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+    <a href={to} target="_blank" rel="noopener noreferrer" {...props}>
       <BiLink className="inline" />
       {children}
     </a>
