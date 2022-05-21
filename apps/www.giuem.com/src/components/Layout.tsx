@@ -1,22 +1,31 @@
 import { Helmet } from 'react-helmet';
 import { FaRss } from 'react-icons/fa';
 
+import { Link } from './Link';
 import { SiteHeader } from './SiteHeader';
 
 const SiteFooter: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 mb-8 flex justify-between items-center">
-      <section>GIUEM &copy; {year}</section>
+    <footer className="mt-20 mb-8 flex flex-col items-end text-gray-500 text-sm">
+      <section>
+        <span>
+          &copy; {year}{' '}
+          <Link to="/">
+            <span className="font-semibold">giuem</span>.
+          </Link>{' '}
+          Powered by Gatsby & Vercel.
+        </span>
+      </section>
       <section>
         <a
           href="/rss.xml"
           target="_blank"
-          className="text-indigo-600 dark:text-indigo-300 flex items-center underline"
+          className="text-indigo-600 dark:text-indigo-300 flex items-center"
         >
           <FaRss />
-          <span className="ml-1">RSS</span>
+          <span className="ml-1"> Subscribe via RSS</span>
         </a>
       </section>
     </footer>
