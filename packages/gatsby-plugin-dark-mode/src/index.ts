@@ -21,13 +21,12 @@ export const useTheme = () => {
     setTheme(window.__currentTheme);
 
     const doc = document.documentElement;
-    const onTransitionDone = () => {
-      doc.classList.remove('toggle-theme');
-      doc.removeEventListener('transitionend', onTransitionDone);
-    };
-    doc.addEventListener('transitionend', onTransitionDone);
+
     if (!doc.classList.contains('toggle-theme')) {
       doc.classList.add('toggle-theme');
+      setTimeout(() => {
+        doc.classList.remove('toggle-theme');
+      }, 0);
     }
 
     if (window.__currentTheme === 'dark') {
