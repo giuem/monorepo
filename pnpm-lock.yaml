@@ -70,7 +70,7 @@ importers:
       react-icons: 4.3.1
       react-medium-image-zoom: 4.4.0
       react-schemaorg: 2.0.0
-      react-use: 17.3.2
+      react-use: 17.4.0
       schema-dts: 1.1.0
       tailwindcss: 3.0.24
       typescript: 4.7.1-rc
@@ -115,7 +115,7 @@ importers:
       react-icons: 4.3.1_react@18.1.0
       react-medium-image-zoom: 4.4.0_react-dom@18.1.0+react@18.1.0
       react-schemaorg: 2.0.0_4f4c533a82f92bd882173ce876b7051a
-      react-use: 17.3.2_react-dom@18.1.0+react@18.1.0
+      react-use: 17.4.0_react-dom@18.1.0+react@18.1.0
       schema-dts: 1.1.0_typescript@4.7.1-rc
       tailwindcss: 3.0.24
       typescript: 4.7.1-rc
@@ -12538,11 +12538,11 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /react-use/17.3.2_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-bj7OD0/1wL03KyWmzFXAFe425zziuTf7q8olwCYBfOeFHY1qfO1FAMjROQLsLZYwG4Rx63xAfb7XAbBrJsZmEw==}
+  /react-use/17.4.0_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-TgbNTCA33Wl7xzIJegn1HndB4qTS9u03QUwyNycUnXaweZkE4Kq2SB+Yoxx8qbshkZGYBDvUXbXWRUmQDcZZ/Q==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || 18
-      react-dom: ^16.8.0 || ^17.0.0 || 18
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
       '@types/js-cookie': 2.2.7
       '@xobotyi/scrollbar-width': 1.9.5
