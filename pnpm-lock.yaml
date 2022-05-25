@@ -68,7 +68,7 @@ importers:
       react-dom: 18.1.0
       react-helmet: 6.1.0
       react-icons: 4.3.1
-      react-medium-image-zoom: 4.4.0
+      react-medium-image-zoom: 4.4.3
       react-schemaorg: 2.0.0
       react-use: 17.4.0
       schema-dts: 1.1.0
@@ -113,7 +113,7 @@ importers:
       react-dom: 18.1.0_react@18.1.0
       react-helmet: 6.1.0_react@18.1.0
       react-icons: 4.3.1_react@18.1.0
-      react-medium-image-zoom: 4.4.0_react-dom@18.1.0+react@18.1.0
+      react-medium-image-zoom: 4.4.3_react-dom@18.1.0+react@18.1.0
       react-schemaorg: 2.0.0_cbb210ebb40ab9e75c4e19e47bd7dc91
       react-use: 17.4.0_react-dom@18.1.0+react@18.1.0
       schema-dts: 1.1.0_typescript@4.7.2
@@ -11323,8 +11323,8 @@ packages:
   /react-lifecycles-compat/3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
 
-  /react-medium-image-zoom/4.4.0_react-dom@18.1.0+react@18.1.0:
-    resolution: {integrity: sha512-Y+1enQKyeM/ASAmvlKkLw0USbHePP5dbdjNSclHDBvzGLD8+tUqgxjjtTS54tMvvll7OSxTThVaXxrvO0uYO6A==}
+  /react-medium-image-zoom/4.4.3_react-dom@18.1.0+react@18.1.0:
+    resolution: {integrity: sha512-I928Z6mEMRUup4CPa+XtASiSuFzdVb1ecztXpF7xAJddXv4XZSE4n5gleZNYCn5wEU1LQY5LiN4aNW4KgrOVIA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
