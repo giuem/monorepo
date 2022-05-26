@@ -37,6 +37,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = (
 
   setPostBodyComponents([
     <Script
+      strategy="post-hydrate"
       key="umami-script"
       async
       defer
