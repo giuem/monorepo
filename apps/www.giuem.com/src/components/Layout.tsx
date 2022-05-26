@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import { FaRss } from 'react-icons/fa';
 
@@ -41,11 +42,13 @@ export const Layout: React.FC<
         <html lang="zh-CN" />
         <body className="bg-white dark:bg-black text-gray-800 dark:text-gray-100" />
       </Helmet>
-      <div className="max-w-3xl mx-auto px-4 lg:px-0 flex flex-col min-h-screen">
-        <SiteHeader isPost={isPost} />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-      </div>
+      <Suspense fallback={null}>
+        <div className="max-w-3xl mx-auto px-4 lg:px-0 flex flex-col min-h-screen">
+          <SiteHeader isPost={isPost} />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </div>
+      </Suspense>
     </>
   );
 };
