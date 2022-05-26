@@ -171,7 +171,7 @@ module.exports = {
         websiteId: 'c6b67d7c-b6ed-4ed3-9b76-287955224503',
         autoTrack: true,
         respectDNT: true,
-        enableInDev: true,
+        enableInDev: false,
         enablePreload: true,
       },
     },

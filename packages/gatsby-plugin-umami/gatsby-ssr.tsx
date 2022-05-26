@@ -1,5 +1,4 @@
 import type { GatsbySSR } from 'gatsby';
-import { Script } from 'gatsby';
 
 import type { PluginOptions } from './plugin';
 
@@ -36,8 +35,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = (
   }
 
   setPostBodyComponents([
-    <Script
-      strategy="post-hydrate"
+    <script
       key="umami-script"
       async
       defer
