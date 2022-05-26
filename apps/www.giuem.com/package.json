@@ -64,5 +64,8 @@
     "@types/react-helmet": "6.1.5",
     "@types/tailwindcss": "3.0.10",
     "webpack": "5.72.1"
-  }
+  },
+  "browserslist": [
+    "supports es6-module"
+  ]
 }
