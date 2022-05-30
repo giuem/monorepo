@@ -67,7 +67,7 @@ importers:
       react: 18.1.0
       react-dom: 18.1.0
       react-helmet: 6.1.0
-      react-icons: 4.3.1
+      react-icons: 4.4.0
       react-medium-image-zoom: 4.4.3
       react-schemaorg: 2.0.0
       react-use: 17.4.0
@@ -112,7 +112,7 @@ importers:
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
       react-helmet: 6.1.0_react@18.1.0
-      react-icons: 4.3.1_react@18.1.0
+      react-icons: 4.4.0_react@18.1.0
       react-medium-image-zoom: 4.4.3_react-dom@18.1.0+react@18.1.0
       react-schemaorg: 2.0.0_cbb210ebb40ab9e75c4e19e47bd7dc91
       react-use: 17.4.0_react-dom@18.1.0+react@18.1.0
@@ -11348,8 +11348,8 @@ packages:
       react-side-effect: 2.1.1_react@18.1.0
     dev: false
 
-  /react-icons/4.3.1_react@18.1.0:
-    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+  /react-icons/4.4.0_react@18.1.0:
+    resolution: {integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==}
     peerDependencies:
       react: '*'
     dependencies:
