@@ -41,7 +41,7 @@ importers:
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.10
       autoprefixer: 10.4.7
-      disqusjs: 3.0.0
+      disqusjs: 3.0.1
       gatsby: 4.15.1
       gatsby-plugin-feed: 4.15.0
       gatsby-plugin-image: 2.15.0
@@ -86,7 +86,7 @@ importers:
       '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.0.24
       '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
       autoprefixer: 10.4.7_postcss@8.4.14
-      disqusjs: 3.0.0_react@18.1.0
+      disqusjs: 3.0.1_react@18.1.0
       gatsby: 4.15.1_a50dc1765ceba18174e9574149753d70
       gatsby-plugin-feed: 4.15.0_1f27273642fe38658cb90145226cadee
       gatsby-plugin-image: 2.15.0_4f90e1c072d066f99e3e5a7087a761cc
@@ -5373,8 +5373,8 @@ packages:
     dependencies:
       path-type: 4.0.0
 
-  /disqusjs/3.0.0_react@18.1.0:
-    resolution: {integrity: sha512-SwxQLe5r+hd6CvZCYvgFIKTVhJ0Ok004pIVHfFtGpB/bt8N0PIGIAlTkzUZrpZbe5qGUSY25mR7G9671FNHInA==}
+  /disqusjs/3.0.1_react@18.1.0:
+    resolution: {integrity: sha512-zx9QSEu4kuLYOUi1IGqdb90xPlt/HMg9r3/hAchDsiBp+bsIA/dW2sUHlQC1SlHKJZHQzMF/hd9rJIGyN9qXbw==}
     peerDependencies:
       preact: ^10.7.1
       react: ^16.11.0 || ^17.0.0 || ^18.0.0 || 18
