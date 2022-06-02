@@ -63,7 +63,7 @@
     "@types/react-dom": "18.0.5",
     "@types/react-helmet": "6.1.5",
     "@types/tailwindcss": "3.0.10",
-    "webpack": "5.72.1"
+    "webpack": "5.73.0"
   },
   "browserslist": [
     "supports es6-module"
