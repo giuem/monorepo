@@ -36,7 +36,7 @@ importers:
       '@types/lodash-es': 4.17.6
       '@types/mdx-js__react': 1.5.5
       '@types/node': 16.11.38
-      '@types/react': 18.0.10
+      '@types/react': 18.0.11
       '@types/react-dom': 18.0.5
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.10
@@ -125,7 +125,7 @@ importers:
       '@types/lodash-es': 4.17.6
       '@types/mdx-js__react': 1.5.5
       '@types/node': 16.11.38
-      '@types/react': 18.0.10
+      '@types/react': 18.0.11
       '@types/react-dom': 18.0.5
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.10
@@ -3127,7 +3127,7 @@ packages:
   /@types/mdx-js__react/1.5.5:
     resolution: {integrity: sha512-k8pnaP6JXVlQh18HgL5X6sYFNC/qZnzO7R2+HsmwrwUd+JnnsU0d9lyyT0RQrHg1anxDU36S98TI/fsGtmYqqg==}
     dependencies:
-      '@types/react': 18.0.10
+      '@types/react': 18.0.11
     dev: true
 
   /@types/minimatch/3.0.5:
@@ -3178,17 +3178,17 @@ packages:
   /@types/react-dom/18.0.5:
     resolution: {integrity: sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==}
     dependencies:
-      '@types/react': 18.0.10
+      '@types/react': 18.0.11
     dev: true
 
   /@types/react-helmet/6.1.5:
     resolution: {integrity: sha512-/ICuy7OHZxR0YCAZLNg9r7I9aijWUWvxaPR6uTuyxe8tAj5RL4Sw1+R6NhXUtOsarkGYPmaHdBDvuXh2DIN/uA==}
     dependencies:
-      '@types/react': 18.0.10
+      '@types/react': 18.0.11
     dev: true
 
-  /@types/react/18.0.10:
-    resolution: {integrity: sha512-dIugadZuIPrRzvIEevIu7A1smqOAjkSMv8qOfwPt9Ve6i6JT/FQcCHyk2qIAxwsQNKZt5/oGR0T4z9h2dXRAkg==}
+  /@types/react/18.0.11:
+    resolution: {integrity: sha512-JxSwm54IgMW4XTR+zFF5QpNx4JITmFbB4WHR2J0vg9RpjNeyqEMlODXsD2e64br6GX70TL0UYjZJETpyyC1WdA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
