@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "devDependencies": {
     "@infra/tsconfig": "workspace:^0.0.0",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "gatsby": "4.17.1"
   },
   "peerDependencies": {
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "gatsby": "4.17.1",
     "typescript": "*"
   }

@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "devDependencies": {
     "@infra/tsconfig": "workspace:^0.0.0",
-    "react": "18.1.0"
+    "react": "18.2.0"
   },
   "peerDependencies": {
-    "react": "18.1.0"
+    "react": "18.2.0"
   }
 }
