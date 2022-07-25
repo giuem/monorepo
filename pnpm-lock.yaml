@@ -74,7 +74,7 @@ importers:
       schema-dts: 1.1.0
       tailwindcss: 3.0.24
       typescript: 4.7.3
-      webpack: 5.73.0
+      webpack: 5.74.0
     dependencies:
       '@fec/remark-a11y-emoji': 3.1.0
       '@giuem/gatsby-plugin-dark-mode': link:../../packages/gatsby-plugin-dark-mode
@@ -94,7 +94,7 @@ importers:
       gatsby-plugin-mdx: 3.17.0_ace553bc3ace7a70233e4df091858691
       gatsby-plugin-nprogress: 4.17.0_gatsby@4.17.1
       gatsby-plugin-pnpm: 1.2.10_gatsby@4.17.1
-      gatsby-plugin-postcss: 5.17.0_a6d4a048a1dd5a5fac168ccd8c9d85ea
+      gatsby-plugin-postcss: 5.17.0_4ca233940b9e12eea8d59f07fcdc15b3
       gatsby-plugin-react-helmet: 5.17.0_gatsby@4.17.1+react-helmet@6.1.0
       gatsby-plugin-remove-serviceworker: 1.0.0
       gatsby-plugin-sharp: 4.17.0_gatsby@4.17.1+graphql@16.5.0
@@ -129,7 +129,7 @@ importers:
       '@types/react-dom': 18.0.6
       '@types/react-helmet': 6.1.5
       '@types/tailwindcss': 3.0.10
-      webpack: 5.73.0
+      webpack: 5.74.0
 
   packages/gatsby-plugin-dark-mode:
     specifiers:
@@ -6819,6 +6819,13 @@ packages:
       - supports-color
       - utf-8-validate
 
+  /enhanced-resolve/5.10.0:
+    resolution: {integrity: sha512-T0yTFjdpldGY8PmuXXR0PyQ1ufZpEGiHVrp7zHKB7jdR4qlmZHhONVM5AQOAWXuF/w3dnHbEQVrNptJgt7F+cQ==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      graceful-fs: 4.2.10
+      tapable: 2.2.1
+
   /enhanced-resolve/5.9.3:
     resolution: {integrity: sha512-Bq9VSor+kjvW3f9/MiiR4eE3XYgOl7/rS8lnSxbRbF3kS0B2r+Y9w5krBWxZgDxASVZbdYrn5wT4j/Wb0J9qow==}
     engines: {node: '>=10.13.0'}
@@ -8376,7 +8383,7 @@ packages:
       lodash.uniq: 4.5.0
     dev: false
 
-  /gatsby-plugin-postcss/5.17.0_a6d4a048a1dd5a5fac168ccd8c9d85ea:
+  /gatsby-plugin-postcss/5.17.0_4ca233940b9e12eea8d59f07fcdc15b3:
     resolution: {integrity: sha512-3B18hrRQf3QHTbl5ShLKpmeLq7ytb69I2rysQZk2avB1ZhVDw6soCLl8Rxe2ZEwhkES0L9oY2wgDB1tmuk91vw==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
@@ -8386,7 +8393,7 @@ packages:
       '@babel/runtime': 7.18.0
       gatsby: 4.17.1_45c371e1620d8756972274bf53aa5cda
       postcss: 8.4.14
-      postcss-loader: 4.3.0_postcss@8.4.14+webpack@5.73.0
+      postcss-loader: 4.3.0_postcss@8.4.14+webpack@5.74.0
     transitivePeerDependencies:
       - webpack
     dev: false
@@ -12045,7 +12052,7 @@ packages:
       yaml: 1.10.2
     dev: false
 
-  /postcss-loader/4.3.0_postcss@8.4.14+webpack@5.73.0:
+  /postcss-loader/4.3.0_postcss@8.4.14+webpack@5.74.0:
     resolution: {integrity: sha512-M/dSoIiNDOo8Rk0mUqoj4kpGq91gcxCfb9PoyZVdZ76/AuhxylHDYZblNE8o+EQ9AMSASeMFEKxZf5aU6wlx1Q==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -12058,7 +12065,7 @@ packages:
       postcss: 8.4.14
       schema-utils: 3.1.1
       semver: 7.3.7
-      webpack: 5.73.0
+      webpack: 5.74.0
     dev: false
 
   /postcss-loader/5.3.0_postcss@8.4.14+webpack@5.73.0:
@@ -14035,6 +14042,29 @@ packages:
       terser: 5.13.1
       webpack: 5.73.0
 
+  /terser-webpack-plugin/5.3.1_webpack@5.74.0:
+    resolution: {integrity: sha512-GvlZdT6wPQKbDNW/GDQzZFg/j4vKU96yl2q6mcUkzKOgW4gwf1Z8cZToUCrz31XHlPWH8MVb1r2tFtdDtTGJ7g==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      '@swc/core': '*'
+      esbuild: '*'
+      uglify-js: '*'
+      webpack: ^5.1.0
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      esbuild:
+        optional: true
+      uglify-js:
+        optional: true
+    dependencies:
+      jest-worker: 27.5.1
+      schema-utils: 3.1.1
+      serialize-javascript: 6.0.0
+      source-map: 0.6.1
+      terser: 5.13.1
+      webpack: 5.74.0
+
   /terser/5.13.1:
     resolution: {integrity: sha512-hn4WKOfwnwbYfe48NgrQjqNOH9jzLqRcIfbYytOXCOv46LBfWr9bDS17MQqOi+BWGD0sJK3Sj5NC/gJjiojaoA==}
     engines: {node: '>=10'}
@@ -14833,6 +14863,13 @@ packages:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.10
 
+  /watchpack/2.4.0:
+    resolution: {integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.10
+
   /weak-lru-cache/1.2.2:
     resolution: {integrity: sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==}
 
@@ -14931,6 +14968,45 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.1_webpack@5.73.0
       watchpack: 2.3.1
+      webpack-sources: 3.2.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+
+  /webpack/5.74.0:
+    resolution: {integrity: sha512-A2InDwnhhGN4LYctJj6M1JEaGL7Luj6LOmyBHjcI8529cm5p6VXiTIW2sn6ffvEAKmveLzvu4jrihwXtPojlAA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    peerDependencies:
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack-cli:
+        optional: true
+    dependencies:
+      '@types/eslint-scope': 3.7.3
+      '@types/estree': 0.0.51
+      '@webassemblyjs/ast': 1.11.1
+      '@webassemblyjs/wasm-edit': 1.11.1
+      '@webassemblyjs/wasm-parser': 1.11.1
+      acorn: 8.7.1
+      acorn-import-assertions: 1.8.0_acorn@8.7.1
+      browserslist: 4.20.3
+      chrome-trace-event: 1.0.3
+      enhanced-resolve: 5.10.0
+      es-module-lexer: 0.9.3
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.10
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.0
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 3.1.1
+      tapable: 2.2.1
+      terser-webpack-plugin: 5.3.1_webpack@5.74.0
+      watchpack: 2.4.0
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'
