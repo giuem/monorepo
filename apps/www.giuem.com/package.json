@@ -18,7 +18,7 @@
     "@react-spring/web": "9.4.5",
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.2",
-    "autoprefixer": "10.4.7",
+    "autoprefixer": "10.4.8",
     "disqusjs": "3.0.1",
     "gatsby": "4.17.1",
     "gatsby-plugin-feed": "4.17.0",
