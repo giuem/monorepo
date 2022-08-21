@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@infra/tsconfig": "workspace:^0.0.0",
-    "@types/node": "16.11.51",
+    "@types/node": "16.11.52",
     "gatsby": "4.17.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
