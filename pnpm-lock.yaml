@@ -32,7 +32,7 @@ importers:
       '@mdx-js/react': 1.6.22
       '@react-spring/web': 9.4.5
       '@tailwindcss/line-clamp': 0.4.0
-      '@tailwindcss/typography': 0.5.2
+      '@tailwindcss/typography': 0.5.4
       '@types/lodash-es': 4.17.6
       '@types/mdx-js__react': 1.5.5
       '@types/node': 16.11.56
@@ -84,7 +84,7 @@ importers:
       '@mdx-js/react': 1.6.22_react@18.2.0
       '@react-spring/web': 9.4.5_react-dom@18.2.0+react@18.2.0
       '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.7
-      '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.7
+      '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.7
       autoprefixer: 10.4.8_postcss@8.4.14
       disqusjs: 3.0.1_react@18.2.0
       gatsby: 4.21.1_a167f601cb24436d4c8a7ee570cb157b
@@ -3036,10 +3036,10 @@ packages:
       tailwindcss: 3.1.7
     dev: false
 
-  /@tailwindcss/typography/0.5.2_tailwindcss@3.1.7:
-    resolution: {integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==}
+  /@tailwindcss/typography/0.5.4_tailwindcss@3.1.7:
+    resolution: {integrity: sha512-QEdg40EmGvE7kKoDei8zr5sf4D1pIayHj4R31bH3lX8x2BtTiR+jNejYPOkhbmy3DXgkMF9jC8xqNiGFAuL9Sg==}
     peerDependencies:
-      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
+      tailwindcss: '>=3.0.0 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
@@ -9440,7 +9440,7 @@ packages:
     dev: false
 
   /lodash.castarray/4.4.0:
-    resolution: {integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=}
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
     dev: false
 
   /lodash.clonedeep/4.5.0:
@@ -9476,7 +9476,7 @@ packages:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
 
   /lodash.isplainobject/4.0.6:
-    resolution: {integrity: sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=}
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
     dev: false
 
   /lodash.map/4.6.0:
