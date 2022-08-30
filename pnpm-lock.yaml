@@ -72,7 +72,7 @@ importers:
       react-schemaorg: 2.0.0
       react-use: 17.4.0
       schema-dts: 1.1.0
-      tailwindcss: 3.1.7
+      tailwindcss: 3.1.8
       typescript: 4.7.4
       webpack: 5.74.0
     dependencies:
@@ -83,8 +83,8 @@ importers:
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22_react@18.2.0
       '@react-spring/web': 9.5.2_react-dom@18.2.0+react@18.2.0
-      '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.7
-      '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.7
+      '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.8
+      '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
       autoprefixer: 10.4.8_postcss@8.4.16
       disqusjs: 3.0.1_react@18.2.0
       gatsby: 4.21.1_a167f601cb24436d4c8a7ee570cb157b
@@ -117,7 +117,7 @@ importers:
       react-schemaorg: 2.0.0_7a63e8c70863cc94e0868890d59e0bea
       react-use: 17.4.0_react-dom@18.2.0+react@18.2.0
       schema-dts: 1.1.0_typescript@4.7.4
-      tailwindcss: 3.1.7
+      tailwindcss: 3.1.8
       typescript: 4.7.4
     devDependencies:
       '@babel/core': 7.18.13
@@ -3028,15 +3028,15 @@ packages:
     dependencies:
       defer-to-connect: 2.0.1
 
-  /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.1.7:
+  /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.1.8:
     resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.1.7
+      tailwindcss: 3.1.8
     dev: false
 
-  /@tailwindcss/typography/0.5.4_tailwindcss@3.1.7:
+  /@tailwindcss/typography/0.5.4_tailwindcss@3.1.8:
     resolution: {integrity: sha512-QEdg40EmGvE7kKoDei8zr5sf4D1pIayHj4R31bH3lX8x2BtTiR+jNejYPOkhbmy3DXgkMF9jC8xqNiGFAuL9Sg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -3044,7 +3044,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.1.7
+      tailwindcss: 3.1.8
     dev: false
 
   /@tokenizer/token/0.3.0:
@@ -12704,8 +12704,8 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  /tailwindcss/3.1.7:
-    resolution: {integrity: sha512-r7mgumZ3k0InfVPpGWcX8X/Ut4xBfv+1O/+C73ar/m01LxGVzWvPxF/w6xIUPEztrCoz7axfx0SMdh8FH8ZvRQ==}
+  /tailwindcss/3.1.8:
+    resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
