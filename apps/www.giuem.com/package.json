@@ -19,7 +19,7 @@
     "@tailwindcss/line-clamp": "0.4.0",
     "@tailwindcss/typography": "0.5.4",
     "autoprefixer": "10.4.8",
-    "disqusjs": "3.0.1",
+    "disqusjs": "3.0.2",
     "gatsby": "4.21.1",
     "gatsby-plugin-feed": "4.21.0",
     "gatsby-plugin-image": "2.21.0",
