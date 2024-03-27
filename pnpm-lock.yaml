@@ -32,7 +32,7 @@ importers:
       '@mdx-js/react': 1.6.22
       '@react-spring/web': 9.5.2
       '@tailwindcss/line-clamp': 0.4.0
-      '@tailwindcss/typography': 0.5.4
+      '@tailwindcss/typography': 0.5.12
       '@types/lodash-es': 4.17.6
       '@types/mdx-js__react': 1.5.5
       '@types/node': 16.11.58
@@ -84,7 +84,7 @@ importers:
       '@mdx-js/react': 1.6.22_react@18.2.0
       '@react-spring/web': 9.5.2_react-dom@18.2.0+react@18.2.0
       '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.8
-      '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
+      '@tailwindcss/typography': 0.5.12_tailwindcss@3.1.8
       autoprefixer: 10.4.8_postcss@8.4.16
       disqusjs: 3.0.1_react@18.2.0
       gatsby: 4.21.1_7ba9fd73b22b398c0a4fa77025ee8d25
@@ -4071,14 +4071,15 @@ packages:
       tailwindcss: 3.1.8
     dev: false
 
-  /@tailwindcss/typography/0.5.4_tailwindcss@3.1.8:
-    resolution: {integrity: sha512-QEdg40EmGvE7kKoDei8zr5sf4D1pIayHj4R31bH3lX8x2BtTiR+jNejYPOkhbmy3DXgkMF9jC8xqNiGFAuL9Sg==}
+  /@tailwindcss/typography/0.5.12_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-CNwpBpconcP7ppxmuq3qvaCxiRWnbhANpY/ruH4L5qs2GCiVDJXde/pjj2HWPV1+Q4G9+V/etrwUYopdcjAlyg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
+      postcss-selector-parser: 6.0.10
       tailwindcss: 3.1.8
     dev: false
 
