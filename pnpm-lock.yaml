@@ -68,7 +68,7 @@ importers:
       react-dom: 18.2.0
       react-helmet: 6.1.0
       react-icons: 4.4.0
-      react-medium-image-zoom: 4.4.3
+      react-medium-image-zoom: 5.1.11
       react-schemaorg: 2.0.0
       react-use: 17.4.0
       schema-dts: 1.1.0
@@ -113,7 +113,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-helmet: 6.1.0_react@18.2.0
       react-icons: 4.4.0_react@18.2.0
-      react-medium-image-zoom: 4.4.3_react-dom@18.2.0+react@18.2.0
+      react-medium-image-zoom: 5.1.11_react-dom@18.2.0+react@18.2.0
       react-schemaorg: 2.0.0_7a63e8c70863cc94e0868890d59e0bea
       react-use: 17.4.0_react-dom@18.2.0+react@18.2.0
       schema-dts: 1.1.0_typescript@4.7.4
@@ -7806,10 +7806,6 @@ packages:
   /flatted/3.2.5:
     resolution: {integrity: sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==}
 
-  /focus-options-polyfill/1.5.1:
-    resolution: {integrity: sha512-7yH20IePROHJLLbJvqqtsG420jE6DuukccapiB/WagtUpnc98r9NzHbX5rnjCDgdZqLgcqlzGjn+8l0Zb8Zf9w==}
-    dev: false
-
   /follow-redirects/1.15.0_debug@3.2.7:
     resolution: {integrity: sha512-aExlJShTV4qOUOL7yF1U5tvLCB0xQuudbf6toyYA0E/acBNw71mvjFTnLaRp50aQaYocMR0a/RMMBIHeZnGyjQ==}
     engines: {node: '>=4.0'}
@@ -12516,16 +12512,14 @@ packages:
   /react-lifecycles-compat/3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
 
-  /react-medium-image-zoom/4.4.3_react-dom@18.2.0+react@18.2.0:
-    resolution: {integrity: sha512-I928Z6mEMRUup4CPa+XtASiSuFzdVb1ecztXpF7xAJddXv4XZSE4n5gleZNYCn5wEU1LQY5LiN4aNW4KgrOVIA==}
+  /react-medium-image-zoom/5.1.11_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-7rHECk0nRY+Uwmd02HKPt0L0Lxv2/km24ztcxgUaGR8TD0ikK+OOJyGZAMg/SeQzJDzmNv0yW6U1K8jqnta5MQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
-      focus-options-polyfill: 1.5.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      tslib: 2.4.0
     dev: false
 
   /react-refresh/0.9.0:
