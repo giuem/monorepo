@@ -61,7 +61,7 @@ importers:
       gatsby-source-filesystem: 4.21.1
       gatsby-transformer-sharp: 4.21.0
       graphql: 16.5.0
-      lodash-es: 4.17.21
+      lodash-es: 4.18.1
       postcss: 8.4.16
       prism-react-renderer: 1.3.5
       react: 18.2.0
@@ -106,7 +106,7 @@ importers:
       gatsby-source-filesystem: 4.21.1_gatsby@4.21.1
       gatsby-transformer-sharp: 4.21.0_62bdf5c2b9a029a181e56d2af98fdb3c
       graphql: 16.5.0
-      lodash-es: 4.17.21
+      lodash-es: 4.18.1
       postcss: 8.4.16
       prism-react-renderer: 1.3.5_react@18.2.0
       react: 18.2.0
@@ -10537,8 +10537,8 @@ packages:
   /lock/1.1.0:
     resolution: {integrity: sha512-NZQIJJL5Rb9lMJ0Yl1JoVr9GSdo4HTPsUEWsSFzB8dE8DSoiLCVavWZPi7Rnlv/o73u6I24S/XYc/NmG4l8EKA==}
 
-  /lodash-es/4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+  /lodash-es/4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
     dev: false
 
   /lodash.assignin/4.2.0:
